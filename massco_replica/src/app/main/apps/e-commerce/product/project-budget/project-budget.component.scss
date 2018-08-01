@@ -1,0 +1,6 @@
+table {
+    width: 100%;
+  }
+  .mat-list, .mat-nav-list, .mat-selection-list{display:flex;}
+  .mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .mat-list-item{font-size: 14px;}
+  th.mat-header-cell{background:#e4e4e4 !important;}
