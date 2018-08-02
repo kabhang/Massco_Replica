@@ -1,5 +1,9 @@
-import {Component} from '@angular/core';
-import {MatDialog} from '@angular/material';
+import {Component,Inject} from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
+
+export interface DialogData {
+  animal: 'panda' | 'unicorn' | 'lion';
+}
 
 /**
  * @title Dialog with header, scrollable content and actions
@@ -13,12 +17,10 @@ export class DialogContentExample {
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog, {
-      height: '350px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+    this.dialog.open(DialogContentExampleDialog, {
+      data: {
+        animal: 'panda'
+      }
     });
   }
 }
@@ -27,4 +29,8 @@ export class DialogContentExample {
   selector: 'dialog-content-example-dialog',
   templateUrl: 'dialog-content-example-dialog.html',
 })
-export class DialogContentExampleDialog {}
+export class DialogContentExampleDialog {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+
+}

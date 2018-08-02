@@ -112,6 +112,7 @@ const routes: Routes = [
         FuseSharedModule,
         FuseWidgetModule,
     ],
+    entryComponents: [DialogContentExample, DialogContentExampleDialog],
     providers   : [
         EcommerceDashboardService,
         EcommerceProductsService,
