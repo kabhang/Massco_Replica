@@ -20,34 +20,23 @@
         }
     }
 
-.content {        
-.fa-book:before,.fa-file-invoice-dollar:before,.fa-users:before,.fa-sticky-note:before,.fa-file-alt:before,.fa-print:before,.fa-cog:before
- {font-size: 17px;position: relative;bottom: 4px;color:#717070;}
-        // .fa-file-invoice-dollar:before{color: #FFC107}
-        // .fa-users:before,.fa-file-alt:before{color: #3f51b5}
-        // .fa-sticky-note:before{color: #4CAF50}
-        // .fa-print:before{color: #03a9f4}
-        // .fa-cog:before{color: #009688;}
+    .content {
+
         .mat-tab-group,
         .mat-tab-body-wrapper,
         .tab-content{
             flex: 1 1 auto;
             max-width: 100%;
         }
-        .fa-plus-circle:before{font-size: 18px;}
+
         .mat-tab-body-content {
             display: flex;
         }
-        .mat-table{width: 100%}
-        .mat-tab-label {
-            height: 64px;         
-        }
-        .homeIcon { background: url(assets/icons/home2.png)  35px 34px no-repeat;   padding: 10px;    background-size: 16px; }
-        .documentIcon { background: url(assets/icons/document.png) 0 0 no-repeat;   padding: 10px;    background-size: 16px; }
-        .mat-expansion-panel-content.mat-expanded {overflow: scroll;height: 318px;        }
 
-        .cardAlign{width: 100%;top: 0;position: absolute;}
-    
+        .mat-tab-label {
+            height: 64px;
+        }
+
         .product-image {
             overflow: hidden;
             width: 128px;

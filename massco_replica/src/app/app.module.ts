@@ -20,11 +20,6 @@ import { AppComponent } from 'app/app.component';
 import { AppStoreModule } from 'app/store/store.module';
 import { LayoutModule } from 'app/layout/layout.module';
 
-
-
-
-
-  
 const appRoutes: Routes = [
     {
         path        : 'apps',
@@ -54,12 +49,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent,
- 
-        
-      
-    
-
+        AppComponent
     ],
     imports     : [
         BrowserModule,
@@ -75,11 +65,11 @@ const appRoutes: Routes = [
 
         // Material moment date module
         MatMomentDateModule,
-      
+
         // Material
         MatButtonModule,
         MatIconModule,
-      
+
         // Fuse modules
         FuseModule.forRoot(fuseConfig),
         FuseProgressBarModule,

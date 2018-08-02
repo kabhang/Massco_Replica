@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MatButtonModule, MatChipsModule, MatFormFieldModule, MatIconModule, MatInputModule, MatPaginatorModule, MatRippleModule, MatSelectModule, MatSnackBarModule, MatSortModule, MatTableModule, MatTabsModule,MatDialogModule,MatExpansionModule,MatCardModule,MatListModule } from '@angular/material';
+import { MatButtonModule, MatChipsModule, MatFormFieldModule, MatIconModule, MatInputModule, MatPaginatorModule, MatRippleModule, MatSelectModule, MatSnackBarModule, MatSortModule, MatTableModule, MatTabsModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AgmCoreModule } from '@agm/core';
 
 import { FuseSharedModule } from '@fuse/shared.module';
 import { FuseWidgetModule } from '@fuse/components/widget/widget.module';
-
 
 import { EcommerceDashboardComponent } from 'app/main/apps/e-commerce/dashboard/dashboard.component';
 import { EcommerceDashboardService } from 'app/main/apps/e-commerce/dashboard/dashboard.service';
@@ -18,14 +17,6 @@ import { EcommerceOrdersComponent } from 'app/main/apps/e-commerce/orders/orders
 import { EcommerceOrdersService } from 'app/main/apps/e-commerce/orders/orders.service';
 import { EcommerceOrderComponent } from 'app/main/apps/e-commerce/order/order.component';
 import { EcommerceOrderService } from 'app/main/apps/e-commerce/order/order.service';
-import {MatGridListModule} from '@angular/material/grid-list';
-import { ProjectOverviewComponent } from './product/project-overview/project-overview.component';
-
-import { DocumentComponent } from './product/document/document.component';
-import {ProjectBudgetComponent} from './product/project-budget/project-budget.component'
-import {DialogContentExample,DialogContentExampleDialog} from'./product/dialog-content/dialog-content-example'; 
-// this is dialauge component
-import {OverlayModule} from '@angular/cdk/overlay';
 
 const routes: Routes = [
     {
@@ -78,16 +69,11 @@ const routes: Routes = [
         EcommerceProductsComponent,
         EcommerceProductComponent,
         EcommerceOrdersComponent,
-        EcommerceOrderComponent,
-        ProjectOverviewComponent,
-       
-        DocumentComponent,
-        ProjectBudgetComponent,
-        DialogContentExample,DialogContentExampleDialog
+        EcommerceOrderComponent
     ],
     imports     : [
         RouterModule.forChild(routes),
-        MatExpansionModule,
+
         MatButtonModule,
         MatChipsModule,
         MatFormFieldModule,
@@ -95,16 +81,12 @@ const routes: Routes = [
         MatInputModule,
         MatPaginatorModule,
         MatRippleModule,
-        MatCardModule,
         MatSelectModule,
         MatSortModule,
         MatSnackBarModule,
         MatTableModule,
         MatTabsModule,
-        MatListModule,
-        MatGridListModule,
-        MatDialogModule,
-        OverlayModule,
+
         NgxChartsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyD81ecsCj4yYpcXSLFcYU97PvRsE_X8Bx8'
@@ -113,7 +95,6 @@ const routes: Routes = [
         FuseSharedModule,
         FuseWidgetModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog],
     providers   : [
         EcommerceDashboardService,
         EcommerceProductsService,

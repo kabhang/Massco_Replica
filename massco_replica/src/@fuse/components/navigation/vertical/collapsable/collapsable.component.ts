@@ -22,7 +22,7 @@ export class FuseNavVerticalCollapsableComponent implements OnInit, OnDestroy
     classes = 'nav-collapsable nav-item';
 
     @HostBinding('class.open')
-    public isOpen = true;
+    public isOpen = false;
 
     // Private
     private _unsubscribeAll: Subject<any>;

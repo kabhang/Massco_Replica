@@ -11,9 +11,6 @@ import { FuseUtils } from '@fuse/utils';
 import { Product } from 'app/main/apps/e-commerce/product/product.model';
 import { EcommerceProductService } from 'app/main/apps/e-commerce/product/product.service';
 
-
-
-
 @Component({
     selector     : 'e-commerce-product',
     templateUrl  : './product.component.html',
@@ -21,21 +18,14 @@ import { EcommerceProductService } from 'app/main/apps/e-commerce/product/produc
     encapsulation: ViewEncapsulation.None,
     animations   : fuseAnimations
 })
-
-
 export class EcommerceProductComponent implements OnInit, OnDestroy
 {
-
-    panelOpenState = false;
     product: Product;
     pageType: string;
     productForm: FormGroup;
 
     // Private
     private _unsubscribeAll: Subject<any>;
-
-
-    
 
     /**
      * Constructor
