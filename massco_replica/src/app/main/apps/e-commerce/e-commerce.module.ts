@@ -23,7 +23,8 @@ import { ProjectOverviewComponent } from './product/project-overview/project-ove
 
 import { DocumentComponent } from './product/document/document.component';
 import {ProjectBudgetComponent} from './product/project-budget/project-budget.component'
-import {DialogContentExample,DialogContentExampleDialog} from'./product/dialog-content/dialog-content-example';
+import {DialogContentExample,DialogContentExampleDialog} from'./product/dialog-content/dialog-content-example'; 
+// this is dialauge component
 import {OverlayModule} from '@angular/cdk/overlay';
 
 const routes: Routes = [

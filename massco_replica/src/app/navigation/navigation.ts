@@ -250,7 +250,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.CALENDAR',
                 type     : 'item',
                 icon     : 'today',
-                url      : '/apps/calendar'
+                url      : 'apps/dashboards/analytics'
             },
             {
                 id       : 'calendar',
