@@ -84,7 +84,8 @@ export class FuseShortcutsComponent implements OnInit, OnDestroy
                     'title': 'Calendar',
                     'type' : 'item',
                     'icon' : 'today',
-                    'url'  : '/apps/calendar'
+                    'url'  : '/apps/calendar',
+
                 },
                 {
                     'title': 'Mail',

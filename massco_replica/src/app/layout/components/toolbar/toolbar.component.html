@@ -17,12 +17,12 @@
                 </div>
             </div>
 
-            <div class="px-8 px-mat-16">
+            <!-- <div class="px-8 px-mat-16">
                 <fuse-shortcuts [navigation]="navigation"></fuse-shortcuts>
-            </div>
+            </div> -->
 
         </div>
-
+      
         <div class="" fxFlex="0 1 auto" fxLayout="row" fxLayoutAlign="start center">
 
             <button mat-button [matMenuTriggerFor]="userMenu"
@@ -42,8 +42,8 @@
                 </button>
 
                 <button mat-menu-item class="">
-                    <mat-icon>mail</mat-icon>
-                    <span>Inbox</span>
+                    <mat-icon>help</mat-icon>
+                    <span>Help</span>
                 </button>
 
                 <button mat-menu-item class="">
@@ -58,7 +58,7 @@
             <fuse-search-bar (input)="search($event)"></fuse-search-bar>
 
             <div class="toolbar-separator"></div>
-
+<!-- 
             <button mat-button fxHide fxShow.gt-xs
                     class="language-button"
                     [matMenuTriggerFor]="languageMenu">
@@ -83,20 +83,20 @@
                     </div>
                 </button>
 
-            </mat-menu>
+            </mat-menu> -->
 
             <div class="toolbar-separator" fxHide fxShow.gt-xs></div>
 
-            <button mat-icon-button fxHide.gt-md
+            <!-- <button mat-icon-button fxHide.gt-md
                     class="chat-panel-toggle-button"
                     (click)="toggleSidebarOpen('chatPanel')"
                     aria-label="Toggle chat panel">
                 <mat-icon class="icon">chat</mat-icon>
-            </button>
+            </button> -->
 
             <div class="toolbar-separator" fxHide.gt-md></div>
 
-            <button mat-icon-button
+            <!-- <button mat-icon-button
                     class="quick-panel-toggle-button"
                     (click)="toggleSidebarOpen('quickPanel')"
                     aria-label="Toggle quick panel">
@@ -108,7 +108,7 @@
             <button mat-icon-button class="navbar-toggle-button"
                     *ngIf="!hiddenNavbar && rightNavbar" (click)="toggleSidebarOpen('navbar')" fxHide.gt-md>
                 <mat-icon class="secondary-text">menu</mat-icon>
-            </button>
+            </button> -->
 
         </div>
 

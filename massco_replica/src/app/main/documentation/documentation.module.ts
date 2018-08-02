@@ -44,9 +44,7 @@ const routes: Routes = [
     ],
     imports     : [
         RouterModule.forChild(routes),
-
         MatIconModule,
-
         FuseSharedModule
     ]
 })
