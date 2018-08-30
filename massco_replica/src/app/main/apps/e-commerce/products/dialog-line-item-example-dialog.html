@@ -1,0 +1,117 @@
+<div class="tab-content p-24" fusePerfectScrollbar style="width:500px;">
+    <div class="w-100-p">
+    <mat-form-field fxFlex="50"  class="mr-16">
+        <input matInput placeholder="Type" value="CC">
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50">
+          <mat-select placeholder="Description" formControlName="Description" required  >
+              <mat-option [value]="'-- none --'">
+                  Original Contract
+
+              </mat-option>
+              <mat-option [value]="' Option 1'">
+                  Reimbursables
+              </mat-option>
+              <mat-option [value]="' Option 2'">
+                Change Order
+              </mat-option>                              
+
+          </mat-select>
+        </mat-form-field>  
+        </div>
+
+   
+                                  
+    <div class="w-100-p">
+        <mat-form-field fxFlex="50"  class="mr-16">
+            <input matInput [matDatepicker]="picker" placeholder="Create Date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field fxFlex="50">
+            <mat-select placeholder="No." formControlName="Description" required  >
+                <mat-option [value]="'1'">
+                   1
+  
+                </mat-option>
+                <mat-option [value]="'2'">
+                   2
+                </mat-option>
+                                       
+  
+            </mat-select>
+          </mat-form-field>  
+          </div>
+
+          <div class="w-100-p">
+
+              <mat-form-field fxFlex="50"  class="mr-16">
+                  <input matInput placeholder="JCAF Line" value=" 3. Working Drawings - A. Architectual Fees ">
+                </mat-form-field>
+                <mat-form-field fxFlex="50"  class="mr-16">
+                    <input matInput placeholder="Funding" value="MeasureX ">
+                  </mat-form-field>
+      
+      
+             
+          </div>
+
+          <div class="w-100-p">
+
+              <mat-form-field fxFlex="50"  class="mr-16">
+                  <input matInput placeholder="ObjectCode" value="  62303-Building Imp - Archit Services  ">
+                </mat-form-field>
+                <mat-form-field fxFlex="50"  class="mr-16">
+                    <input matInput placeholder="C" value=" Details  ">
+                  </mat-form-field>
+      
+      
+             
+          </div>
+       
+ 
+   
+   
+
+    
+    <div class="w-100-p">
+
+        <mat-form-field fxFlex="50"  class="mr-16">
+            <input matInput placeholder="Expanded" value="  ">
+          </mat-form-field>
+          <mat-form-field fxFlex="50"  class="mr-16">
+              <input matInput placeholder="Pending Amount" value=" 10  ">
+            </mat-form-field>
+
+
+       
+    </div>
+    <div class="w-100-p">
+
+        <mat-form-field fxFlex="100" >
+            <input matInput placeholder="Amount" value=" 19.9 ">
+          </mat-form-field>
+    </div>
+    <div class="w-100-p">
+
+        <mat-form-field fxFlex="100">
+            <input matInput placeholder="Account Number" >
+          </mat-form-field>
+    </div>
+    <div class="w-100-p">
+
+        <mat-form-field fxFlex="100">
+            <input matInput placeholder="R" >
+          </mat-form-field>
+    </div>
+                         
+  
+    <div class="w-100-p" style="float: right">
+            <button mat-flat-button color="accent" style="margin-right: 10px;">Save</button>
+            <!-- <button mat-flat-button >Delete</button> -->
+        </div>
+
+       
+          
+</div>

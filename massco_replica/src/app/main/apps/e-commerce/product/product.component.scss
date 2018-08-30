@@ -19,15 +19,21 @@
             margin: 6px 0 0 0;
         }
     }
+    
 
+    .mat-tab-body.mat-tab-body-active{background: #fff ; padding: 20px;}
 .content {        
+
 .fa-book:before,.fa-file-invoice-dollar:before,.fa-users:before,.fa-sticky-note:before,.fa-file-alt:before,.fa-print:before,.fa-cog:before
- {font-size: 17px;position: relative;bottom: 4px;color:#717070;}
+ {font-size: 12px;position: relative;bottom: 4px;color:#717070;}
         // .fa-file-invoice-dollar:before{color: #FFC107}
         // .fa-users:before,.fa-file-alt:before{color: #3f51b5}
         // .fa-sticky-note:before{color: #4CAF50}
         // .fa-print:before{color: #03a9f4}
         // .fa-cog:before{color: #009688;}
+
+
+        #product .content .mat-tab-body-content{display: inline !important}
         .mat-tab-group,
         .mat-tab-body-wrapper,
         .tab-content{
@@ -62,6 +68,8 @@
                 max-width: none;
             }
         }
+
+   
 
     }
 

@@ -53,117 +53,179 @@
 
             <!-- CONTENT -->
             <div class="content">
-
-                <form name="productForm" [formGroup]="productForm" class="product w-100-p" fxLayout="column" fxFlex>
+                 <form name="productForm" [formGroup]="productForm" class="product w-100-p" fxLayout="column" fxFlex>
 
 
 
                     <mat-tab-group class="homeIcon">
                         <span class="documentIcon"></span>
                         <mat-tab label="Overview">
-
-
-
-
-                            <div class="tab-content p-24" fusePerfectScrollbar>
+                             <div class="tab-content p-24" fusePerfectScrollbar>
 
                                 <div style="margin: 10px 0">
-                                    <dialog-content-example></dialog-content-example>
+                                    <!-- <dialog-content-example></dialog-content-example> -->
+                                    <app-add-new-contact></app-add-new-contact>
+
                                 </div>
 
+                                <div class="content w-100-p">
 
-                                <mat-grid-list cols="2" rowHeight="2:1">
-                                    <mat-grid-tile>
+                                    <!-- WIDGET GROUP -->
+                                    <div class="widget-group" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start" [@animateStagger]="{value:'50'}">
 
-                                        <mat-accordion class="cardAlign">
-                                            <mat-expansion-panel [expanded]="true">
-                                                <mat-expansion-panel-header>
-                                                    <mat-panel-title>
-                                                        <i class="fas fa-book"></i>
-                                                        Project Overview
-                                                    </mat-panel-title>
+                                        <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
 
-                                                </mat-expansion-panel-header>
-                                                <app-project-overview></app-project-overview>
+                                            <!-- Front -->
+                                            <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                    <div>
+                                                        <i class="fas fa-book"></i>Project Overview</div>
 
-                                            </mat-expansion-panel>
+                                                    <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                        <mat-icon>more_vert</mat-icon>
+                                                    </button>
+                                                </div>
 
-                                        </mat-accordion>
+                                                <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                    <app-project-overview></app-project-overview>
+                                                </div>
+                                            </div>
+                                            <!-- / Front -->
 
-                                    </mat-grid-tile>
-                                    <mat-grid-tile>
-                                        <mat-accordion class="cardAlign">
-                                            <mat-expansion-panel [expanded]="true">
-                                                <mat-expansion-panel-header>
-                                                    <mat-panel-title>
+                                            <!-- Back -->
+                                            <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                    <mat-icon class="s-16">close</mat-icon>
+                                                </button>
+
+                                                <div>
+                                                    More widget info
+                                                </div>
+                                            </div>
+                                            <!-- / Back -->
+
+                                        </fuse-widget>
+
+                                        <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+
+                                            <!-- Front -->
+                                            <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                    <div>
                                                         <i class="fas fa-file-invoice-dollar"></i>
-                                                        Budget Overview
-                                                    </mat-panel-title>
+                                                        Budget Overview</div>
 
-                                                </mat-expansion-panel-header>
-                                                <app-project-overview></app-project-overview>
+                                                    <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                        <mat-icon>more_vert</mat-icon>
+                                                    </button>
+                                                </div>
 
-                                            </mat-expansion-panel>
+                                                <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                    <app-project-overview></app-project-overview>
+                                                </div>
+                                            </div>
+                                            <!-- / Front -->
 
-                                        </mat-accordion>
-                                    </mat-grid-tile>
+                                            <!-- Back -->
+                                            <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                    <mat-icon class="s-16">close</mat-icon>
+                                                </button>
 
-                                    <mat-grid-tile>
+                                                <div>
+                                                    More widget info
+                                                </div>
+                                            </div>
+                                            <!-- / Back -->
 
-                                        <mat-accordion class="cardAlign">
-                                            <mat-expansion-panel [expanded]="true">
-                                                <mat-expansion-panel-header>
-                                                    <mat-panel-title>
+                                        </fuse-widget>
+
+
+                                        <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+
+                                            <!-- Front -->
+                                            <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                    <div>
                                                         <i class="fas fa-users"></i>
-                                                        Project Team Members
-                                                    </mat-panel-title>
+                                                        Project Team Members</div>
 
-                                                </mat-expansion-panel-header>
-                                                <app-project-overview></app-project-overview>
+                                                    <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                        <mat-icon>more_vert</mat-icon>
+                                                    </button>
+                                                </div>
 
-                                            </mat-expansion-panel>
+                                                <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                    <app-project-overview></app-project-overview>
+                                                </div>
+                                            </div>
+                                            <!-- / Front -->
 
-                                        </mat-accordion>
-                                    </mat-grid-tile>
-                                    <mat-grid-tile>
+                                            <!-- Back -->
+                                            <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                    <mat-icon class="s-16">close</mat-icon>
+                                                </button>
+
+                                                <div>
+                                                    More widget info
+                                                </div>
+                                            </div>
+                                            <!-- / Back -->
+
+                                        </fuse-widget>
 
 
-                                        <mat-accordion class="cardAlign">
-                                            <mat-expansion-panel [expanded]="true">
-                                                <mat-expansion-panel-header>
-                                                    <mat-panel-title>
+                                        <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+
+                                            <!-- Front -->
+                                            <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                    <div>
                                                         <i class="fas fa-sticky-note"></i>
-                                                        Notes
-                                                    </mat-panel-title>
+                                                        Notes</div>
 
-                                                </mat-expansion-panel-header>
-                                                <app-project-overview></app-project-overview>
+                                                    <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                        <mat-icon>more_vert</mat-icon>
+                                                    </button>
+                                                </div>
 
-                                            </mat-expansion-panel>
+                                                <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                    <app-project-overview></app-project-overview>
+                                                </div>
+                                            </div>
+                                            <!-- / Front -->
 
-                                        </mat-accordion>
-                                    </mat-grid-tile>
-                                </mat-grid-list>
+                                            <!-- Back -->
+                                            <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                    <mat-icon class="s-16">close</mat-icon>
+                                                </button>
 
+                                                <div>
+                                                    More widget info
+                                                </div>
+                                            </div>
+                                            <!-- / Back -->
+
+                                        </fuse-widget>
+
+
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
                             </div>
 
                         </mat-tab>
 
                         <mat-tab label="Documents">
-                            <div class="tab-content p-24" fusePerfectScrollbar>
-                                <div fxLayout="row wrap" fxLayoutAlign="start start">
-
-                                    <div *ngIf="product.images.length === 0" class="product-image" fxlayout="row" fxLayoutAlign="center center">
-                                        <img class="media" [src]="'assets/images/ecommerce/product-image-placeholder.png'">
-                                    </div>
-
-                                    <div *ngFor="let image of product.images">
-                                        <div *ngIf="product.images.length > 0" class="product-image" fxlayout="row" fxLayoutAlign="center center">
-                                            <img class="media" [src]="image.url">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                <attachment-tree></attachment-tree>
                         </mat-tab>
 
                         <mat-tab label="Project Budget">
@@ -212,9 +274,9 @@
                                 </mat-form-field>
                             </div>
                         </mat-tab>
-                        <mat-tab label="Bond Website"> Bond Website Here</mat-tab>
+                        <mat-tab label="Bond Website"> <bond-website> </bond-website></mat-tab>
                         <mat-tab label="Photos"> Photos Website Here</mat-tab>
-                        <mat-tab label="Notes"> Notes Website Here</mat-tab>
+                        <mat-tab label="Notes"> <notes></notes></mat-tab>
 
                     </mat-tab-group>
                 </form>

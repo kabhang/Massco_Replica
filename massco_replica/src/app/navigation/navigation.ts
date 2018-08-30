@@ -26,7 +26,7 @@ export const navigation: FuseNavigation[] = [
                         id   : 'project',
                         title: 'Project',
                         type : 'item',
-                        url  : '/apps/dashboards/project',
+                        url  : '/apps/calendar',
                         exactMatch: true
                        
                      }
@@ -46,7 +46,7 @@ export const navigation: FuseNavigation[] = [
                         id   : 'dashboard',
                         title: '5th Floor CTE & 2nd Floor Room 215',
                         type : 'item',
-                        url  : '/apps/e-commerce/dashboard'
+                        url  : '/apps/calendar'
                     },
                     {
                         id        : 'products',
@@ -59,21 +59,21 @@ export const navigation: FuseNavigation[] = [
                         id        : 'productDetail',
                         title     : 'Mass Communications & Security Systems Upgrade',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orders',
                         title     : 'Planning-AC (Non Project Specific)',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Reactivate 1st Floor Warehouse Areas for Storage',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders/1',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     }
                 ]
@@ -98,69 +98,69 @@ export const navigation: FuseNavigation[] = [
                         id   : 'dashboard',
                         title: 'Central Plant / TES',
                         type : 'item',
-                        url  : '/apps/e-commerce/dashboard'
+                        url  : '/apps/calendar'
                     },
                     {
-                        id        : 'products',
+                        id        : 'productDetail',
                         title     : 'Library-Learning Resource Center Expansion',
                         type      : 'item',
-                        url       : '/apps/e-commerce/products',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'productDetail',
                         title     : 'Mass Communications & Security Systems Upgrade',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orders',
                         title     : 'New Science, Engineering, and Mathematics Building',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'New Veterans Resource Center & Student Activities Center Expansion',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'New Veterans Resource Center & Student Activities Center Expansion',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Planning-CC (Non Project Specific)',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Swing Space Projects',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     } ,
                     {
                         id        : 'orderDetail',
                         title     : 'Update/Improve Infrastructure',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     }   ,
                     {
                         id        : 'orderDetail',
                         title     : 'Veterans Memorial Bridge',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     }   
                 ]
@@ -176,69 +176,69 @@ export const navigation: FuseNavigation[] = [
                         id   : 'dashboard',
                         title: 'Central Plant / TES',
                         type : 'item',
-                        url  : '/apps/e-commerce/dashboard'
+                        url  : '/apps/calendar'
                     },
                     {
                         id        : 'products',
                         title     : 'Library-Learning Resource Center Expansion',
                         type      : 'item',
-                        url       : '/apps/e-commerce/products',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'productDetail',
                         title     : 'Mass Communications & Security Systems Upgrade',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orders',
                         title     : 'New Science, Engineering, and Mathematics Building',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'New Veterans Resource Center & Student Activities Center Expansion',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders/1',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'New Veterans Resource Center & Student Activities Center Expansion',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders/1',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Planning-CC (Non Project Specific)',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders/1',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Swing Space Projects',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders/1',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     } ,
                     {
                         id        : 'orderDetail',
                         title     : 'Update/Improve Infrastructure',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders/1',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     }   ,
                     {
                         id        : 'orderDetail',
                         title     : 'Veterans Memorial Bridge',
                         type      : 'item',
-                        url       : '/apps/e-commerce/orders/1',
+                        url       : '/apps/calendar',
                         exactMatch: true
                     }   
                 ]
@@ -258,7 +258,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.CALENDAR',
                 type     : 'item',
                 icon     : 'today',
-                url      : '/apps/calendar'
+                url      : '/apps/e-commerce/district/'
             },
             {
                 id       : 'calendar',

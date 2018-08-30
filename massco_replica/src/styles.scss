@@ -22,3 +22,19 @@ $yellow-theme: mat-light-theme($yellow-theme-primary, $yellow-theme-accent, $yel
     // Generate the fuse color classes with the new colors...
     @include generateFuseColorClasses($yellow-theme-primary, $yellow-theme-accent, $yellow-theme-warn);
 }
+
+.popupToolBar{background: #03A9F4 !important; color: #fff !important;}
+a{cursor: pointer;}
+a:hover{text-decoration: none  !important;}
+
+.mat-dialog-container{width:473px !important; padding: 0 !important;}
+.mat-header-cell{background: #d2d2d2;}
+mat-footer-row, mat-row:nth-child(odd){background: #eaeaea}
+tbody> tr:nth-child(odd){background: #eaeaea}
+
+.fa-book:before, .fa-file-invoice-dollar:before, .fa-users:before, .fa-sticky-note:before, .fa-file-alt:before, .fa-print:before, .fa-cog:before
+ {font-size: 17px!important; position: relative;bottom: -1px;color:#717070;}
+ 
+ #product .content .mat-tab-body-content {
+    display: inline !important;
+}

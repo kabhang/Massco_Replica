@@ -1,9 +1,24 @@
+
+
+<mat-accordion>
+    <mat-expansion-panel style="background:#e6e6e6; margin-bottom: 40px;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+       <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> ADD NEW TRANSACTION</mat-panel-title>    
+      </mat-expansion-panel-header> 
+      
+      <budget-panel></budget-panel>
+  
+  
+    </mat-expansion-panel>
+  
+  </mat-accordion>   
+
+
 <mat-list role="list">
-    <mat-list-item role="listitem"><i class="fas fa-file-invoice-dollar"></i> <a href="#f">Budget Generator</a></mat-list-item>
-    <mat-list-item role="listitem"><i class="fas fa-file-alt"></i><a href="#f">Budget Estimates</a></mat-list-item>
-    <mat-list-item role="listitem"><i class="fas fa-book"></i><a href="#f">Budget Reporting</a></mat-list-item>
+
     <mat-list-item role="listitem"><i class="fas fa-print text-info"></i><a href="#f">Printer-friendly page</a></mat-list-item>
-    <mat-list-item role="listitem"><i class="fas fa-cog"></i><a href="#f">Preferences</a></mat-list-item>
+ 
   </mat-list>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">

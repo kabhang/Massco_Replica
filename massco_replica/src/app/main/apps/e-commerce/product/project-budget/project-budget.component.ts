@@ -36,3 +36,4 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {alphaBet:'C',position: 9, name: 'CC Plan Check Fee', totalCost: 0, stateFunded: 0,bondFunded: 0	,local:0,rda: 0,schMaint:0,measureX: 0},
   {alphaBet:'D', position: 10,name: 'Other Costs', totalCost: 0, stateFunded: 0,bondFunded: 0	,local:0,rda: 0,schMaint:0,measureX: 0}
 ];
+

@@ -1,0 +1,108 @@
+
+
+        <div>
+                <mat-toolbar class="popupToolBar">
+                    <span>Edit Contract NOC</span>
+                  </mat-toolbar>
+            </div>
+            
+ 
+
+<div class="tab-content p-24" fusePerfectScrollbar >
+   
+
+   
+                                  
+    <div class="w-100-p">
+        <mat-form-field fxFlex="100"  class="mr-16">
+            <input matInput [matDatepicker]="picker" placeholder="NOC Date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+  
+          </div>
+
+          <div class="w-100-p">
+                <mat-form-field fxFlex="100">
+                        <mat-select placeholder="Surety" formControlName="Description" required  >
+                            <mat-option [value]="'none'">
+                               None
+              
+                            </mat-option>
+                            <mat-option [value]="'**New**'">
+                               **New**
+                            </mat-option>
+                                                   
+              
+                        </mat-select>
+                      </mat-form-field>  
+
+          
+      
+             
+          </div>
+
+          <div class="w-100-p">
+
+                <mat-form-field fxFlex="100"  class="mr-16">
+                        <input matInput [matDatepicker]="picker1" placeholder="Board Approved">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+      
+             
+          </div>
+       
+ 
+   
+   
+
+    
+    <div class="w-100-p">
+
+            <mat-form-field fxFlex="100"  class="mr-16">
+                    <input matInput [matDatepicker]="picker2" placeholder="Mailed for Rec">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+
+       
+    </div>
+    <div class="w-100-p">
+            <mat-form-field fxFlex="100"  class="mr-16">
+                    <input matInput [matDatepicker]="picker3" placeholder="Date Recorded">
+                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3></mat-datepicker>
+                </mat-form-field>
+
+
+        
+    </div>
+    <div class="w-100-p">
+
+        <mat-form-field fxFlex="100">
+            <input matInput placeholder="Doc Number"  value="">
+          </mat-form-field>
+    </div>
+    <div class="w-100-p">
+
+            <mat-form-field fxFlex="50"  class="mr-16">
+                    <input matInput [matDatepicker]="picker4" placeholder="Release Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                    <mat-datepicker #picker4></mat-datepicker>
+                </mat-form-field>
+             
+                <span class="mat-caption">(Leave Blank to automatically calculate as 35 days from DateRecorded when record is saved.)</span>
+            
+
+    </div>
+                         
+  
+    <div class="w-100-p" style="float: right">
+            <button mat-flat-button color="accent" style="margin-right: 10px;">Save</button>
+            <!-- <button mat-flat-button >Delete</button> -->
+        </div>
+
+       
+          
+</div>
