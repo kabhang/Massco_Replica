@@ -275,7 +275,26 @@
                             </div>
                         </mat-tab>
                         <mat-tab label="Bond Website"> <bond-website> </bond-website></mat-tab>
-                        <mat-tab label="Photos"> Photos Website Here</mat-tab>
+                        <mat-tab label="Photos">  
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+                            <!-- <div fxLayout="row wrap" fxLayoutAlign="start start">
+
+                                <div *ngIf="product.images.length === 0"
+                                     class="product-image" fxlayout="row" fxLayoutAlign="center center">
+                                    <img class="media"
+                                         [src]="'assets/images/ecommerce/product-image-placeholder.png'">
+                                </div>
+
+                                <div *ngFor="let image of product.images">
+                                    <div *ngIf="product.images.length > 0"
+                                         class="product-image" fxlayout="row" fxLayoutAlign="center center">
+                                        <img class="media" [src]="image.url">
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <photos></photos>
+                        </div></mat-tab>
                         <mat-tab label="Notes"> <notes></notes></mat-tab>
 
                     </mat-tab-group>

@@ -61,6 +61,8 @@ import { NOCComponent,DialogNocDialog } from './products/noc/noc.component';
 import { ExpenseComponent, DialogAttDialog } from './products/expense/expense.component';
 import { BondWebsiteComponent,DialogBondDialog } from './product/bond-website/bond-website.component';
 import { BudgetPanelComponent } from './product/project-budget/budget-panel/budget-panel.component';
+import { PhotosComponent, PhotoEditDialog } from './product/photos/photos.component';
+import { PhotoServiceService } from './product/photos/photo-service.service';
 
 
 
@@ -80,6 +82,13 @@ const routes: Routes = [
         // resolve  : {
         //     data: EcommerceDashboardService
         // }
+    },
+    {
+        path     : 'photos/:id',
+        component: PhotosComponent,
+        resolve  : {
+            data: PhotoServiceService
+        }
     },
     {
         path     : 'products',
@@ -182,7 +191,8 @@ const routes: Routes = [
         NOCComponent,DialogNocDialog,
         ExpenseComponent,DialogAttDialog,
         BondWebsiteComponent,DialogBondDialog,
-        BudgetPanelComponent
+        BudgetPanelComponent,
+        PhotosComponent, PhotoEditDialog
       
         
        
@@ -230,14 +240,15 @@ const routes: Routes = [
         FuseSharedModule,
         FuseWidgetModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog],  
+    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog],  
       providers   : [
         EcommerceDashboardService,
         EcommerceProductsService,
         EcommerceProductService,
         EcommerceOrdersService,
         EcommerceOrderService,
-        TransactionService
+        TransactionService,
+        PhotoServiceService
     ]
 })
 export class EcommerceModule
