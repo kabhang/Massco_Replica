@@ -23,7 +23,7 @@ $yellow-theme: mat-light-theme($yellow-theme-primary, $yellow-theme-accent, $yel
     @include generateFuseColorClasses($yellow-theme-primary, $yellow-theme-accent, $yellow-theme-warn);
 }
 
-.popupToolBar{background: #03A9F4 !important; color: #fff !important;}
+.popupToolBar{background: #03A9F4 !important; color: #fff !important; padding: 10px;}
 a{cursor: pointer;}
 a:hover{text-decoration: none  !important;}
 

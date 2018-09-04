@@ -28,6 +28,9 @@
         }
     }
 
+    .mat-dialog-container{width: auto !important;}
+    
+
     .products-table {
         flex: 1 1 auto;
         border-bottom: 1px solid rgba(0, 0, 0, .12);
@@ -43,6 +46,9 @@
             cursor: pointer;
             height: 84px;
         }
+
+
+   
 
         .mat-cell {
             min-width: 0;

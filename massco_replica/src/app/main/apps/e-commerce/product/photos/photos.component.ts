@@ -22,6 +22,9 @@ export class PhotosComponent {
       console.log(`Dialog result: ${result}`);
     });
   }
+
+
+  
 }
 
 export interface PeriodicElement {

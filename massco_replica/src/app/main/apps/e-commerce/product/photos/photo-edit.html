@@ -1,3 +1,48 @@
-<mat-form-field class="example-full-width">
-        <input matInput type="file">
-      </mat-form-field>
+<div>
+    <mat-toolbar class="popupToolBar" style="padding-right: 172px;">
+        <span> Please select the folder to delete</span>
+      </mat-toolbar>
+</div>
+<div class="p-24" fusePerfectScrollbar>
+
+<div class="w-100-p">
+    <mat-form-field fxFlex="100" class="mr-16" class="mr-16">
+        <input matInput placeholder="Title" value="5th Floor CTE and Laboratory">
+    </mat-form-field>
+</div>
+
+
+<div class="w-100-p">
+    <mat-form-field fxFlex="100" class="mr-16" class="mr-16">
+        <input matInput placeholder="Description" value="Campus Overhead View of Floor Build Out">
+    </mat-form-field>
+</div>
+<div class="w-100-p">
+    <mat-form-field fxFlex="50" class="mr-16" class="mr-16">
+        <input matInput placeholder="Display Order" value="1">
+    </mat-form-field>
+
+    <mat-checkbox>Post to web</mat-checkbox>
+</div>
+
+
+
+
+<div class="w-100-p">
+        <div class="form-group"  fxFlex="30" class="mr-16">
+                <label for="file">Attachments</label>
+                <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+            </div>
+
+</div>
+
+<div  style="float: right">
+    <button mat-flat-button color="accent" class="mr-16">Save</button>    
+    <button mat-flat-button class="mr-16"  >Delete</button>                                          
+</div>
+
+
+   
+      
+</div>
+  
