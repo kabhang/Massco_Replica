@@ -250,29 +250,7 @@
                         </mat-tab>
 
                         <mat-tab label="Meeting Minutes">
-                            <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
-
-                                <div class="py-16" fxLayout="row">
-                                    <mat-form-field fxFlex>
-                                        <input matInput name="Width" formControlName="width" placeholder="Width">
-                                    </mat-form-field>
-                                    <mat-form-field fxFlex>
-                                        <input matInput name="Height" formControlName="height" placeholder="Height">
-                                    </mat-form-field>
-                                    <mat-form-field fxFlex>
-                                        <input matInput name="Depth" formControlName="depth" placeholder="Depth">
-                                    </mat-form-field>
-                                </div>
-
-                                <mat-form-field class="w-100-p">
-                                    <input matInput name="Weight" formControlName="weight" placeholder="Weight">
-                                </mat-form-field>
-
-                                <mat-form-field class="w-100-p">
-                                    <input matInput name="extraShippingFee" formControlName="extraShippingFee" placeholder="Extra Shipping Fee" type="number">
-                                    <span matPrefix>$&nbsp;</span>
-                                </mat-form-field>
-                            </div>
+                                <meeting></meeting>
                         </mat-tab>
                         <mat-tab label="Bond Website"> <bond-website> </bond-website></mat-tab>
                         <mat-tab label="Photos">  
@@ -296,6 +274,7 @@
                             <photos></photos>
                         </div></mat-tab>
                         <mat-tab label="Notes"> <notes></notes></mat-tab>
+                        <mat-tab label="Currespondence"><currespondence></currespondence></mat-tab>
 
                     </mat-tab-group>
                 </form>

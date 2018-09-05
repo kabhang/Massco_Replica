@@ -63,6 +63,9 @@ import { BondWebsiteComponent,DialogBondDialog } from './product/bond-website/bo
 import { BudgetPanelComponent } from './product/project-budget/budget-panel/budget-panel.component';
 import { PhotosComponent, PhotoEditDialog } from './product/photos/photos.component';
 import { PhotoServiceService } from './product/photos/photo-service.service';
+import { MeetingComponent,DialogContentMeeting } from './product/meeting/meeting.component';
+import { CurrespondenceComponent } from './product/currespondence/currespondence.component';
+
 
 
 
@@ -192,7 +195,9 @@ const routes: Routes = [
         ExpenseComponent,DialogAttDialog,
         BondWebsiteComponent,DialogBondDialog,
         BudgetPanelComponent,
-        PhotosComponent, PhotoEditDialog
+        PhotosComponent, PhotoEditDialog,MeetingComponent,
+        DialogContentMeeting,
+        CurrespondenceComponent
       
         
        
@@ -240,7 +245,7 @@ const routes: Routes = [
         FuseSharedModule,
         FuseWidgetModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog],  
+    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog,DialogContentMeeting],  
       providers   : [
         EcommerceDashboardService,
         EcommerceProductsService,
