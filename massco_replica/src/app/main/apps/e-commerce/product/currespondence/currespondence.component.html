@@ -1,3 +1,238 @@
-<p>
-  currespondence works!
-</p>
+<mat-accordion >
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+       <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> Add New Correspondence</mat-panel-title>
+      
+      </mat-expansion-panel-header> 
+      <div class="tab-content p-24" fusePerfectScrollbar>
+          <div class="w-100-p">
+              <mat-form-field fxFlex="50" class="mr-16" >
+                  <mat-select placeholder="Correspondence Level" formControlName="Visibility" required  >
+                      <mat-option [value]="'-- none --'">
+                       Project
+                      </mat-option>
+                      <mat-option [value]="' Option 1'">
+                        Contract
+                      </mat-option>
+                    
+                  </mat-select>
+  
+              </mat-form-field>
+              <mat-form-field fxFlex="50" >
+                  <mat-select placeholder="Project Name" formControlName="Visibility" required  >
+                      <mat-option [value]="'-- none --'">
+                       Project
+                      </mat-option>
+                      <mat-option [value]="' Option 1'">
+                        Contract
+                      </mat-option>
+                    
+                  </mat-select>
+  
+              </mat-form-field>
+  
+  
+             
+          </div>
+         
+          <div class="w-100-p">
+              <mat-form-field fxFlex="50" class="mr-16" >
+                  <mat-select placeholder="Correspondence Type" formControlName="Visibility" required  >
+                      <mat-option [value]="'-- none --'">
+                       Not Selected
+                      </mat-option>
+                      <mat-option [value]="' Option 1'">
+                      DSA
+                      </mat-option>
+                      <mat-option [value]="' Letters'">
+                          Letters
+                          </mat-option>
+                          <mat-option [value]="' Notice of Award'">
+                              Notice of Award
+                              </mat-option>
+                          
+                    
+                  </mat-select>
+  
+              </mat-form-field>
+              <mat-form-field fxFlex="50" >
+                  <mat-select placeholder="Project Name" formControlName="Visibility" required  >
+                      <mat-option [value]="'-- none --'">
+                       Project
+                      </mat-option>
+                      <mat-option [value]="' Option 1'">
+                        Contract
+                      </mat-option>
+                    
+                  </mat-select>
+  
+              </mat-form-field>
+  
+  
+             
+          </div>
+         
+  
+          <div class="w-100-p">
+              <mat-form-field class="w-100-p" fxFlex="50" class="mr-16">
+                  <textarea matInput name="Topic" formControlName="Description" placeholder="Topic" rows="5">
+              </textarea>
+              </mat-form-field>
+             
+
+          </div>
+
+        
+                                    
+       
+          <div class="w-100-p" style="float: right">
+                  <button mat-flat-button color="accent" style="margin-right: 10px;">Save</button>
+                  <button mat-flat-button >Cancel</button>
+              </div>
+  
+             
+                
+      </div>
+          
+    </mat-expansion-panel>
+    
+  
+  </mat-accordion>
+
+
+<span class="mat-subheading-2 mt-16">Project Level Correspondence</span>
+<div style="float: right; margin: 10px 0; ">
+<button mat-button [matMenuTriggerFor]="animals">Prefrences</button>
+
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+</mat-menu>
+
+<mat-menu #vertebrates="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu>
+
+<mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu>
+
+</div>
+<table mat-table [dataSource]="dataSource" class=" mb-16">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef> Number </th>
+      <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="uploadedBy">
+      <th mat-header-cell *matHeaderCellDef> Uploaded By </th>
+      <td mat-cell *matCellDef="let element"> {{element.uploadedBy}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="fileName">
+            <th mat-header-cell *matHeaderCellDef> File Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.fileName}} </td>
+          </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+  <span class="mat-subheading-2">Contract Level Correspondence</span>
+
+<table mat-table [dataSource]="dataSourceOne" class=" mb-16">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="contractID">
+      <th mat-header-cell *matHeaderCellDef> Contract ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.contractID}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="bidPackNumber">
+      <th mat-header-cell *matHeaderCellDef> Bid Pack Number </th>
+      <td mat-cell *matCellDef="let element"> {{element.bidPackNumber}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="contractor">
+      <th mat-header-cell *matHeaderCellDef> Contractor </th>
+      <td mat-cell *matCellDef="let element"> {{element.contractor}} </td>
+    </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="contact">
+            <th mat-header-cell *matHeaderCellDef> Contact </th>
+            <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+          </ng-container>
+  
+                  <!-- Symbol Column -->
+        <ng-container matColumnDef="phoneNumber">
+            <th mat-header-cell *matHeaderCellDef> Phone Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+          </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsTwo"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsTwo;"></tr>
+  </table>

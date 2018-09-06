@@ -31,7 +31,6 @@ import { EcommerceOrderComponent } from 'app/main/apps/e-commerce/order/order.co
 import { EcommerceOrderService } from 'app/main/apps/e-commerce/order/order.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ProjectOverviewComponent } from './product/project-overview/project-overview.component';
-
 import { DocumentComponent } from './product/document/document.component';
 import {ProjectBudgetComponent} from './product/project-budget/project-budget.component'
 import {DialogContentExample,DialogContentExampleDialog} from'./product//dialog-content/dialog-content-example';
@@ -65,6 +64,7 @@ import { PhotosComponent, PhotoEditDialog } from './product/photos/photos.compon
 import { PhotoServiceService } from './product/photos/photo-service.service';
 import { MeetingComponent,DialogContentMeeting } from './product/meeting/meeting.component';
 import { CurrespondenceComponent } from './product/currespondence/currespondence.component';
+
 
 
 
@@ -253,7 +253,8 @@ const routes: Routes = [
         EcommerceOrdersService,
         EcommerceOrderService,
         TransactionService,
-        PhotoServiceService
+        PhotoServiceService,
+      
     ]
 })
 export class EcommerceModule
