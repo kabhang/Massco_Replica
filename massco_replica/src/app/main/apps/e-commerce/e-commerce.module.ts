@@ -64,7 +64,8 @@ import { PhotosComponent, PhotoEditDialog } from './product/photos/photos.compon
 import { PhotoServiceService } from './product/photos/photo-service.service';
 import { MeetingComponent,DialogContentMeeting } from './product/meeting/meeting.component';
 import { CurrespondenceComponent } from './product/currespondence/currespondence.component';
-
+import { PepComponent } from './product/pep/pep.component';
+import { PepContractComponent } from './product/pep-contract/pep-contract.component';
 
 
 
@@ -197,7 +198,8 @@ const routes: Routes = [
         BudgetPanelComponent,
         PhotosComponent, PhotoEditDialog,MeetingComponent,
         DialogContentMeeting,
-        CurrespondenceComponent
+        CurrespondenceComponent,
+        PepComponent,PepContractComponent
       
         
        
