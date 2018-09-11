@@ -243,6 +243,127 @@ export const navigation: FuseNavigation[] = [
                     }   
                 ]
             },
+            {
+                id       : 'academy',
+                title    : 'Administration',
+                translate: 'NAV.ACADEMY',
+                type     : 'collapsable',
+                icon     : 'school',
+                children : [
+                    {
+                        id   : 'dashboard',
+                        title: 'My Settings',
+                        type : 'item',
+                        url  : '/apps/e-commerce/orders'
+                    },
+                    {
+                        id        : 'products',
+                        title     : 'Maintain District Bond Website Info',
+                        type      : 'item',
+                        url       : '/apps/e-commerce/maintainDistrict',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'productDetail',
+                        title     : 'CM/DM Report Notes',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orders',
+                        title     : 'Table Maintenance',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'District Settings (Current District)',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'System Settings',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Maintain Clients/Districts/Colleges',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Maintain Users',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    } ,
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Maintain User Roles',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    }   ,
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Maintain Help Files',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Maintain Reports',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },      
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Update Prompt Announcement',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'System Utilities',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Workflow Settings',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'User Activity Report',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                    {
+                        id        : 'orderDetail',
+                        title     : 'Test Report Viewer',
+                        type      : 'item',
+                        url       : '/apps/calendar',
+                        exactMatch: true
+                    },
+                ]
+            },
+            
             
             {
                 id       : 'calendar',

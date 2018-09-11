@@ -64,8 +64,9 @@ import { PhotosComponent, PhotoEditDialog } from './product/photos/photos.compon
 import { PhotoServiceService } from './product/photos/photo-service.service';
 import { MeetingComponent,DialogContentMeeting } from './product/meeting/meeting.component';
 import { CurrespondenceComponent } from './product/currespondence/currespondence.component';
-import { PepComponent } from './product/pep/pep.component';
+import { PepComponent, PepSavechanges,PepRecordItration } from './product/pep/pep.component';
 import { PepContractComponent } from './product/pep-contract/pep-contract.component';
+import { MaintainDistrictComponent } from './maintain-district/maintain-district.component';
 
 
 
@@ -100,6 +101,11 @@ const routes: Routes = [
         resolve  : {
             data: EcommerceProductsService
         }
+    },
+    {
+        path     : 'maintainDistrict',
+        component: MaintainDistrictComponent,
+    
     },
     {
         path     : 'products/:id/:handle',
@@ -199,10 +205,8 @@ const routes: Routes = [
         PhotosComponent, PhotoEditDialog,MeetingComponent,
         DialogContentMeeting,
         CurrespondenceComponent,
-        PepComponent,PepContractComponent
-      
-        
-       
+        PepComponent,PepContractComponent,PepSavechanges,PepRecordItration,
+        MaintainDistrictComponent
     ],
     imports: [
         RouterModule.forChild(routes),
@@ -247,7 +251,7 @@ const routes: Routes = [
         FuseSharedModule,
         FuseWidgetModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog,DialogContentMeeting],  
+    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog,DialogContentMeeting,PepSavechanges,PepRecordItration],  
       providers   : [
         EcommerceDashboardService,
         EcommerceProductsService,

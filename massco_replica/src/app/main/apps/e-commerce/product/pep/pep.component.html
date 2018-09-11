@@ -1,7 +1,7 @@
 <mat-list role="list" style="display: flex; font-size:14px">
     <mat-list-item role="listitem"><mat-icon>local_printshop</mat-icon>Print</mat-list-item>
-    <mat-list-item role="listitem"><mat-icon>save</mat-icon>Save Changes </mat-list-item>
-    <mat-list-item role="listitem"><mat-icon>assignment_returned</mat-icon>Record New Iteration </mat-list-item>
+    <mat-list-item role="listitem"  (click)="openDialog()"><mat-icon>save</mat-icon>Save Changes </mat-list-item>
+    <mat-list-item role="listitem" (click)="openDialogOne()"><mat-icon>assignment_returned</mat-icon>Record New Iteration </mat-list-item>
     <mat-list-item role="listitem"><mat-icon>date_range</mat-icon>Iteration No. / Date </mat-list-item>
     <mat-list-item> <mat-form-field fxFlex="100" class="mr-16">
         <mat-select placeholder="Iteration No. / Date " formControlName=">Iteration No. / Date " required >
@@ -26,7 +26,7 @@
 
 
   <mat-accordion>
-      <mat-expansion-panel>
+      <mat-expansion-panel class="mb-16" [expanded]="true">
         <mat-expansion-panel-header>
             <mat-list role="list" style="display: flex; font-size:14px">
                 <mat-list-item role="listitem" style="width:670px">PHASES</mat-list-item>
@@ -76,7 +76,7 @@
           </table>
       </mat-expansion-panel>
 
-      <mat-expansion-panel>
+      <mat-expansion-panel class="mb-16" [expanded]="true">
           <mat-expansion-panel-header>
               <mat-list role="list" style="display: flex; font-size:14px">
                   <mat-list-item role="listitem"  style="width: 327px;">CONTRACTS</mat-list-item>
@@ -92,17 +92,13 @@
           <pep-contract></pep-contract>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel class="mb-16" [expanded]="true">
             <mat-expansion-panel-header>
-              Notes
-                <!-- <mat-list role="list" style="display: flex; font-size:14px">
-                    <mat-list-item role="listitem"  style="width: 327px;">CONTRACTS</mat-list-item>
-                    <mat-list-item role="listitem"  style="width:321px">Purchase Order Number</mat-list-item>
-                    <mat-list-item role="listitem" style="width:217px">BOT Award</mat-list-item>      
-                    <mat-list-item role="listitem" style="width:338px">Signed Copy Rec'd / PO Date </mat-list-item>      
-                    <mat-list-item role="listitem" >Duration </mat-list-item>      
-                     
-                  </mat-list> -->
+            
+                <mat-list role="list" style="display: flex; font-size:14px">
+                    <mat-list-item role="listitem"  style="width: 327px;">NOTES</mat-list-item>
+                                      
+                  </mat-list>
           
             </mat-expansion-panel-header>
   

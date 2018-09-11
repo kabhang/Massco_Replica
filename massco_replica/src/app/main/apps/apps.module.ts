@@ -10,17 +10,12 @@ const routes = [
     {
         path        : 'dashboards/project',
         loadChildren: './dashboards/project/project.module#ProjectDashboardModule'
-    },
-
-    
+    },   
 
     {
         path        : 'e-commerce',
         loadChildren: './e-commerce/e-commerce.module#EcommerceModule'
     },
-
-
-   
 ];
 
 @NgModule({

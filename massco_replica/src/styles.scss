@@ -27,7 +27,7 @@ $yellow-theme: mat-light-theme($yellow-theme-primary, $yellow-theme-accent, $yel
 a{cursor: pointer;}
 a:hover{text-decoration: none  !important;}
 
-.mat-dialog-container{width:473px !important; padding: 0 !important;}
+.mat-dialog-container{width:473px; padding: 0 ;}
 .mat-header-cell{background: #d2d2d2;}
 mat-footer-row, mat-row:nth-child(odd){background: #eaeaea}
 tbody> tr:nth-child(odd){background: #eaeaea}
