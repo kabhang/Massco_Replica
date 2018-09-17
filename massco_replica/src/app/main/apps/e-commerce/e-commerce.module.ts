@@ -67,8 +67,16 @@ import { CurrespondenceComponent } from './product/currespondence/currespondence
 import { PepComponent, PepSavechanges,PepRecordItration } from './product/pep/pep.component';
 import { PepContractComponent } from './product/pep-contract/pep-contract.component';
 import { MaintainDistrictComponent } from './maintain-district/maintain-district.component';
+import { CBOCComponent } from './cboc/cboc.component';
+import { ReportNotesComponent } from './report-notes/report-notes.component';
+import { ObjectCodeComponent, ObjectCodeDialog } from './object-code/object-code.component';
+import { AcivityModeComponent, ActivityEditDialog } from './acivity-mode/acivity-mode.component';
+import { BoundFundComponent } from './bound-fund/bound-fund.component';
+import { BoundSeriesComponent } from './bound-series/bound-series.component';
 
-
+import { CategoryComponent } from './category/category.component';
+import { CutoffDatesComponent } from './cutoff-dates/cutoff-dates.component';
+import { PhaseComponent } from './phase/phase.component';
 
 
 
@@ -105,6 +113,56 @@ const routes: Routes = [
     {
         path     : 'maintainDistrict',
         component: MaintainDistrictComponent,
+    
+    },
+    {
+        path     : 'CBOC',
+        component: CBOCComponent,
+    
+    },
+    {
+        path     : 'AcivityMode',
+        component: AcivityModeComponent,
+    
+    },
+    {
+        path     : 'BondFund',
+        component: BoundFundComponent,
+    
+    },
+    {
+        path     : 'BoundSeries',
+        component: BoundSeriesComponent,
+    
+    },
+    {
+        path     : 'category',
+        component: CategoryComponent,
+    
+    },
+    {
+        path     : 'CutoffDates',
+        component: CutoffDatesComponent,
+    
+    },
+    {
+        path     : 'phase',
+        component: PhaseComponent,
+    
+    },
+    {
+        path     : 'ReportNotes',
+        component: ReportNotesComponent,
+    
+    },
+    {
+        path     : 'ObjectCode',
+        component: ObjectCodeComponent,
+    
+    },
+    {
+        path     : 'BoundFund',
+        component: BoundFundComponent,
     
     },
     {
@@ -204,12 +262,15 @@ const routes: Routes = [
         BudgetPanelComponent,
         PhotosComponent, PhotoEditDialog,MeetingComponent,
         DialogContentMeeting,
-        CurrespondenceComponent,
+        CurrespondenceComponent,    
         PepComponent,PepContractComponent,PepSavechanges,PepRecordItration,
-        MaintainDistrictComponent
-    ],
+        MaintainDistrictComponent,CBOCComponent, ReportNotesComponent, ObjectCodeDialog,ObjectCodeComponent,AcivityModeComponent, ActivityEditDialog,
+        BoundFundComponent,BoundSeriesComponent,CategoryComponent,CutoffDatesComponent,PhaseComponent
+
+    ], 
     imports: [
         RouterModule.forChild(routes),
+
         MatExpansionModule,
         MatButtonModule,
         MatMenuModule,
@@ -251,7 +312,7 @@ const routes: Routes = [
         FuseSharedModule,
         FuseWidgetModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog,DialogContentMeeting,PepSavechanges,PepRecordItration],  
+    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog,DialogContentMeeting,PepSavechanges,PepRecordItration, ObjectCodeDialog,ActivityEditDialog],  
       providers   : [
         EcommerceDashboardService,
         EcommerceProductsService,

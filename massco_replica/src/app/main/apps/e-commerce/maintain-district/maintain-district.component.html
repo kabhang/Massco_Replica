@@ -22,17 +22,7 @@
             </div>
             <!-- / APP TITLE -->
 
-            <!-- SEARCH -->
-            <div class="search-input-wrapper ml-sm-16"
-                 fxFlex="1 0 auto" fxLayout="row" fxLayoutAlign="start center">
-                <label for="search" class="mr-8">
-                    <mat-icon class="secondary-text">search</mat-icon>
-                </label>
-                <mat-form-field floatLabel="never" fxFlex="1 0 auto">
-                    <input id="search" matInput #filter placeholder="Search">
-                </mat-form-field>
-            </div>
-            <!-- / SEARCH -->
+          
         </div>
         <!-- / HEADER -->
 
@@ -43,16 +33,13 @@
                         <mat-tab label="Current News"> 
                                 <div class="tab-content p-24" fusePerfectScrollbar>
                                         <div class="w-100-p">
-                                                <mat-form-field fxFlex="100" class="mr-16">
-                                                    <mat-form-field class="example-full-width">
+                                                <mat-form-field fxFlex="80" class="mr-16">
+                                               
                                                         <textarea matInput placeholder="Write Current News"></textarea>
-                                                      </mat-form-field>   
+                                                   
                                                 </mat-form-field>
                                             </div>
-
-                                         
-                                                
-                                                    <div class="w-80-p">
+                                         <div class="w-80-p">
                                                             <button mat-raised-button  color="accent" style="float: right;" >Save</button>
                                                     </div>
 
@@ -61,15 +48,16 @@
                         </mat-tab>
                         <mat-tab label="CBOC Meeting Minutes">
                                 <div class="tab-content p-24" fusePerfectScrollbar>
-                                            <div class="w-80-p">
-                                            <button mat-raised-button  color="accent" >Reset All Saved Grid and Dashboard Settings</button>
-                                                </div>
+                                           <cboc></cboc>
 
                                         </div>
 
                         </mat-tab>
                    
-                        <mat-tab label="Links"></mat-tab>
+                        <mat-tab label="Links">
+                            <cboc></cboc>
+
+                        </mat-tab>
                       </mat-tab-group>
 
         </div>

@@ -267,15 +267,124 @@ export const navigation: FuseNavigation[] = [
                         id        : 'productDetail',
                         title     : 'CM/DM Report Notes',
                         type      : 'item',
-                        url       : '/apps/calendar',
+                        url       : '/apps/e-commerce/ReportNotes',
                         exactMatch: true
                     },
                     {
                         id        : 'orders',
                         title     : 'Table Maintenance',
-                        type      : 'item',
-                        url       : '/apps/calendar',
-                        exactMatch: true
+                        type      : 'collapsable',                
+                       children:[
+                        {
+                            id        : 'productDetail',
+                            title     : 'Object Codes',
+                            type      : 'item',
+                            url       : '/apps/e-commerce/ObjectCode',
+                            exactMatch: true
+                        },
+                        {
+                            id        : 'productDetail',
+                            title     : 'Project',
+                            type      : 'collapsable',
+                           children:[
+                            {
+                                id        : 'productDetail',
+                                title     : 'Activity Code',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/AcivityMode',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'BondFundCategory',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/BoundFund',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'BondSeriesNumber',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/BoundSeries',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'Category',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/category',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'CBOC_CutoffDates',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/CutoffDates',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'Phase',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/phase',
+                                exactMatch: true
+                            },
+                           ]
+                        },
+                        {
+                            id        : 'productDetail',
+                            title     : 'Contractors',
+                            type      : 'collapsable', 
+                            children:[
+                                {
+                                    id        : 'productDetail',
+                                    title     : 'ContractorType',
+                                    type      : 'item',
+                                    url       : '/apps/e-commerce/ReportNotes',
+                                    exactMatch: true
+                                }
+                            ]
+                        },
+                        {
+                            id        : 'productDetail',
+                            title     : 'Contacts',
+                            type      : 'collapsable',
+                            children:[
+                                {
+                                    id        : 'productDetail',
+                                    title     : 'Surety',
+                                    type      : 'item',
+                                    url       : '/apps/e-commerce/ReportNotes',
+                                    exactMatch: true
+                                }
+
+                            ]
+                            
+                        },
+                        {
+                            id        : 'productDetail',
+                            title     : 'Amendments/COs',
+                            type      : 'collapsable',
+                            children:[
+                                {
+                                    id        : 'productDetail',
+                                    title     : 'Category',
+                                    type      : 'item',
+                                    url       : '/apps/e-commerce/ReportNotes',
+                                    exactMatch: true
+                                },
+                                {
+                                    id        : 'productDetail',
+                                    title     : 'DetailType',
+                                    type      : 'item',
+                                    url       : '/apps/e-commerce/ReportNotes',
+                                    exactMatch: true    
+                                }
+
+                            ]
+                            
+                        },
+                       ]
                     },
                     {
                         id        : 'orderDetail',
