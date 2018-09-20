@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MatButtonModule, MatCheckboxModule,MatMenuModule,MatChipsModule, MatFormFieldModule, MatIconModule, 
-MatInputModule,MatDatepickerModule,MatPaginatorModule, MatRippleModule, MatSelectModule, MatSnackBarModule, 
-MatSortModule, MatTableModule, MatTabsModule,MatDialogModule,MatExpansionModule,MatCardModule,MatListModule,
-MatToolbarModule,MatSlideToggleModule, MatStepperModule,MatTreeModule,MatProgressBarModule,MatRadioModule } from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatMenuModule, MatChipsModule, MatFormFieldModule, MatIconModule,
+    MatInputModule, MatDatepickerModule, MatPaginatorModule, MatRippleModule, MatSelectModule, MatSnackBarModule,
+    MatSortModule, MatTableModule, MatTabsModule, MatDialogModule, MatExpansionModule, MatCardModule, MatListModule,
+    MatToolbarModule, MatSlideToggleModule, MatStepperModule, MatTreeModule, MatProgressBarModule, MatRadioModule
+} from '@angular/material';
 
 
 import { UIFormsModule } from 'app/main/ui/forms/forms.module';
@@ -26,45 +27,45 @@ import { EcommerceProductComponent } from 'app/main/apps/e-commerce/product/prod
 import { EcommerceProductService } from 'app/main/apps/e-commerce/product/product.service';
 import { EcommerceOrdersComponent } from 'app/main/apps/e-commerce/orders/orders.component';
 import { EcommerceOrdersService } from 'app/main/apps/e-commerce/orders/orders.service';
-import { TransactionService} from'./products/transaction/transaction.service';
+import { TransactionService } from './products/transaction/transaction.service';
 import { EcommerceOrderComponent } from 'app/main/apps/e-commerce/order/order.component';
 import { EcommerceOrderService } from 'app/main/apps/e-commerce/order/order.service';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { ProjectOverviewComponent } from './product/project-overview/project-overview.component';
 import { DocumentComponent } from './product/document/document.component';
-import {ProjectBudgetComponent} from './product/project-budget/project-budget.component'
-import {DialogContentExample,DialogContentExampleDialog} from'./product//dialog-content/dialog-content-example';
-import {OverlayModule} from '@angular/cdk/overlay';
+import { ProjectBudgetComponent } from './product/project-budget/project-budget.component'
+import { DialogContentExample, DialogContentExampleDialog } from './product//dialog-content/dialog-content-example';
+import { OverlayModule } from '@angular/cdk/overlay';
 import { AddNewContactComponent } from './add-new-contact/add-new-contact.component';
-import {FormsComponent} from './forms/forms.component'
+import { FormsComponent } from './forms/forms.component'
 import { DistrictComponent } from './district/district.component';
-import {DialogContactExample} from './products/dialog-contact/dialog-contact-example';
+import { DialogContactExample } from './products/dialog-contact/dialog-contact-example';
 
 
-import { DialogLineItemExampleDialog} from'./products/products.component';
+import { DialogLineItemExampleDialog } from './products/products.component';
 import { ProductNewComponent } from 'app/main/apps/e-commerce/product-new/product-new.component';
-import { TransactionComponent,DialogContactExampleDialog,DialogAttachmentDialog } from './products/transaction/transaction.component';
+import { TransactionComponent, DialogContactExampleDialog, DialogAttachmentDialog } from './products/transaction/transaction.component';
 import { AddNewComponent } from './products/add-new/add-new.component';
-import {FormsOneComponent} from './products/formsOne/formsOne.component';
+import { FormsOneComponent } from './products/formsOne/formsOne.component';
 import { ContractNewComponent } from './contract-new/contract-new.component';
 import { AmountTableComponent } from './amount-table/amount-table.component';
 import { DialougeTableComponent } from './products/transaction/dialouge-table/dialouge-table.component';
 import { AttachTableComponent } from './products/transaction/attach-table/attach-table.component';
-import { AttachmentTreeComponent,DialogAddFolderDialog, DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog } from './attachment-tree/attachment-tree.component';
-import { NotesComponent,DialogContentNotes } from './products/notes/notes.component';
+import { AttachmentTreeComponent, DialogAddFolderDialog, DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog } from './attachment-tree/attachment-tree.component';
+import { NotesComponent, DialogContentNotes } from './products/notes/notes.component';
 import { DeleteAttachComponent } from './attachment-tree/delete-attach/delete-attach.component';
 import { UploadFolderComponent } from './attachment-tree/upload-folder/upload-folder.component';
 import { MoveFolderComponent } from './attachment-tree/move-folder/move-folder.component';
 import { AssoAttachComponent } from './contract-new/asso-attach/asso-attach.component';
-import { NOCComponent,DialogNocDialog } from './products/noc/noc.component';
+import { NOCComponent, DialogNocDialog } from './products/noc/noc.component';
 import { ExpenseComponent, DialogAttDialog } from './products/expense/expense.component';
-import { BondWebsiteComponent,DialogBondDialog } from './product/bond-website/bond-website.component';
+import { BondWebsiteComponent, DialogBondDialog } from './product/bond-website/bond-website.component';
 import { BudgetPanelComponent } from './product/project-budget/budget-panel/budget-panel.component';
 import { PhotosComponent, PhotoEditDialog } from './product/photos/photos.component';
 import { PhotoServiceService } from './product/photos/photo-service.service';
-import { MeetingComponent,DialogContentMeeting } from './product/meeting/meeting.component';
+import { MeetingComponent, DialogContentMeeting } from './product/meeting/meeting.component';
 import { CurrespondenceComponent } from './product/currespondence/currespondence.component';
-import { PepComponent, PepSavechanges,PepRecordItration } from './product/pep/pep.component';
+import { PepComponent, PepSavechanges, PepRecordItration } from './product/pep/pep.component';
 import { PepContractComponent } from './product/pep-contract/pep-contract.component';
 import { MaintainDistrictComponent } from './maintain-district/maintain-district.component';
 import { CBOCComponent } from './cboc/cboc.component';
@@ -74,150 +75,197 @@ import { AcivityModeComponent, ActivityEditDialog } from './acivity-mode/acivity
 import { BoundFundComponent } from './bound-fund/bound-fund.component';
 import { BoundSeriesComponent } from './bound-series/bound-series.component';
 
-import { CategoryComponent } from './category/category.component';
+import { CategoryComponent, CategoryCodeDialog } from './category/category.component';
 import { CutoffDatesComponent } from './cutoff-dates/cutoff-dates.component';
 import { PhaseComponent } from './phase/phase.component';
+import { ContractorTypeComponent, ContractTypeDialog } from './contractor-type/contractor-type.component';
+import { SuretyComponent } from './surety/surety.component';
+import { TabVisibilityComponent } from './tab-visibility/tab-visibility.component';
+import { WidgetVisibilityComponent } from './widget-visibility/widget-visibility.component';
+import { MenuVisibilityComponent } from './menu-visibility/menu-visibility.component';
+import { MaintainClientComponent } from './maintain-client/maintain-client.component';
+import {TreeTableModule} from 'primeng/treetable';
+import {TreeNode} from 'primeng/api';
+import { NodeService } from './maintain-client/node-service.service';
+import { MaintainUserComponent } from './maintain-user/maintain-user.component';
 
 
 
 const routes: Routes = [
     {
-        path     : 'dashboard',
+        path: 'dashboard',
         component: EcommerceDashboardComponent,
-        resolve  : {
+        resolve: {
             data: EcommerceDashboardService
         }
     },
 
     {
-        path     : 'district',
+        path: 'district',
         component: DistrictComponent,
         // resolve  : {
         //     data: EcommerceDashboardService
         // }
     },
     {
-        path     : 'photos/:id',
+        path: 'photos/:id',
         component: PhotosComponent,
-        resolve  : {
+        resolve: {
             data: PhotoServiceService
         }
     },
     {
-        path     : 'products',
+        path: 'products',
         component: EcommerceProductsComponent,
-        resolve  : {
+        resolve: {
             data: EcommerceProductsService
         }
     },
     {
-        path     : 'maintainDistrict',
+        path: 'maintainDistrict',
         component: MaintainDistrictComponent,
-    
+
     },
+    { path: 'CBOC', component: CBOCComponent    },
     {
-        path     : 'CBOC',
-        component: CBOCComponent,
-    
-    },
-    {
-        path     : 'AcivityMode',
+        path: 'AcivityMode',
         component: AcivityModeComponent,
-    
+
     },
     {
-        path     : 'BondFund',
+        path: 'BondFund',
         component: BoundFundComponent,
-    
+
     },
     {
-        path     : 'BoundSeries',
+        path: 'BoundSeries',
         component: BoundSeriesComponent,
-    
+
     },
     {
-        path     : 'category',
+        path: 'category',
         component: CategoryComponent,
-    
+
     },
     {
-        path     : 'CutoffDates',
+        path: 'CutoffDates',
         component: CutoffDatesComponent,
-    
+
     },
     {
-        path     : 'phase',
+        path: 'phase',
         component: PhaseComponent,
-    
+
     },
     {
-        path     : 'ReportNotes',
+        path: 'contractType',
+        component: ContractorTypeComponent,
+
+    },
+    {
+        path: 'ReportNotes',
         component: ReportNotesComponent,
-    
+
     },
     {
-        path     : 'ObjectCode',
+        path: 'ObjectCode',
         component: ObjectCodeComponent,
-    
+
     },
     {
-        path     : 'BoundFund',
+        path: 'BoundFund',
         component: BoundFundComponent,
-    
+
     },
     {
-        path     : 'products/:id/:handle',
+        path: 'Surety',
+        component: SuretyComponent,
+
+    },
+    {
+        path: 'tabVisibility',
+        component: TabVisibilityComponent,
+
+    },
+    {
+        path: 'widgetVisibility',
+        component: WidgetVisibilityComponent,
+
+    },
+    {
+        path: 'menuVisibility',
+        component: MenuVisibilityComponent,
+
+    },
+    {
+        path: 'maintainClient',
+        component: MaintainClientComponent,
+        // resolve: {
+        //     data: NodeService
+        // }
+
+    },
+    {
+        path: 'maintainUser',
+        component: MaintainUserComponent,
+       
+
+    },
+
+    
+    {
+        path: 'products/:id/:handle',
         component: EcommerceProductComponent,
-        resolve  : {
+        resolve: {
             data: EcommerceProductService
         }
     },
     {
-        path     : 'transaction',
+        path: 'transaction',
         component: TransactionComponent,
-        resolve  : {
+        resolve: {
             data: TransactionService
         }
     },
     {
-        path     : 'contract-new',
+        path: 'contract-new',
         component: ContractNewComponent,
         // resolve  : {
         //     data: EcommerceProductsService
         // }
     },
     {
-        path     : 'product-new',
+        path: 'product-new',
         component: ProductNewComponent,
         // resolve  : {
         //     data: EcommerceProductsService
         // }
     },
     {
-        path     : 'products/:id',
+        path: 'products/:id',
         component: EcommerceProductComponent,
-        resolve  : {
+        resolve: {
             data: EcommerceProductService
         }
     },
     {
-        path     : 'products/:id/:handle',
+        path: 'products/:id/:handle',
         component: EcommerceProductComponent,
-        resolve  : {
+        resolve: {
             data: EcommerceProductService
         }
     },
     {
-        path     : 'orders',
+        path: 'orders',
         component: EcommerceOrdersComponent,
-        resolve  : {
+        resolve: {
             data: EcommerceOrdersService
         }
     },
     {
-        path     : 'orders/:id',
+        path: 'orders/:id',
         component: EcommerceOrderComponent,
-        resolve  : {
+        resolve: {
             data: EcommerceOrderService
         }
     }
@@ -234,18 +282,10 @@ const routes: Routes = [
         DistrictComponent,
         DocumentComponent,
         ProjectBudgetComponent,
-        DialogContentExample,DialogContentExampleDialog,
-        DialogContactExample,DialogContactExampleDialog,DialogAttachmentDialog,
-        DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,
-        AssoAttachComponent,
-        DialogContentNotes,
-        DialogAddFolderDialog,
-        DialogLineItemExampleDialog,
-        AddNewContactComponent,
-        FormsComponent,
-        ProductNewComponent,
-        TransactionComponent,
-        AddNewComponent,
+        DialogContentExample, DialogContentExampleDialog,
+        DialogContactExample, DialogContactExampleDialog, DialogAttachmentDialog,
+        DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog, AssoAttachComponent,DialogContentNotes,DialogAddFolderDialog,
+        DialogLineItemExampleDialog,AddNewContactComponent,FormsComponent,ProductNewComponent,TransactionComponent,AddNewComponent,
         FormsOneComponent,
         ContractNewComponent,
         AmountTableComponent,
@@ -256,21 +296,21 @@ const routes: Routes = [
         DeleteAttachComponent,
         UploadFolderComponent,
         MoveFolderComponent,
-        NOCComponent,DialogNocDialog,
-        ExpenseComponent,DialogAttDialog,
-        BondWebsiteComponent,DialogBondDialog,
+        NOCComponent, DialogNocDialog,
+        ExpenseComponent, DialogAttDialog,
+        BondWebsiteComponent, DialogBondDialog,
         BudgetPanelComponent,
-        PhotosComponent, PhotoEditDialog,MeetingComponent,
+        PhotosComponent, PhotoEditDialog, MeetingComponent,
         DialogContentMeeting,
-        CurrespondenceComponent,    
-        PepComponent,PepContractComponent,PepSavechanges,PepRecordItration,
-        MaintainDistrictComponent,CBOCComponent, ReportNotesComponent, ObjectCodeDialog,ObjectCodeComponent,AcivityModeComponent, ActivityEditDialog,
-        BoundFundComponent,BoundSeriesComponent,CategoryComponent,CutoffDatesComponent,PhaseComponent
+        CurrespondenceComponent,
+        PepComponent, PepContractComponent, PepSavechanges, PepRecordItration,
+        MaintainDistrictComponent, CBOCComponent, ReportNotesComponent, ObjectCodeDialog, ObjectCodeComponent, AcivityModeComponent, ActivityEditDialog,
+        BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
+        SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent
 
-    ], 
+    ],
     imports: [
         RouterModule.forChild(routes),
-
         MatExpansionModule,
         MatButtonModule,
         MatMenuModule,
@@ -311,9 +351,10 @@ const routes: Routes = [
 
         FuseSharedModule,
         FuseWidgetModule,
+               TreeTableModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog,DialogContactExample,DialogContactExampleDialog,DialogLineItemExampleDialog,DialogAttachmentDialog,DialogContentNotes,DialogAddFolderDialog,DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog,DialogNocDialog,DialogAttDialog,DialogBondDialog,PhotoEditDialog,DialogContentMeeting,PepSavechanges,PepRecordItration, ObjectCodeDialog,ActivityEditDialog],  
-      providers   : [
+    entryComponents: [DialogContentExample, DialogContentExampleDialog, DialogContactExample, DialogContactExampleDialog, DialogLineItemExampleDialog, DialogAttachmentDialog, DialogContentNotes, DialogAddFolderDialog, DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog, DialogNocDialog, DialogAttDialog, DialogBondDialog, PhotoEditDialog, DialogContentMeeting, PepSavechanges, PepRecordItration, ObjectCodeDialog, ActivityEditDialog, CategoryCodeDialog],
+    providers: [
         EcommerceDashboardService,
         EcommerceProductsService,
         EcommerceProductService,
@@ -321,9 +362,9 @@ const routes: Routes = [
         EcommerceOrderService,
         TransactionService,
         PhotoServiceService,
-      
+        NodeService
+
     ]
 })
-export class EcommerceModule
-{
+export class EcommerceModule {
 }

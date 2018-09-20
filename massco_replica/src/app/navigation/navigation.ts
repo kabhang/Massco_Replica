@@ -31,8 +31,7 @@ export const navigation: FuseNavigation[] = [
                        
                      }
                 ]
-            },
-           
+            },         
           
 
             {
@@ -155,7 +154,7 @@ export const navigation: FuseNavigation[] = [
                         type      : 'item',
                         url       : '/apps/calendar',
                         exactMatch: true
-                    }   ,
+                    },
                     {
                         id        : 'orderDetail',
                         title     : 'Veterans Memorial Bridge',
@@ -226,14 +225,14 @@ export const navigation: FuseNavigation[] = [
                         type      : 'item',
                         url       : '/apps/calendar',
                         exactMatch: true
-                    } ,
+                    },
                     {
                         id        : 'orderDetail',
                         title     : 'Update/Improve Infrastructure',
                         type      : 'item',
                         url       : '/apps/calendar',
                         exactMatch: true
-                    }   ,
+                    },
                     {
                         id        : 'orderDetail',
                         title     : 'Veterans Memorial Bridge',
@@ -274,7 +273,7 @@ export const navigation: FuseNavigation[] = [
                         id        : 'orders',
                         title     : 'Table Maintenance',
                         type      : 'collapsable',                
-                       children:[
+                         children:[
                         {
                             id        : 'productDetail',
                             title     : 'Object Codes',
@@ -328,7 +327,7 @@ export const navigation: FuseNavigation[] = [
                                 type      : 'item',
                                 url       : '/apps/e-commerce/phase',
                                 exactMatch: true
-                            },
+                            }
                            ]
                         },
                         {
@@ -340,7 +339,7 @@ export const navigation: FuseNavigation[] = [
                                     id        : 'productDetail',
                                     title     : 'ContractorType',
                                     type      : 'item',
-                                    url       : '/apps/e-commerce/ReportNotes',
+                                    url       : '/apps/e-commerce/contractType',
                                     exactMatch: true
                                 }
                             ]
@@ -354,12 +353,10 @@ export const navigation: FuseNavigation[] = [
                                     id        : 'productDetail',
                                     title     : 'Surety',
                                     type      : 'item',
-                                    url       : '/apps/e-commerce/ReportNotes',
+                                    url       : '/apps/e-commerce/Surety',
                                     exactMatch: true
                                 }
-
-                            ]
-                            
+                            ]                            
                         },
                         {
                             id        : 'productDetail',
@@ -389,29 +386,73 @@ export const navigation: FuseNavigation[] = [
                     {
                         id        : 'orderDetail',
                         title     : 'District Settings (Current District)',
-                        type      : 'item',
-                        url       : '/apps/calendar',
-                        exactMatch: true
+                        type      : 'collapsable',
+                        children:[
+                            {
+                                id        : 'productDetail',
+                                title     : 'Tab Visibility',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/tabVisibility',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'Widget Visbility',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/widgetVisibility',
+                                exactMatch: true    
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'Menu Visibility',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/menuVisibility',
+                                exactMatch: true    
+                            }                        
+
+                        ]
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'System Settings',
-                        type      : 'item',
-                        url       : '/apps/calendar',
-                        exactMatch: true
+                        type      : 'collapsable',
+                        children:[
+                            {
+                                id        : 'productDetail',
+                                title     : 'Tab Visibility',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/tabVisibility',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'Widget Visbility',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/widgetVisibility',
+                                exactMatch: true    
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'Menu Visibility',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/menuVisibility',
+                                exactMatch: true    
+                            }                        
+
+                        ]
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Maintain Clients/Districts/Colleges',
                         type      : 'item',
-                        url       : '/apps/calendar',
+                        url       : '/apps/e-commerce/maintainClient',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Maintain Users',
                         type      : 'item',
-                        url       : '/apps/calendar',
+                        url       : '/apps/e-commerce/maintainUser',
                         exactMatch: true
                     } ,
                     {
@@ -471,8 +512,7 @@ export const navigation: FuseNavigation[] = [
                         exactMatch: true
                     },
                 ]
-            },
-            
+            },           
             
             {
                 id       : 'calendar',
@@ -529,14 +569,9 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'today',
                 url      : '/apps/calendar'
-            },
-
-            
-           
-            
-            
+            }
         ]
-    },
+    }
 
     
 ];

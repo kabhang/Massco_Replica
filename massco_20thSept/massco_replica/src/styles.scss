@@ -1,0 +1,40 @@
+// Import Fuse core library
+@import "@fuse/scss/core";
+
+// -----------------------------------------------------------------------------------------------------
+// @ Multiple material themes example
+// -----------------------------------------------------------------------------------------------------
+
+// Define the Material palettes
+$yellow-theme-primary: mat-palette($mat-fusedark);
+$yellow-theme-accent: mat-palette($mat-yellow, 600, 400, 700);
+$yellow-theme-warn: mat-palette($mat-red);
+
+// Create the Material theme object
+$yellow-theme: mat-light-theme($yellow-theme-primary, $yellow-theme-accent, $yellow-theme-warn);
+
+// Add ".yellow-theme" class to the body to activate this theme
+.yellow-theme {
+
+    // Generate the Angular Material theme
+    @include angular-material-theme($yellow-theme);
+
+    // Generate the fuse color classes with the new colors...
+    @include generateFuseColorClasses($yellow-theme-primary, $yellow-theme-accent, $yellow-theme-warn);
+}
+
+.popupToolBar{background: #03A9F4 !important; color: #fff !important; padding: 10px;}
+a{cursor: pointer;}
+a:hover{text-decoration: none  !important;}
+
+.mat-dialog-container{width:473px; padding: 0 ;}
+.mat-header-cell{background: #d2d2d2;}
+mat-footer-row, mat-row:nth-child(odd){background: #eaeaea}
+tbody> tr:nth-child(odd){background: #eaeaea}
+
+.fa-book:before, .fa-file-invoice-dollar:before, .fa-users:before, .fa-sticky-note:before, .fa-file-alt:before, .fa-print:before, .fa-cog:before
+ {font-size: 17px!important; position: relative;bottom: -1px;color:#717070;}
+ 
+ #product .content .mat-tab-body-content {
+    display: inline !important;
+}

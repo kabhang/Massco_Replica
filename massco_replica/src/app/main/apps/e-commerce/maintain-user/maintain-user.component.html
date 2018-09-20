@@ -1,0 +1,186 @@
+<div id="orders" class="page-layout carded fullwidth inner-scroll">
+
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg mat-accent-bg"></div>
+  <!-- / TOP BACKGROUND -->
+
+  <!-- CENTER -->
+  <div class="center">
+
+    <!-- HEADER -->
+    <div class="header mat-accent-bg" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+      <!-- APP TITLE -->
+      <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+        <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+          shopping_basket
+        </mat-icon>
+        <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Maintain User</span>
+      </div>
+      <!-- / APP TITLE -->
+
+
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT CARD -->
+    <div class="content-card mat-white-bg">
+
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> Add New </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="tab-content p-24" fusePerfectScrollbar>
+            <div class="w-100-p">
+              <mat-form-field fxFlex="30" class="mr-16">
+                <input matInput placeholder="Lookup Value">
+              </mat-form-field>
+            </div>
+            <div class="w-100-p">
+              <mat-form-field fxFlex="30" class="mr-16">
+                <input matInput placeholder="Lookup Title">
+              </mat-form-field>
+            </div>
+
+            <div class="w-100-p">
+              <mat-form-field fxFlex="30" class="mr-16">
+                <input matInput placeholder="ID" value="621">
+              </mat-form-field>
+            </div>
+
+            <div class="w-50-p" style="float: right">
+              <button mat-flat-button color="accent" class="mr-16" (click)="addHero(newHero.value)">Save</button>
+            </div>
+          </div>
+
+
+        </mat-expansion-panel>
+
+      </mat-accordion>
+  
+        <mat-list role="list" style="display: flex">
+          <mat-list-item role="listitem">
+            <mat-form-field fxFlex="100">
+              <mat-select placeholder="Filter" formControlName="country" >
+                  <mat-option [value]="'All Active Users'">
+                    All Active Users
+                  </mat-option>
+                  <mat-option [value]="'All Disabled Users'">
+                    All Disabled Users
+                  </mat-option>
+                  <mat-option [value]="'All Users'">
+                    All Users
+                  </mat-option>
+                  <mat-option [value]="'Tech Support'">
+                    Tech Support
+                  </mat-option>
+               
+                 
+              </mat-select>
+           
+          </mat-form-field>
+
+
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <mat-form-field fxFlex="100">
+              <mat-select placeholder="District" formControlName="country" >
+                  <mat-option [value]="'** Ford Test District'">
+                    ** Ford Test District
+                  </mat-option>
+                  <mat-option [value]="'ABC Community College District'">
+                    ABC Community College District
+                  </mat-option>
+                  <mat-option [value]="'Admin District'">
+                    Admin District
+                  </mat-option>
+                  <mat-option [value]="'Barts District'">
+                    Bart's District
+                  </mat-option>
+                  <mat-option [value]="'California Vipassana Center'">
+                    California Vipassana Center
+                  </mat-option>
+                  <mat-option [value]="'College of the Desert'">
+                    College of the Desert
+                  </mat-option>
+                  <mat-option [value]="'Dan CCD'">
+                    Dan CCD
+                  </mat-option>
+                 
+              </mat-select>
+           
+          </mat-form-field>
+
+          </mat-list-item>
+          
+        </mat-list>
+
+        <table mat-table [dataSource]="dataSource" >
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="user">
+            <th mat-header-cell *matHeaderCellDef> User </th>
+            <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="loginAs">
+            <th mat-header-cell *matHeaderCellDef> LoginAs </th>
+            <td mat-cell *matCellDef="let element"> <mat-icon>keyboard_tab</mat-icon> </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="loginID">
+            <th mat-header-cell *matHeaderCellDef> LoginID </th>
+            <td mat-cell *matCellDef="let element"> {{element.loginID}} </td>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="password">
+            <th mat-header-cell *matHeaderCellDef> Password </th>
+            <td mat-cell *matCellDef="let element"> {{element.password}} </td>
+          </ng-container>
+        
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="role">
+              <th mat-header-cell *matHeaderCellDef> Role </th>
+              <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+            </ng-container>
+        
+        
+              <!-- Symbol Column -->
+          <ng-container matColumnDef="dashboard">
+            <th mat-header-cell *matHeaderCellDef> Dashboard </th>
+            <td mat-cell *matCellDef="let element"> {{element.dashboard}} </td>
+          </ng-container>
+        
+          
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="lastLogin">
+                <th mat-header-cell *matHeaderCellDef> LastLogin </th>
+                <td mat-cell *matCellDef="let element"> {{element.lastLogin}} </td>
+              </ng-container>
+        
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="disabled">
+                      <th mat-header-cell *matHeaderCellDef> Disabled ? </th>
+                      <td mat-cell *matCellDef="let element"> {{element.disabled}} </td>
+                    </ng-container>
+        
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </div>
+    <!-- / CONTENT CARD -->
+  </div>
+  <!-- / CENTER -->
+</div>
