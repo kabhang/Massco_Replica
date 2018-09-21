@@ -459,21 +459,21 @@ export const navigation: FuseNavigation[] = [
                         id        : 'orderDetail',
                         title     : 'Maintain User Roles',
                         type      : 'item',
-                        url       : '/apps/calendar',
+                        url       : '/apps/e-commerce/maintainUserRole',
                         exactMatch: true
                     }   ,
                     {
                         id        : 'orderDetail',
                         title     : 'Maintain Help Files',
                         type      : 'item',
-                        url       : '/apps/calendar',
+                        url       : '/apps/e-commerce/MaintainHelp',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Maintain Reports',
                         type      : 'item',
-                        url       : '/apps/calendar',
+                        url       : '/apps/e-commerce/maintainReport',
                         exactMatch: true
                     },      
                     {

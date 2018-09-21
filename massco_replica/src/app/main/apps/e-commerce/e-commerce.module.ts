@@ -87,10 +87,13 @@ import { MaintainClientComponent } from './maintain-client/maintain-client.compo
 import {TreeTableModule} from 'primeng/treetable';
 import {TreeNode} from 'primeng/api';
 import { NodeService } from './maintain-client/node-service.service';
-import { MaintainUserComponent } from './maintain-user/maintain-user.component';
+import { MaintainUserComponent,maintainDialog } from './maintain-user/maintain-user.component';
+import { MaitainUSerRoleComponent } from './maitain-user-role/maitain-user-role.component';
+import { MaintainHelpComponent } from './maintain-help/maintain-help.component';
+import { MaintainReportComponent } from './maintain-report/maintain-report.component';
 
 
-
+ 
 const routes: Routes = [
     {
         path: 'dashboard',
@@ -207,9 +210,23 @@ const routes: Routes = [
     },
     {
         path: 'maintainUser',
-        component: MaintainUserComponent,
-       
+        component: MaintainUserComponent,      
 
+    },
+    {
+        path: 'maintainUserRole',
+        component: MaitainUSerRoleComponent,      
+
+    },
+    {
+        path: 'MaintainHelp',
+        component: MaintainHelpComponent,      
+
+    },
+    {
+        path: 'maintainReport',
+        component: MaintainReportComponent,      
+        
     },
 
     
@@ -306,7 +323,8 @@ const routes: Routes = [
         PepComponent, PepContractComponent, PepSavechanges, PepRecordItration,
         MaintainDistrictComponent, CBOCComponent, ReportNotesComponent, ObjectCodeDialog, ObjectCodeComponent, AcivityModeComponent, ActivityEditDialog,
         BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
-        SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent
+        SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent,maintainDialog,
+        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent
 
     ],
     imports: [
@@ -353,7 +371,7 @@ const routes: Routes = [
         FuseWidgetModule,
                TreeTableModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog, DialogContactExample, DialogContactExampleDialog, DialogLineItemExampleDialog, DialogAttachmentDialog, DialogContentNotes, DialogAddFolderDialog, DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog, DialogNocDialog, DialogAttDialog, DialogBondDialog, PhotoEditDialog, DialogContentMeeting, PepSavechanges, PepRecordItration, ObjectCodeDialog, ActivityEditDialog, CategoryCodeDialog],
+    entryComponents: [DialogContentExample, DialogContentExampleDialog, DialogContactExample, DialogContactExampleDialog, DialogLineItemExampleDialog, DialogAttachmentDialog, DialogContentNotes, DialogAddFolderDialog, DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog, DialogNocDialog, DialogAttDialog, DialogBondDialog, PhotoEditDialog, DialogContentMeeting, PepSavechanges, PepRecordItration, ObjectCodeDialog, ActivityEditDialog, CategoryCodeDialog,maintainDialog],
     providers: [
         EcommerceDashboardService,
         EcommerceProductsService,

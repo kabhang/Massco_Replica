@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Inject } from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-maintain-user',
@@ -6,10 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./maintain-user.component.scss']
 })
 export class MaintainUserComponent  {
+  constructor(public dialog: MatDialog) {}
 
   displayedColumns = ['user', 'loginAs', 'loginID', 'password','role','dashboard','lastLogin','disabled'];
   dataSource = ELEMENT_DATA;
 
+  openDialog() {
+    this.dialog.open(maintainDialog, {
+      data: {
+        animal: 'panda'
+      }
+    });
+  }
+
+}
+
+@Component({
+  selector: 'maintain-edit',
+  templateUrl: 'maintain-edit.html',
+})
+
+export class maintainDialog {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 }
 
 
