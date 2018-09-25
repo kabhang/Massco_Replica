@@ -487,15 +487,37 @@ export const navigation: FuseNavigation[] = [
                         id        : 'orderDetail',
                         title     : 'System Utilities',
                         type      : 'item',
-                        url       : '/apps/calendar',
+                        url       : '/apps/e-commerce/systeamUtilities',
                         exactMatch: true
                     },
                     {
                         id        : 'orderDetail',
                         title     : 'Workflow Settings',
-                        type      : 'item',
-                        url       : '/apps/calendar',
-                        exactMatch: true
+                        type      : 'collapsable',
+                        children:[
+                            {
+                                id        : 'productDetail',
+                                title     : 'Maintain Workflow Roles',
+                                type      : 'item',
+                                url       : '/apps/e-commerce/MaintainWorkflow',
+                                exactMatch: true
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'Maintain Workflow Scenerios',
+                                type      : 'item',
+                                url       : '/apps/e-commerce',
+                                exactMatch: true    
+                            },
+                            {
+                                id        : 'productDetail',
+                                title     : 'View Transaction Import Batch Log',
+                                type      : 'item',
+                                url       : '/apps/e-commerce',
+                                exactMatch: true    
+                            }                        
+
+                        ]
                     },
                     {
                         id        : 'orderDetail',

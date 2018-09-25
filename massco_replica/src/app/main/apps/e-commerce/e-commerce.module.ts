@@ -91,6 +91,8 @@ import { MaintainUserComponent,maintainDialog } from './maintain-user/maintain-u
 import { MaitainUSerRoleComponent } from './maitain-user-role/maitain-user-role.component';
 import { MaintainHelpComponent } from './maintain-help/maintain-help.component';
 import { MaintainReportComponent } from './maintain-report/maintain-report.component';
+import { SysteamUtilitiesComponent } from './systeam-utilities/systeam-utilities.component';
+import { MaintainWorkflowComponent } from './maintain-workflow/maintain-workflow.component';
 
 
  
@@ -228,7 +230,16 @@ const routes: Routes = [
         component: MaintainReportComponent,      
         
     },
-
+    {
+        path: 'systeamUtilities',
+        component: SysteamUtilitiesComponent,      
+        
+    },
+    {
+        path: 'MaintainWorkflow',
+        component: MaintainWorkflowComponent,      
+        
+    },
     
     {
         path: 'products/:id/:handle',
@@ -324,7 +335,7 @@ const routes: Routes = [
         MaintainDistrictComponent, CBOCComponent, ReportNotesComponent, ObjectCodeDialog, ObjectCodeComponent, AcivityModeComponent, ActivityEditDialog,
         BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
         SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent,maintainDialog,
-        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent
+        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent
 
     ],
     imports: [

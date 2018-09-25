@@ -1,0 +1,281 @@
+<div id="orders" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg mat-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- HEADER -->
+        <div class="header mat-accent-bg"
+             fxLayout="column" fxLayoutAlign="center center"
+             fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+            <!-- APP TITLE -->
+            <div class="logo"
+                 fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    shopping_basket
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Object Code</span>
+            </div>
+            <!-- / APP TITLE -->
+
+          
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD --> 
+        <div class="content-card mat-white-bg">
+
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                   <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> Add New </mat-panel-title>    
+                  </mat-expansion-panel-header> 
+                  
+                  <div class="tab-content p-24" fusePerfectScrollbar>
+                      <div class="w-100-p">
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="Lookup Value">         
+                          </mat-form-field>
+                      </div>
+                      <div class="w-100-p">
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="Lookup Title">        
+                          </mat-form-field>
+                      </div>
+                     
+                      <div class="w-100-p">
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="ID" value="0">        
+                          </mat-form-field>
+                      </div>
+              
+              <div class="w-50-p" style="float: right">
+                <button mat-flat-button color="accent" class="mr-16" >Save</button>    
+              </div>
+               </div>
+              
+              
+                </mat-expansion-panel>
+              
+              </mat-accordion>
+
+              <mat-tab-group>
+                  <mat-tab label="Reconcile Attachments" > 
+                    <div class="p-24">    
+                      
+
+<mat-list role="list">
+    <mat-list-item role="listitem">  <button mat-flat-button color="accent" class="mr-16">Run Proc</button>   </mat-list-item>
+    <mat-list-item role="listitem">This proc will check that each file in the attachments direcotry has a matching record in the database. <mat-checkbox>Audit Only (Does not write to Database)</mat-checkbox></mat-list-item>
+    <mat-list-item role="listitem"><span class="mat-subheading-2">Result:</span></mat-list-item>
+</mat-list>
+
+</div>
+                  </mat-tab>
+                  <mat-tab label="Move Project"> 
+                    <div class="p-24">                       
+                    <mat-list role="list" >
+                          <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                          <mat-list-item role="listitem"> 
+                              <div class="w-100-p">
+                             <mat-form-field fxFlex="50"  class="mr-16" >
+                              <input matInput placeholder="ProjectID" >
+                            </mat-form-field>  
+
+                            <mat-form-field fxFlex="50">
+                                <input matInput placeholder="Target College ID" >
+                              </mat-form-field>  
+                          </div>
+                          </mat-list-item>
+                         
+                          <mat-list-item role="listitem"> Allows you to move a given project ID to new college.</mat-list-item>
+                          <mat-list-item role="listitem"> Results :</mat-list-item>
+                      </mat-list>
+                  
+                      </div> </mat-tab>
+                  <mat-tab label="Purge College"> 
+                      <div class="p-24">                       
+                          <mat-list role="list" >
+                                <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                                
+                                <mat-list-item role="listitem">
+                                    <div class="w-100-p">
+                                    <mat-form-field fxFlex="50">
+                                        <input matInput placeholder="College ID" >
+                                      </mat-form-field>  </div>
+                                </mat-list-item>
+                                <mat-list-item role="listitem">This proc removes all records for a selected college from the system. For now, we need to remove the Attachments directly for the college manually as the current functions in .net do not deal with read only files without some coding. USE WITH CARE!</mat-list-item>
+                                <mat-list-item role="listitem">>Results :</mat-list-item>
+                            </mat-list>
+                            
+                            
+                            </div>   
+                  </mat-tab>
+                  <mat-tab label="Purge District"> 
+                    <div class="p-24">                       
+                      <mat-list role="list" >
+            <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                            
+            <mat-list-item role="listitem">
+                <div class="w-100-p">
+                                <mat-form-field  fxFlex="50">
+                                    <input matInput placeholder="District ID" >
+                                  </mat-form-field>  
+                                </div>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">  
+                              This proc removes all records for a selected college from the system. <br/>
+                              For now, we need to remove the Attachments directly for the college manually as the current functions in .<br/>net do not deal with read only files without some coding. USE WITH CARE!</mat-list-item>
+                            <mat-list-item role="listitem"> Results : </mat-list-item>
+                        </mat-list>
+                      
+                        
+                        </div> 
+                      
+                      </mat-tab>
+                  <mat-tab label="Import FRS Tables"> 
+                      <div class="p-24">                       
+                          <mat-list role="list">
+                                <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                                <mat-list-item role="listitem">  This proc imports Check Message Codes, AccountNumbers, PONumbers and Vendors reference tables from FRS output files.</mat-list-item>
+                                <mat-list-item role="listitem">Results : </mat-list-item>
+                                
+                            </mat-list>
+                          
+                            
+                            </div> 
+                  </mat-tab>
+                  <mat-tab label="Run FRS Disbursement Import">
+                      <div class="p-24">                       
+                          <mat-list role="list">
+                          <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                          <mat-list-item role="listitem">  This proc imports the FRS DIsbursements.</mat-list-item>
+                          <mat-list-item role="listitem"> Results :</mat-list-item>
+                            </mat-list>
+                          
+                         
+                            </div> 
+
+                  </mat-tab>
+                  <mat-tab label="Reset Workflow Transaction">
+                       <div class="p-24">                       
+                      <mat-list role="list">
+                      <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                       <mat-list-item role="listitem"> 
+                             <div class="w-100-p">
+                               <mat-form-field fxFlex="50"><input matInput placeholder="TransID" ></mat-form-field> 
+                              </div>
+                             </mat-list-item>
+                        <mat-list-item role="listitem"> This proc imports the FRS DIsbursements.</mat-list-item>
+                        <mat-list-item role="listitem"> Results :</mat-list-item>
+                      
+                        </mat-list>
+                       
+                     
+                        </div>   </mat-tab>
+                  <mat-tab label="Process Workflow Email Notification"> 
+                     <div class="p-24">                       
+                      <mat-list role="list" >
+                      <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                       <mat-list-item role="listitem">
+                          Runs the email notify routine for new inbox messages - will send only to tech support in Beta or Local environments
+                      </mat-list-item>
+                      <mat-list-item role="listitem">
+                          Results :
+                      </mat-list-item>
+                        </mat-list>
+                       
+                       
+                        </div> 
+                      </mat-tab>
+                  <mat-tab label="Reset ALL Workflow Transactions for District">  
+                    <div class="p-24">                       
+                      <mat-list role="list">
+                      <mat-list-item role="listitem"><button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                       <mat-list-item role="listitem">
+                         <mat-form-field class="mr-16" fxFlex="50"><input matInput placeholder="DistrictID" ></mat-form-field>  
+                      </mat-list-item>
+                      <mat-list-item role="listitem">  Clears all the workflow history for given District and resets current owner to generic FDO. </mat-list-item>
+                      <mat-list-item role="listitem"> Results : </mat-list-item>
+                        </mat-list>
+                      
+                        
+                        </div> 
+                       </mat-tab>
+                  <mat-tab label="Run Pre-Release Updates"> 
+                     <div class="p-24">                       
+                      <mat-list role="list">
+                      <mat-list-item role="listitem">
+                        <button mat-flat-button color="accent" class="mr-16">Run Proc</button>
+                      </mat-list-item>
+                       <mat-list-item role="listitem">
+                         <mat-form-field class="mr-16" fxFlex="50"><input matInput placeholder="DistrictID" ></mat-form-field>  
+                      </mat-list-item>
+                      <mat-list-item role="listitem"> Clears all the workflow history for given District and resets current owner to generic FDO.</mat-list-item>
+                      <mat-list-item role="listitem">Results :</mat-list-item>
+                        </mat-list>
+                       
+                     
+                        </div>  </mat-tab>
+                  <mat-tab label="Send Broadcast Annoucement">  
+                    <div class="p-24">                        
+                   
+                      <mat-list role="list" >
+                          <mat-list-item role="listitem"> <button mat-flat-button color="accent" class="mr-16">Run Proc</button> </mat-list-item>
+                          <mat-list-item role="listitem">  This proc will check that each file in the attachments direcotry has a matching record in the database.  <mat-checkbox>Test Only (send to tech support only)</mat-checkbox> </mat-list-item>
+                          <mat-list-item role="listitem"> Send Annoucement to all active PROMPT Users</mat-list-item>                      
+                          <mat-list-item role="listitem"><span class="mat-subheading-2">Result:</span></mat-list-item>
+                          <mat-list-item role="listitem"><div class="w-100-p"><mat-form-field fxFlex="50" >
+                          <textarea matInput placeholder="Leave a comment" ></textarea>
+                        </mat-form-field>
+                      </div>
+                      </mat-list-item>
+
+                      </mat-list>
+                      </div>
+                    </mat-tab>
+                  <mat-tab label="Copy College"><div class="p-24">                        
+                   
+                      <mat-list role="list" >
+                          <mat-list-item role="listitem"> <span class="mat-title">Copy College</span></mat-list-item>
+                          <mat-list-item role="listitem">  This procedure will create a copy of the selected college in the current District, including all subordinate items associated with the source college (except Attachments).   </mat-list-item>
+                          
+                          <mat-list-item role="listitem">
+                              <div class="w-100-p">
+                                  <mat-form-field fxFlex="30">
+                                      <mat-select placeholder="Source College" formControlName="Source College" required>
+                                          <mat-option [value]="'_District'">
+                                              _District
+                                          </mat-option>
+                                          <mat-option [value]="'Anaheim'">
+                                              Anaheim
+                                          </mat-option>
+                                          <mat-option [value]="'Cypress'">
+                                              Cypress
+                                          </mat-option>
+                                          <mat-option [value]="'Fullerton'">
+                                              Fullerton
+                                          </mat-option>
+                                      </mat-select>
+                                
+                                  </mat-form-field>
+                      </div>
+                      </mat-list-item>
+                      <mat-list-item role="listitem">
+                          <button mat-flat-button color="accent" class="mr-16" style="float: right;">Copy</button> 
+                      </mat-list-item>
+
+                      </mat-list>
+                      </div></mat-tab>
+                </mat-tab-group>
+           
+        </div>
+        <!-- / CONTENT CARD -->
+    </div>
+    <!-- / CENTER -->
+</div>
