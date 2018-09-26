@@ -554,11 +554,19 @@ export const navigation: FuseNavigation[] = [
             },
             {
                 id       : 'calendar',
+                title    : 'Contacts',
+                translate: 'NAV.CALENDAR',
+                type     : 'item',
+                icon     : 'today',
+                url      : '/apps/e-commerce/contacts'
+            },
+            {
+                id       : 'calendar',
                 title    : 'Companies',
                 translate: 'NAV.CALENDAR',
                 type     : 'item',
                 icon     : 'today',
-                url      : '/apps/calendar'
+                url      : '/apps/e-commerce/companies'
             },
             {
                 id       : 'calendar',

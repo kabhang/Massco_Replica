@@ -93,6 +93,10 @@ import { MaintainHelpComponent } from './maintain-help/maintain-help.component';
 import { MaintainReportComponent } from './maintain-report/maintain-report.component';
 import { SysteamUtilitiesComponent } from './systeam-utilities/systeam-utilities.component';
 import { MaintainWorkflowComponent } from './maintain-workflow/maintain-workflow.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { ContactsComponent } from './contacts/contacts.component';
+
+
 
 
  
@@ -240,7 +244,17 @@ const routes: Routes = [
         component: MaintainWorkflowComponent,      
         
     },
-    
+    {
+        path: 'companies',
+        component: CompaniesComponent,      
+
+    },
+    {
+        path: 'contacts',
+        component:  ContactsComponent,      
+
+    },
+   
     {
         path: 'products/:id/:handle',
         component: EcommerceProductComponent,
@@ -335,7 +349,7 @@ const routes: Routes = [
         MaintainDistrictComponent, CBOCComponent, ReportNotesComponent, ObjectCodeDialog, ObjectCodeComponent, AcivityModeComponent, ActivityEditDialog,
         BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
         SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent,maintainDialog,
-        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent
+        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent,CompaniesComponent,ContactsComponent
 
     ],
     imports: [
