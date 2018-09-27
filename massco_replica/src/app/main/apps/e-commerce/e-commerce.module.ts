@@ -95,6 +95,8 @@ import { SysteamUtilitiesComponent } from './systeam-utilities/systeam-utilities
 import { MaintainWorkflowComponent } from './maintain-workflow/maintain-workflow.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormPageComponent } from './form-page/form-page.component';
 
 
 
@@ -251,10 +253,14 @@ const routes: Routes = [
     },
     {
         path: 'contacts',
-        component:  ContactsComponent,      
-
+        component:ContactsComponent, 
+      
     },
-   
+    {
+        path: 'formsOne',
+        component:FormPageComponent , 
+      
+    },
     {
         path: 'products/:id/:handle',
         component: EcommerceProductComponent,
@@ -349,7 +355,8 @@ const routes: Routes = [
         MaintainDistrictComponent, CBOCComponent, ReportNotesComponent, ObjectCodeDialog, ObjectCodeComponent, AcivityModeComponent, ActivityEditDialog,
         BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
         SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent,maintainDialog,
-        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent,CompaniesComponent,ContactsComponent
+        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent,CompaniesComponent,ContactsComponent,
+        FormPageComponent
 
     ],
     imports: [
@@ -387,6 +394,8 @@ const routes: Routes = [
         MatDialogModule,
         OverlayModule,
         MatToolbarModule,
+        HttpClientModule,
+       
         NgxChartsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyD81ecsCj4yYpcXSLFcYU97PvRsE_X8Bx8'
@@ -406,7 +415,6 @@ const routes: Routes = [
         TransactionService,
         PhotoServiceService,
         NodeService
-
     ]
 })
 export class EcommerceModule {

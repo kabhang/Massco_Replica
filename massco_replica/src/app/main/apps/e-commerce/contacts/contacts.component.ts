@@ -2,41 +2,39 @@ import { Component } from '@angular/core';
 
 
 export interface PeriodicElement {
-  name: string;
-  addressOne: string;
-  contact: string;
-  phoneOne: number;
+  first: string;
+  last: string;
+  company:string;
+  title: string;
+  addressOne:string;
+  contactType: string;
+  phoneOne:number;
+  ext:number;
   phoneTwo:number;
+  cell:number;
   email:string;
-  fax:string;
-  type:string;
-  dir:number;
-  licenseNo:string;
-  bannerID:number;
+  fax:number;
+  comments:string;
+  
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {name: 'All Rain Roofing', addressOne: '12310 Janelle Ct', contact: '', phoneOne:909-238-8508 ,phoneTwo:0,email:'',fax:'',type:'',dir:1000014651,licenseNo:'',bannerID: 1580346},
-  {name: 'All Rain Roofing', addressOne: '19310 Janelle Ct., Mira Loma, CA 91752', contact: 'Oscar Rodriguez', phoneOne: 909-238-8508,phoneTwo:0,email:'allrainroofing@gmail.com	',fax:'',type:'',dir:1000014651,licenseNo:'725233',bannerID: 1580346},
-  {name: 'Allison Mechanical, Inc', addressOne: '1968 Essex Ct., Readlands, CA 92373', contact: 'Bonnie Gordon', phoneOne: 909-478-5633,phoneTwo:0,email:'bgordon@allison1.net	',fax:'',type:'',dir:1000002213,licenseNo:'679866',bannerID: 1580346},
-  {name: 'Allsteel Inc', addressOne: 'c/o Corporate Bus Interiors', contact: 'Bonnie Gordon', phoneOne: 909-478-5633,phoneTwo:0,email:'bgordon@allison1.net	',fax:'',type:'',dir:1000003129,licenseNo:'679866',bannerID: 696666},
-  {name: 'Aloha Island Cable Inc', addressOne: 'dba: CableMasters', contact: 'Bonnie Gordon', phoneOne: 909-478-5633,phoneTwo:0,email:'bgordon@allison1.net	',fax:'',type:'',dir:1000003858,licenseNo:'679866',bannerID: 1340659},
-  {name: 'Amazing Electric Inc', addressOne: '2484 Olive Ave., Altadena, CA 91001', contact: 'Homan Dian', phoneOne: 213-300-6051,phoneTwo:0,email:'Homan@amazingelectricin',fax:'',type:'',dir:1000003858,licenseNo:'679866',bannerID: 1340659},
-  {name: 'All Rain Roofing', addressOne: '12310 Janelle Ct', contact: '', phoneOne:909-238-8508 ,phoneTwo:0,email:'',fax:'',type:'',dir:1000014651,licenseNo:'',bannerID: 1580346},
-  {name: 'All Rain Roofing', addressOne: '19310 Janelle Ct., Mira Loma, CA 91752', contact: 'Oscar Rodriguez', phoneOne: 909-238-8508,phoneTwo:0,email:'allrainroofing@gmail.com	',fax:'',type:'',dir:1000014651,licenseNo:'725233',bannerID: 1580346},
-  {name: 'Allison Mechanical, Inc', addressOne: '1968 Essex Ct., Readlands, CA 92373', contact: 'Bonnie Gordon', phoneOne: 909-478-5633,phoneTwo:0,email:'bgordon@allison1.net	',fax:'',type:'',dir:1000002213,licenseNo:'679866',bannerID: 1580346},
-  {name: 'Allsteel Inc', addressOne: 'c/o Corporate Bus Interiors', contact: 'Bonnie Gordon', phoneOne: 909-478-5633,phoneTwo:0,email:'bgordon@allison1.net	',fax:'',type:'',dir:1000003129,licenseNo:'679866',bannerID: 696666},
-  {name: 'Aloha Island Cable Inc', addressOne: 'dba: CableMasters', contact: 'Bonnie Gordon', phoneOne: 909-478-5633,phoneTwo:0,email:'bgordon@allison1.net	',fax:'',type:'',dir:1000003858,licenseNo:'679866',bannerID: 1340659},
-  {name: 'Amazing Electric Inc', addressOne: '2484 Olive Ave., Altadena, CA 91001', contact: 'Homan Dian', phoneOne: 213-300-6051,phoneTwo:0,email:'Homan@amazingelectricin',fax:'',type:'',dir:1000003858,licenseNo:'679866',bannerID: 1340659},
+  {first: 'Miranda', last: 'Albert', company: 'Cypress College', title:'Director' ,addressOne:'9200 Valley View Street',contactType:'District',phoneOne:714-808-4773,ext:0,phoneTwo:1000014651,cell:97-985-465,email:'tom@adfiresprinklers.com',fax:123-465-858,comments:'Director Physical Plant & Facilities, Cypress'},
+  {first: 'Miranda', last: 'Albert', company: 'Cypress College', title:'Director' ,addressOne:'9200 Valley View Street',contactType:'District',phoneOne:714-808-4773,ext:0,phoneTwo:1000014651,cell:97-985-465,email:'tom@adfiresprinklers.com',fax:123-465-858,comments:'Director Physical Plant & Facilities, Cypress'},
+  {first: 'Miranda', last: 'Albert', company: 'Cypress College', title:'Director' ,addressOne:'9200 Valley View Street',contactType:'District',phoneOne:714-808-4773,ext:0,phoneTwo:1000014651,cell:97-985-465,email:'tom@adfiresprinklers.com',fax:123-465-858,comments:'Director Physical Plant & Facilities, Cypress'},
+  {first: 'Miranda', last: 'Albert', company: 'Cypress College', title:'Director' ,addressOne:'9200 Valley View Street',contactType:'District',phoneOne:714-808-4773,ext:0,phoneTwo:1000014651,cell:97-985-465,email:'tom@adfiresprinklers.com',fax:123-465-858,comments:'Director Physical Plant & Facilities, Cypress'},
+  {first: 'Miranda', last: 'Albert', company: 'Cypress College', title:'Director' ,addressOne:'9200 Valley View Street',contactType:'District',phoneOne:714-808-4773,ext:0,phoneTwo:1000014651,cell:97-985-465,email:'tom@adfiresprinklers.com',fax:123-465-858,comments:'Director Physical Plant & Facilities, Cypress'},
+  {first: 'Miranda', last: 'Albert', company: 'Cypress College', title:'Director' ,addressOne:'9200 Valley View Street',contactType:'District',phoneOne:714-808-4773,ext:0,phoneTwo:1000014651,cell:97-985-465,email:'tom@adfiresprinklers.com',fax:123-465-858,comments:'Director Physical Plant & Facilities, Cypress'}
+  
 
 ];
 @Component({
   selector: 'contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss']
+  styleUrls: ['./contacts.component.scss']  
 })
 export class ContactsComponent   {
-  displayedColumns: string[] = ['name', 'addressOne', 'contact', 'phoneOne', 'phoneTwo', 'email', 'fax', 'type','dir','licenseNo','bannerID'];
+  displayedColumns: string[] = ['first', 'last', 'title', 'contactType', 'company', 'title', 'addressOne', 'contactType','phoneOne','ext','phoneTwo','cell','email','fax','comments'];
   dataSource = ELEMENT_DATA;
 
 }
