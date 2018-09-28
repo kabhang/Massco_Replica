@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import {MatButtonModule, MatCheckboxModule, MatMenuModule, MatChipsModule, MatFormFieldModule, MatIconModule,
     MatInputModule, MatDatepickerModule, MatPaginatorModule, MatRippleModule, MatSelectModule, MatSnackBarModule,
     MatSortModule, MatTableModule, MatTabsModule, MatDialogModule, MatExpansionModule, MatCardModule, MatListModule,
@@ -97,6 +98,8 @@ import { CompaniesComponent } from './companies/companies.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormPageComponent } from './form-page/form-page.component';
+import {ContactService} from './contacts/contact.service';
+import { DistrictOverviewComponent } from './district-overview/district-overview.component';
 
 
 
@@ -151,6 +154,11 @@ const routes: Routes = [
     {
         path: 'BoundSeries',
         component: BoundSeriesComponent,
+
+    },
+    {
+        path: 'DistrictOverview',
+        component: DistrictOverviewComponent,
 
     },
     {
@@ -254,8 +262,13 @@ const routes: Routes = [
     {
         path: 'contacts',
         component:ContactsComponent, 
+    },
+    {
+        path: 'formsOne',
+        component:FormPageComponent , 
       
     },
+
     {
         path: 'formsOne',
         component:FormPageComponent , 
@@ -356,11 +369,12 @@ const routes: Routes = [
         BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
         SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent,maintainDialog,
         MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent,CompaniesComponent,ContactsComponent,
-        FormPageComponent
+        FormPageComponent,DistrictOverviewComponent
 
     ],
     imports: [
         RouterModule.forChild(routes),
+        MatTableModule,
         MatExpansionModule,
         MatButtonModule,
         MatMenuModule,
@@ -414,7 +428,7 @@ const routes: Routes = [
         EcommerceOrderService,
         TransactionService,
         PhotoServiceService,
-        NodeService
+        NodeService,ContactService
     ]
 })
 export class EcommerceModule {
