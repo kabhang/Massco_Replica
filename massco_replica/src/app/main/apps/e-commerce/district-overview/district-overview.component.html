@@ -17,18 +17,18 @@
           <mat-icon>arrow_back</mat-icon>
         </button>
 
-     
+
 
         <div fxLayout="column" fxLayoutAlign="start start" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
           <div class="h2" *ngIf="pageType ==='edit'">
             {{product.name}}
           </div>
-          <div class="h2" *ngIf="pageType ==='new'">
-            Series A
+          <div class="h2">
+            North Orange County Community College District
           </div>
-          <div class="subtitle secondary-text">
+          <!-- <div class="subtitle secondary-text">
             <span>Product Detail</span>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -50,168 +50,282 @@
 
       <!-- CONTENT -->
       <div class="content">
-         <form name="productForm" [formGroup]="productForm" class="product w-100-p" fxLayout="column" fxFlex>
-            <div class="tab-content p-24" fusePerfectScrollbar>
+        <form name="productForm" [formGroup]="productForm" class="product w-100-p" fxLayout="column" fxFlex>
+          <div class="tab-content p-24" fusePerfectScrollbar>
 
-                <div style="margin: 10px 0">
-                  <!-- <dialog-content-example></dialog-content-example> -->
-                  <app-add-new-contact></app-add-new-contact>
 
-                </div>
+            <div class="content w-100-p">
 
-                <div class="content w-100-p">
+              <!-- WIDGET GROUP -->
+              <div class="widget-group" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start" [@animateStagger]="{value:'50'}">
 
-                  <!-- WIDGET GROUP -->
-                  <div class="widget-group" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start" [@animateStagger]="{value:'50'}">
+                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
 
-                    <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+                  <!-- Front -->
+                  <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center" style="background: #dee1e2">
+                      <div>
+                        <i class="fas fa-book"></i>North Orange County Community College District</div>
 
-                      <!-- Front -->
-                      <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
-                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
-                          <div>
-                            <i class="fas fa-book"></i>Project Overview</div>
+                      <button mat-icon-button fuseWidgetToggle aria-label="more">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                    </div>
 
-                          <button mat-icon-button fuseWidgetToggle aria-label="more">
-                            <mat-icon>more_vert</mat-icon>
-                          </button>
+                    <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto; border:1px solid #dee1e2">
+                      <div class="w-100-p">
+                        <div fxFlex="50">
+                          <img src="assets/images/logos/North Orange.png" width="40" height="40" align="center" style=" position: relative;left: 54px; top: 10px;"
+                          />
+                          <mat-list role="list">
+                            <mat-list-item role="listitem">
+                              <a href="#">NOCCCD Bond Site</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">District Schedules</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">District Meeting Minutes</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Reports</a>
+                            </mat-list-item>
+                          </mat-list>
                         </div>
 
-                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
-                          <app-project-overview></app-project-overview>
-                        </div>
-                      </div>
-                      <!-- / Front -->
-
-                      <!-- Back -->
-                      <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
-                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
-                          <mat-icon class="s-16">close</mat-icon>
-                        </button>
-
-                        <div>
-                          More widget info
-                        </div>
-                      </div>
-                      <!-- / Back -->
-
-                    </fuse-widget>
-
-                    <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
-
-                      <!-- Front -->
-                      <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
-                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
-                          <div>
-                            <i class="fas fa-file-invoice-dollar"></i>
-                            Budget Overview</div>
-
-                          <button mat-icon-button fuseWidgetToggle aria-label="more">
-                            <mat-icon>more_vert</mat-icon>
-                          </button>
-                        </div>
-
-                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
-                          <app-project-overview></app-project-overview>
+                        <div fxFlex="50">
+                            <pie-chart></pie-chart>
                         </div>
                       </div>
-                      <!-- / Front -->
-
-                      <!-- Back -->
-                      <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
-                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
-                          <mat-icon class="s-16">close</mat-icon>
-                        </button>
-
-                        <div>
-                          More widget info
-                        </div>
-                      </div>
-                      <!-- / Back -->
-
-                    </fuse-widget>
-
-
-                    <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
-
-                      <!-- Front -->
-                      <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
-                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
-                          <div>
-                            <i class="fas fa-users"></i>
-                            Project Team Members</div>
-
-                          <button mat-icon-button fuseWidgetToggle aria-label="more">
-                            <mat-icon>more_vert</mat-icon>
-                          </button>
-                        </div>
-
-                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
-                          <app-project-overview></app-project-overview>
-                        </div>
-                      </div>
-                      <!-- / Front -->
-
-                      <!-- Back -->
-                      <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
-                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
-                          <mat-icon class="s-16">close</mat-icon>
-                        </button>
-
-                        <div>
-                          More widget info
-                        </div>
-                      </div>
-                      <!-- / Back -->
-
-                    </fuse-widget>
-
-
-                    <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
-
-                      <!-- Front -->
-                      <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
-                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
-                          <div>
-                            <i class="fas fa-sticky-note"></i>
-                            Notes</div>
-
-                          <button mat-icon-button fuseWidgetToggle aria-label="more">
-                            <mat-icon>more_vert</mat-icon>
-                          </button>
-                        </div>
-
-                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
-                          <app-project-overview></app-project-overview>
-                        </div>
-                      </div>
-                      <!-- / Front -->
-
-                      <!-- Back -->
-                      <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
-                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
-                          <mat-icon class="s-16">close</mat-icon>
-                        </button>
-
-                        <div>
-                          More widget info
-                        </div>
-                      </div>
-                      <!-- / Back -->
-
-                    </fuse-widget>
-
-
-
-
-
+                    </div>
                   </div>
+                  <!-- / Front -->
+
+                  <!-- Back -->
+                  <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                      <mat-icon class="s-16">close</mat-icon>
+                    </button>
+
+                    <div>
+                      More widget info
+                    </div>
+                  </div>
+                  <!-- / Back -->
+
+                </fuse-widget>
+
+                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50" style="height: 367px;">
+
+                  <!-- Front -->
+                  <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center" style="background: #dee1e2">
+                      <div>
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        Cypress College</div>
+
+                      <button mat-icon-button fuseWidgetToggle aria-label="more">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                    </div>
+
+                    <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto; border:1px solid #dee1e2">
+                      <div class="w-100-p">
+                        <div fxFlex="50">
+                         <img src="assets/images/logos/Cypress College.png" width="40" height="40" align="center" style=" position: relative;left: 54px; top: 10px;"
+                          />
+                          <mat-list role="list">
+                            <mat-list-item role="listitem">
+                              <a href="#">_Mass Communications &amp; Securi . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Central Plant / TES</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Library-Learning Resource Cen . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Mass Communication &amp; Security . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Mass Communications &amp; Security . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">New Science, Engineering, and . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">New Veterans' Resource Center . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Planning-CC (Non Project Specific)</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Swing Space Projects</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Update/Improve Infrastructure</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Update/Improve Infrastructure (IT)</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Update/Improve Infrastructure</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Veterans' Memorial Bridge</a>
+                            </mat-list-item>
+                          </mat-list>
+                        </div>
+
+                        <div fxFlex="50">
+                            <bar-chart></bar-chart>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / Front -->
+
+                  <!-- Back -->
+                  <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                      <mat-icon class="s-16">close</mat-icon>
+                    </button>
+
+                    <div>
+                      More widget info
+                    </div>
+                  </div>
+                  <!-- / Back -->
+
+                </fuse-widget>
 
 
+                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+
+                  <!-- Front -->
+                  <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center" style="background: #dee1e2">
+                      <div>
+                        <i class="fas fa-users"></i>
+                        North Orange Continuing Education</div>
+
+                      <button mat-icon-button fuseWidgetToggle aria-label="more">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                    </div>
+
+                    <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;  border:1px solid #dee1e2">
+                      <div class="w-100-p">
+                        <div fxFlex="50">
+                          <img src="assets/images/logos/NOCE.png" width="40" height="40" align="center" style=" position: relative;left: 54px; top: 10px;"
+                          />
+                          <mat-list role="list">
+                            <mat-list-item role="listitem">
+                              <a href="#">5th Floor CTE &amp; 2nd Floor Room 215</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">7th and 10th Floors Buildout</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Planning-AC (Non Project Specific)</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Reactivate 1st Floor Warehous . . . .</a>
+                            </mat-list-item>
+
+                          </mat-list>
+                        </div>
+
+                        <div fxFlex="50">
+                          <img src="assets/images/charts/chart_3.png" align="center" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / Front -->
+
+                  <!-- Back -->
+                  <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                      <mat-icon class="s-16">close</mat-icon>
+                    </button>
+
+                    <div>
+                      More widget info
+                    </div>
+                  </div>
+                  <!-- / Back -->
+
+                </fuse-widget>
 
 
-                </div>
+                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50" style="height: 355px;">
+
+                  <!-- Front -->
+                  <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center" style="background: #dee1e2">
+                      <div>
+                        <i class="fas fa-sticky-note"></i>
+                        Fullerton College</div>
+
+                      <button mat-icon-button fuseWidgetToggle aria-label="more">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                    </div>
+
+                    <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;  border:1px solid #dee1e2">
+                      <div class="w-100-p">
+                        <div fxFlex="50">
+     <img src="assets/images/logos/Fullerton College.png" width="40" height="40" align="center" style=" position: relative;left: 54px; top: 10px;"/>
+                          <mat-list role="list">
+                            <mat-list-item role="listitem">
+                              <a href="#">_New TES &amp; Chilled Water Plan . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Chiller Plant Expansion (New . . . .</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">New Instructional Building</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">New M &amp;O Building</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">New Parking Structure</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Planning-FC (Non Project Specific)</a>
+                            </mat-list-item>
+                            <mat-list-item role="listitem">
+                              <a href="#">Renovate Buildings 300 &amp; 500</a>
+                            </mat-list-item>
+                          </mat-list>
+                        </div>
+
+                        <div fxFlex="50">
+                          <img src="assets/images/charts/chart_4.png" align="center" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / Front -->
+
+                  <!-- Back -->
+                  <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                      <mat-icon class="s-16">close</mat-icon>
+                    </button>
+
+                    <div>
+                      More widget info
+                    </div>
+                  </div>
+                  <!-- / Back -->
+
+                </fuse-widget>
               </div>
+            </div>
+          </div>
         </form>
 
       </div>

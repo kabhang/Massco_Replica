@@ -2077,30 +2077,7 @@ export class ECommerceFakeDb
         }
     ];
 
-    
-    public static contract = [
-        {
-            "type": "CC",
-             "description": "Original Contract",
-             "createDate": "04/17/2017",
-             "no": "1",
-             "jcafLine": "3. Working Drawings - A. Architectual Fees",
-             "funding": "MeasureX",
-             "objectCode": "62303-Building Imp - Archit Services",
-             "c": "Details",
-             "expnaded": 9.309,
-             "priceTaxIncl": 10.24,
-             "pendingAmount": 10,
-             "amount": 19.90,
-             "acountNumber": 3,
-             "r": "",
-             "editAction": "Edit",
-             "deleteAction": "Delete"    
- 
-         }
-
-        ]    
-        public static orders = [
+    public static orders = [
         {
             'id'             : 1,
             'reference'      : '70d4d7d0',

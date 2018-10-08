@@ -253,7 +253,7 @@ export const navigation: FuseNavigation[] = [
                         id   : 'dashboard',
                         title: 'My Settings',
                         type : 'item',
-                        url  : '/apps/e-commerce/orders'
+                        url  : '/apps/e-commerce/systeamSetting'
                     },
                     {
                         id        : 'products',

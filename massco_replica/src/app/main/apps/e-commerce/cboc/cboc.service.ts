@@ -1,20 +1,25 @@
-import { Injectable }   from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient }   from '@angular/common/http';
 import { Observable }   from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { User } from './contact';
+
+
+export interface cboc {
+  date: string;
+  description: string;
+  agenda: string;
+  minutes: string;
+}
 
 
 @Injectable()
-export class ContactService {
+export class CbocService {
   private serviceUrl="assets/contact.json"
 
   constructor(private http:HttpClient) { }
 
-  getUser():Observable<User[]>{
+  getUser():Observable<cboc[]>{
     console.log(this.serviceUrl);
-    return this.http.get<User[]>(this.serviceUrl);
-
-
-  }
+    return this.http.get<cboc[]>(this.serviceUrl);
+}
 }

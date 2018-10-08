@@ -24,22 +24,6 @@ import { MatTableModule } from '@angular/material';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const appRoutes: Routes = [
     {
         path        : 'apps',

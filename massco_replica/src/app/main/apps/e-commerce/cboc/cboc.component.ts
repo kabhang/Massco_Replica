@@ -1,31 +1,41 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-export interface PeriodicElement {
-  date: string;
-  description: string;
-  agenda: string;
-  minutes: string;
-}
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import {DataSource} from '@angular/cdk/collections';
+import { CommonService } from '../common.service';
+import { cboc } from '../common.model';
 
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {date: '9th June, 18', description: 'Lorem Ipsum is simply dummy text .', agenda:'', minutes: ''},
-  {date: '11th July, 18', description: 'Lorem Ipsum has been the industry', agenda: '', minutes: ''},
-  {date: '15th Aug, 18', description: 'It has survived not only five centuries', agenda:'', minutes: ''},
-  {date: '18th Sept, 18', description: ' It was popularised in the 1960s', agenda:'', minutes: ''},
-  {date: '20th Oct, 18', description: 'Letraset sheets containing Lorem Ipsum passages', agenda: '', minutes: ''},
-  {date: '30th Nov, 18', description: 'More recently with desktop publishing software', agenda: '', minutes: ''},
 
-];
+
+
+
+
 
 @Component({
   selector: 'cboc',
   templateUrl: './cboc.component.html',
   styleUrls: ['./cboc.component.scss']
 })
-export class CBOCComponent  {
+export class CBOCComponent  implements OnInit  {
 
+  dataSource = new UserDataSource(this.commonService);
   displayedColumns: string[] = ['date', 'description', 'agenda', 'minutes'];
-  dataSource = ELEMENT_DATA;
 
+  constructor(private commonService: CommonService) { }
+  
+  ngOnInit() {
+  }
+
+}
+
+export class UserDataSource extends DataSource<any> {
+  constructor(private commonService: CommonService) {
+    super();
+  }
+  connect(): Observable<cboc[]> {
+    return this.commonService.getCbocData();
+  }
+  disconnect() {}
 }

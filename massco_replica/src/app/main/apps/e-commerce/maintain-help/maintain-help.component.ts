@@ -1,6 +1,10 @@
-import { Component, Inject} from '@angular/core';
+import { Component, Inject,OnInit} from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
-
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import {DataSource} from '@angular/cdk/collections';
+import { maintainhelp } from '../common.model';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-maintain-help',
@@ -8,11 +12,14 @@ import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
   styleUrls: ['./maintain-help.component.scss']
 })
 export class MaintainHelpComponent  {
-  constructor(public dialog: MatDialog) {}
+  dataSource = new UserDataSource(this.commonService);
+  constructor(
+    public dialog: MatDialog, 
+    private commonService: CommonService) {}
 
   
-  displayedColumns = ['title', 'value'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns = ['titleOne', 'value'];
+  
 
   openDialog() {
     this.dialog.open(maintainHelpDialog , {
@@ -34,37 +41,13 @@ export class maintainHelpDialog {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 }
 
-export interface PeriodicElement {
-  title: string;
-  value: string;
- 
-}
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {title: '**New**', value: '**New**'},
-  {title: 'Access Controls', value: 'Access Controls'},
-  {title: 'Accordion Door Installer', value: 'Accordion Door Installer'},
-  {title: 'Acoustical Ceilings', value: 'Acoustical Ceilings'},
-  {title: 'Architect', value: 'Architect'},
-  {title: 'Asphalt', value: 'Asphalt'},
-  {title: 'Attorney At Law', value: 'Attorney At Law'},
-  {title: 'Baler Repair', value: 'Baler Repair'},
-  {title: 'Builders Hardware (doors/locks)', value: 'Builders Hardware (doors/locks)'},
-  {title: 'Bus Charter', value: 'Bus Charter'},
-  {title: 'Ceramic Tile', value: 'Ceramic Tile'},
-  {title: 'Commissioning Services', value: 'Commissioning Services'},
-  {title: 'Computer Equip/Software', value: 'Computer Equip/Software'},
-  {title: 'Concrete Work', value: 'Concrete Work'},
-  {title: 'Construction Materials', value: 'Construction Materials'},
-  {title: 'Consultant', value: 'Consultant'},
-  {title: 'Contractor', value: 'Contractor'},
-  {title: 'Core Drilling', value: 'Core Drilling'},
-  {title: 'Demolition', value: 'Demolition'},
-  {title: 'Design-Build Consultant', value: 'Design-Build Consultant'},
-  {title: 'Document Management', value: 'Document Management'},
-  {title: 'Electrical', value: 'Electrical'},
-  {title: 'Elevators', value: 'Elevators'},
-  {title: 'Engineering', value: 'Engineering'},
-  {title: 'Fencing', value: 'Fencing'}
- 
-];
+export class UserDataSource extends DataSource<any> {
+  constructor(private commonService: CommonService) {
+    super();
+  }
+  connect(): Observable<maintainhelp[]> {
+    return this.commonService.getMainatinHelp();
+  }
+  disconnect() {}
+}

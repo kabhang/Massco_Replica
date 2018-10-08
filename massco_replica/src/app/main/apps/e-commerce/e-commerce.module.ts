@@ -90,7 +90,7 @@ import {TreeNode} from 'primeng/api';
 import { NodeService } from './maintain-client/node-service.service';
 import { MaintainUserComponent,maintainDialog } from './maintain-user/maintain-user.component';
 import { MaitainUSerRoleComponent } from './maitain-user-role/maitain-user-role.component';
-import { MaintainHelpComponent } from './maintain-help/maintain-help.component';
+import { MaintainHelpComponent, maintainHelpDialog } from './maintain-help/maintain-help.component';
 import { MaintainReportComponent } from './maintain-report/maintain-report.component';
 import { SysteamUtilitiesComponent } from './systeam-utilities/systeam-utilities.component';
 import { MaintainWorkflowComponent } from './maintain-workflow/maintain-workflow.component';
@@ -98,8 +98,19 @@ import { CompaniesComponent } from './companies/companies.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormPageComponent } from './form-page/form-page.component';
-import {ContactService} from './contacts/contact.service';
+
 import { DistrictOverviewComponent } from './district-overview/district-overview.component';
+import { CbocService } from './cboc/cboc.service';
+
+import { CommonService } from './common.service';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { SysteamSettingComponent } from './systeam-setting/systeam-setting.component';
+
+
+
+
 
 
 
@@ -135,11 +146,18 @@ const routes: Routes = [
             data: EcommerceProductsService
         }
     },
+
+    {
+        path: 'systeamSetting',
+        component: SysteamSettingComponent,
+
+    },
     {
         path: 'maintainDistrict',
         component: MaintainDistrictComponent,
 
     },
+
     { path: 'CBOC', component: CBOCComponent    },
     {
         path: 'AcivityMode',
@@ -209,6 +227,11 @@ const routes: Routes = [
     {
         path: 'widgetVisibility',
         component: WidgetVisibilityComponent,
+
+    },
+    {
+        path: 'menuVisibility',
+        component: MenuVisibilityComponent,
 
     },
     {
@@ -369,7 +392,7 @@ const routes: Routes = [
         BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
         SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent,maintainDialog,
         MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent,CompaniesComponent,ContactsComponent,
-        FormPageComponent,DistrictOverviewComponent
+        FormPageComponent,DistrictOverviewComponent,maintainHelpDialog,PieChartComponent, BarChartComponent, SysteamSettingComponent
 
     ],
     imports: [
@@ -384,6 +407,7 @@ const routes: Routes = [
         MatIconModule,
         MatTreeModule,
         MatInputModule,
+        ChartsModule,
         MatPaginatorModule,
         MatRippleModule,
         MatStepperModule,
@@ -419,7 +443,23 @@ const routes: Routes = [
         FuseWidgetModule,
                TreeTableModule,
     ],
-    entryComponents: [DialogContentExample, DialogContentExampleDialog, DialogContactExample, DialogContactExampleDialog, DialogLineItemExampleDialog, DialogAttachmentDialog, DialogContentNotes, DialogAddFolderDialog, DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog, DialogNocDialog, DialogAttDialog, DialogBondDialog, PhotoEditDialog, DialogContentMeeting, PepSavechanges, PepRecordItration, ObjectCodeDialog, ActivityEditDialog, CategoryCodeDialog,maintainDialog],
+    entryComponents: [DialogContentExample, 
+        DialogContentExampleDialog, 
+        DialogContactExample,
+         DialogContactExampleDialog,
+          DialogLineItemExampleDialog, 
+          DialogAttachmentDialog, 
+          DialogContentNotes,
+           DialogAddFolderDialog, 
+           DialogUploadFolderDialog, 
+           DialogDeleteFolderDialog, 
+           DialogMoveFolderDialog,
+            DialogNocDialog, 
+            DialogAttDialog,
+             DialogBondDialog, PhotoEditDialog, 
+             DialogContentMeeting, PepSavechanges,
+              PepRecordItration, ObjectCodeDialog,
+               ActivityEditDialog, CategoryCodeDialog,maintainDialog,maintainHelpDialog],
     providers: [
         EcommerceDashboardService,
         EcommerceProductsService,
@@ -428,7 +468,7 @@ const routes: Routes = [
         EcommerceOrderService,
         TransactionService,
         PhotoServiceService,
-        NodeService,ContactService
+        NodeService,CommonService
     ]
 })
 export class EcommerceModule {

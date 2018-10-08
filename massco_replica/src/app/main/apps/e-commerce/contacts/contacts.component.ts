@@ -1,10 +1,11 @@
 
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from './contact.service';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import {DataSource} from '@angular/cdk/collections';
-import { User } from './contact';
+import { User } from '../common.model';
+import { CommonService } from '../common.service';
 
 
 @Component({
@@ -13,20 +14,20 @@ import { User } from './contact';
   styleUrls: ['./contacts.component.scss']  
 })
 export class ContactsComponent implements OnInit   {
-  dataSource = new UserDataSource(this.contactService);
+  dataSource = new UserDataSource(this.commonService);
   displayedColumns = ['first', 'last', 'title', 'contactType', 'company', 'title', 'addressOne', 'contactType','phoneOne','ext','phoneTwo','cell','email','fax','comments'];
-  constructor(private contactService: ContactService) { }
+  constructor(private commonService: CommonService) { }
   
   ngOnInit() {
   }
 }
 
 export class UserDataSource extends DataSource<any> {
-  constructor(private contactService: ContactService) {
+  constructor(private commonService: CommonService) {
     super();
   }
   connect(): Observable<User[]> {
-    return this.contactService.getUser();
+    return this.commonService.getUser();
   }
   disconnect() {}
 }

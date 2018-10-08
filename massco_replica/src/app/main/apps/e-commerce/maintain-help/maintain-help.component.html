@@ -18,7 +18,7 @@
                 <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
                     shopping_basket
                 </mat-icon>
-                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Object Code</span>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Maintain Help</span>
             </div>
             <!-- / APP TITLE -->
 
@@ -69,9 +69,9 @@
                       The actual rendered columns are set as a property on the row definition" -->
               
                 <!-- Position Column -->
-                <ng-container matColumnDef="title">
+                <ng-container matColumnDef="titleOne">
                   <th mat-header-cell *matHeaderCellDef> PageID</th>
-                  <td mat-cell *matCellDef="let element" (click)="openDialog()" style="color: #2196F3">  {{element.title}} </td>
+                  <td mat-cell *matCellDef="let element" (click)="openDialog()" style="color: #2196F3">  {{element.titleOne}} </td>
                 </ng-container>
               
                 <!-- Name Column -->

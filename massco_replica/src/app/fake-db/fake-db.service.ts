@@ -97,7 +97,7 @@ export class FakeDbService implements InMemoryDbService
             'quick-panel-events': QuickPanelFakeDb.events,
 
             // contracts
-            'e-commerce-contract':ECommerceFakeDb.contract
+          
 
         };
     }
