@@ -15,7 +15,7 @@ export class BoundSeriesComponent {
   dataSource = ELEMENT_DATA;
 
   openDialog() {
-    this.dialog.open(CategoryCodeDialog, {
+    this.dialog.open(BoundSeriesDialog, {
       data: {
         animal: 'panda'
       }
@@ -28,7 +28,7 @@ export class BoundSeriesComponent {
   templateUrl: 'bound-series-edit.html',
 })
 
-export class CategoryCodeDialog {
+export class BoundSeriesDialog {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 }
 

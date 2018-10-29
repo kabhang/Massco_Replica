@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import {MatButtonModule, MatCheckboxModule, MatMenuModule, MatChipsModule, MatFormFieldModule, MatIconModule,
+import {
+    MatButtonModule, MatCheckboxModule, MatMenuModule, MatChipsModule, MatFormFieldModule, MatIconModule,
     MatInputModule, MatDatepickerModule, MatPaginatorModule, MatRippleModule, MatSelectModule, MatSnackBarModule,
     MatSortModule, MatTableModule, MatTabsModule, MatDialogModule, MatExpansionModule, MatCardModule, MatListModule,
     MatToolbarModule, MatSlideToggleModule, MatStepperModule, MatTreeModule, MatProgressBarModule, MatRadioModule
@@ -74,28 +75,28 @@ import { ReportNotesComponent } from './report-notes/report-notes.component';
 import { ObjectCodeComponent, ObjectCodeDialog } from './object-code/object-code.component';
 import { AcivityModeComponent, ActivityEditDialog } from './acivity-mode/acivity-mode.component';
 import { BoundFundComponent } from './bound-fund/bound-fund.component';
-import { BoundSeriesComponent } from './bound-series/bound-series.component';
+import { BoundSeriesComponent, BoundSeriesDialog } from './bound-series/bound-series.component';
 
 import { CategoryComponent, CategoryCodeDialog } from './category/category.component';
 import { CutoffDatesComponent } from './cutoff-dates/cutoff-dates.component';
 import { PhaseComponent } from './phase/phase.component';
 import { ContractorTypeComponent, ContractTypeDialog } from './contractor-type/contractor-type.component';
-import { SuretyComponent } from './surety/surety.component';
+import { SuretyComponent, SuretyDialog } from './surety/surety.component';
 import { TabVisibilityComponent } from './tab-visibility/tab-visibility.component';
 import { WidgetVisibilityComponent } from './widget-visibility/widget-visibility.component';
 import { MenuVisibilityComponent } from './menu-visibility/menu-visibility.component';
 import { MaintainClientComponent } from './maintain-client/maintain-client.component';
-import {TreeTableModule} from 'primeng/treetable';
-import {TreeNode} from 'primeng/api';
+import { TreeTableModule } from 'primeng/treetable';
+import { TreeNode } from 'primeng/api';
 import { NodeService } from './maintain-client/node-service.service';
-import { MaintainUserComponent,maintainDialog } from './maintain-user/maintain-user.component';
-import { MaitainUSerRoleComponent } from './maitain-user-role/maitain-user-role.component';
+import { MaintainUserComponent, maintainDialog } from './maintain-user/maintain-user.component';
+import { MaitainUSerRoleComponent, maintainUserDialog } from './maitain-user-role/maitain-user-role.component';
 import { MaintainHelpComponent, maintainHelpDialog } from './maintain-help/maintain-help.component';
-import { MaintainReportComponent } from './maintain-report/maintain-report.component';
+import { MaintainReportComponent, maintainReportDialog } from './maintain-report/maintain-report.component';
 import { SysteamUtilitiesComponent } from './systeam-utilities/systeam-utilities.component';
 import { MaintainWorkflowComponent } from './maintain-workflow/maintain-workflow.component';
 import { CompaniesComponent } from './companies/companies.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import { ContactsComponent, ContactsCodeDialog } from './contacts/contacts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormPageComponent } from './form-page/form-page.component';
 
@@ -107,6 +108,8 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { SysteamSettingComponent } from './systeam-setting/systeam-setting.component';
+import { SeriesAComponent } from './series-a/series-a.component';
+import { ContactService } from './contacts/contact.service';
 
 
 
@@ -115,7 +118,7 @@ import { SysteamSettingComponent } from './systeam-setting/systeam-setting.compo
 
 
 
- 
+
 const routes: Routes = [
     {
         path: 'dashboard',
@@ -147,6 +150,12 @@ const routes: Routes = [
         }
     },
 
+
+    {
+        path: 'series',
+        component: SeriesAComponent,
+
+    },
     {
         path: 'systeamSetting',
         component: SysteamSettingComponent,
@@ -158,7 +167,7 @@ const routes: Routes = [
 
     },
 
-    { path: 'CBOC', component: CBOCComponent    },
+    { path: 'CBOC', component: CBOCComponent },
     {
         path: 'AcivityMode',
         component: AcivityModeComponent,
@@ -234,11 +243,7 @@ const routes: Routes = [
         component: MenuVisibilityComponent,
 
     },
-    {
-        path: 'menuVisibility',
-        component: MenuVisibilityComponent,
 
-    },
     {
         path: 'maintainClient',
         component: MaintainClientComponent,
@@ -249,53 +254,53 @@ const routes: Routes = [
     },
     {
         path: 'maintainUser',
-        component: MaintainUserComponent,      
+        component: MaintainUserComponent,
 
     },
     {
         path: 'maintainUserRole',
-        component: MaitainUSerRoleComponent,      
+        component: MaitainUSerRoleComponent,
 
     },
     {
         path: 'MaintainHelp',
-        component: MaintainHelpComponent,      
+        component: MaintainHelpComponent,
 
     },
     {
         path: 'maintainReport',
-        component: MaintainReportComponent,      
-        
+        component: MaintainReportComponent,
+
     },
     {
         path: 'systeamUtilities',
-        component: SysteamUtilitiesComponent,      
-        
+        component: SysteamUtilitiesComponent,
+
     },
     {
         path: 'MaintainWorkflow',
-        component: MaintainWorkflowComponent,      
-        
+        component: MaintainWorkflowComponent,
+
     },
     {
         path: 'companies',
-        component: CompaniesComponent,      
+        component: CompaniesComponent,
 
     },
     {
         path: 'contacts',
-        component:ContactsComponent, 
+        component: ContactsComponent,
     },
     {
         path: 'formsOne',
-        component:FormPageComponent , 
-      
+        component: FormPageComponent,
+
     },
 
     {
         path: 'formsOne',
-        component:FormPageComponent , 
-      
+        component: FormPageComponent,
+
     },
     {
         path: 'products/:id/:handle',
@@ -368,8 +373,8 @@ const routes: Routes = [
         ProjectBudgetComponent,
         DialogContentExample, DialogContentExampleDialog,
         DialogContactExample, DialogContactExampleDialog, DialogAttachmentDialog,
-        DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog, AssoAttachComponent,DialogContentNotes,DialogAddFolderDialog,
-        DialogLineItemExampleDialog,AddNewContactComponent,FormsComponent,ProductNewComponent,TransactionComponent,AddNewComponent,
+        DialogUploadFolderDialog, DialogDeleteFolderDialog, DialogMoveFolderDialog, AssoAttachComponent, DialogContentNotes, DialogAddFolderDialog,
+        DialogLineItemExampleDialog, AddNewContactComponent, FormsComponent, ProductNewComponent, TransactionComponent, AddNewComponent,
         FormsOneComponent,
         ContractNewComponent,
         AmountTableComponent,
@@ -389,11 +394,11 @@ const routes: Routes = [
         CurrespondenceComponent,
         PepComponent, PepContractComponent, PepSavechanges, PepRecordItration,
         MaintainDistrictComponent, CBOCComponent, ReportNotesComponent, ObjectCodeDialog, ObjectCodeComponent, AcivityModeComponent, ActivityEditDialog,
-        BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent,ContractTypeDialog,
-        SuretyComponent,TabVisibilityComponent,MenuVisibilityComponent,WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent,maintainDialog,
-        MaitainUSerRoleComponent,MaintainReportComponent,MaintainHelpComponent,SysteamUtilitiesComponent,MaintainWorkflowComponent,CompaniesComponent,ContactsComponent,
-        FormPageComponent,DistrictOverviewComponent,maintainHelpDialog,PieChartComponent, BarChartComponent, SysteamSettingComponent
-
+        BoundFundComponent, BoundSeriesComponent, CategoryComponent, CutoffDatesComponent, PhaseComponent, CategoryCodeDialog, ContractorTypeComponent, ContractTypeDialog,
+        SuretyComponent, TabVisibilityComponent, MenuVisibilityComponent, WidgetVisibilityComponent, MaintainClientComponent, MaintainUserComponent, maintainDialog,
+        MaitainUSerRoleComponent, MaintainReportComponent, MaintainHelpComponent, SysteamUtilitiesComponent, MaintainWorkflowComponent, CompaniesComponent, ContactsComponent,
+        FormPageComponent, DistrictOverviewComponent, maintainHelpDialog, PieChartComponent, BarChartComponent, SysteamSettingComponent, SeriesAComponent, maintainHelpDialog, maintainUserDialog, maintainReportDialog,
+        BoundSeriesDialog, SuretyDialog,ContactsCodeDialog
     ],
     imports: [
         RouterModule.forChild(routes),
@@ -433,7 +438,7 @@ const routes: Routes = [
         OverlayModule,
         MatToolbarModule,
         HttpClientModule,
-       
+
         NgxChartsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyD81ecsCj4yYpcXSLFcYU97PvRsE_X8Bx8'
@@ -441,25 +446,25 @@ const routes: Routes = [
 
         FuseSharedModule,
         FuseWidgetModule,
-               TreeTableModule,
+        TreeTableModule,
     ],
-    entryComponents: [DialogContentExample, 
-        DialogContentExampleDialog, 
+    entryComponents: [DialogContentExample,
+        DialogContentExampleDialog,
         DialogContactExample,
-         DialogContactExampleDialog,
-          DialogLineItemExampleDialog, 
-          DialogAttachmentDialog, 
-          DialogContentNotes,
-           DialogAddFolderDialog, 
-           DialogUploadFolderDialog, 
-           DialogDeleteFolderDialog, 
-           DialogMoveFolderDialog,
-            DialogNocDialog, 
-            DialogAttDialog,
-             DialogBondDialog, PhotoEditDialog, 
-             DialogContentMeeting, PepSavechanges,
-              PepRecordItration, ObjectCodeDialog,
-               ActivityEditDialog, CategoryCodeDialog,maintainDialog,maintainHelpDialog],
+        DialogContactExampleDialog,
+        DialogLineItemExampleDialog,
+        DialogAttachmentDialog,
+        DialogContentNotes,
+        DialogAddFolderDialog,
+        DialogUploadFolderDialog,
+        DialogDeleteFolderDialog,
+        DialogMoveFolderDialog,
+        DialogNocDialog,
+        DialogAttDialog,
+        DialogBondDialog, PhotoEditDialog,
+        DialogContentMeeting, PepSavechanges,
+        PepRecordItration, ObjectCodeDialog,
+        ActivityEditDialog, CategoryCodeDialog, maintainDialog, maintainHelpDialog, maintainUserDialog, maintainReportDialog, BoundSeriesDialog, SuretyDialog, ContactsCodeDialog],
     providers: [
         EcommerceDashboardService,
         EcommerceProductsService,
@@ -468,7 +473,7 @@ const routes: Routes = [
         EcommerceOrderService,
         TransactionService,
         PhotoServiceService,
-        NodeService,CommonService
+        NodeService, CommonService, ContactService
     ]
 })
 export class EcommerceModule {

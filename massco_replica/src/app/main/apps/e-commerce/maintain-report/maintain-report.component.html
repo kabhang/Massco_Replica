@@ -37,23 +37,77 @@
                   </mat-expansion-panel-header> 
                   
                   <div class="tab-content p-24" fusePerfectScrollbar>
+                        <div class="w-100-p">
+                                <span class="mat-subheading-1">ID:0</span>
+                            </div>
                       <div class="w-100-p">
                           <mat-form-field fxFlex="30" class="mr-16">
-                              <input matInput placeholder="Lookup Value">        
+                              <input matInput placeholder="Title">        
+                          </mat-form-field>
+
+                          <mat-form-field fxFlex="30" class="mr-16">
+                                <input matInput placeholder="FileName">        
+                            </mat-form-field>
+                      </div>
+                      <div class="w-100-p">
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="Number">        
+                          </mat-form-field>
+
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="FileName">        
                           </mat-form-field>
                       </div>
                       <div class="w-100-p">
                           <mat-form-field fxFlex="30" class="mr-16">
-                              <input matInput placeholder="Lookup Title">        
+                                <textarea matInput placeholder="Leave a comment"></textarea>
                           </mat-form-field>
                       </div>
                      
                       <div class="w-100-p">
-                          <mat-form-field fxFlex="30" class="mr-16">
-                              <input matInput placeholder="ID" value="0">        
-                          </mat-form-field>
+                            <mat-form-field fxFlex="50">
+                            <mat-select placeholder="Type">
+                                    <mat-option [value]="'-- none --'">
+                                        -- none --
+                                    </mat-option>
+                                    <mat-option [value]="'Financial'">
+                                        Financial
+                                    </mat-option>
+                                    <mat-option [value]="'none'">
+                                       none
+                                    </mat-option>
+                                    <mat-option [value]="'Project'">
+                                        Project
+                                    </mat-option>
+                                    <mat-option [value]="'Utilities'">
+                                            Utilities
+                                    </mat-option>
+                                    
+                                </mat-select>
+                                </mat-form-field>
                       </div>
               
+                      <div class="w-100-p">
+                         <div fxFlex="50">
+                                Category for grouping on the list page.
+                                <mat-list role="list" style="display: flex">
+                                        <mat-list-item role="listitem">
+                                                <mat-checkbox>Show in List ?</mat-checkbox>
+                                        </mat-list-item>
+                                        <mat-list-item role="listitem">  <mat-checkbox>Prompt for Parameters?</mat-checkbox></mat-list-item>
+                                        <mat-list-item role="listitem">  <mat-checkbox>Prompt for DateRange?</mat-checkbox></mat-list-item>
+                                      </mat-list>
+
+                                      <mat-list role="list" style="display: flex">
+                                            <mat-list-item role="listitem">
+                                                    <mat-checkbox>Prompt for Contractor?</mat-checkbox></mat-list-item>
+                                            <mat-list-item role="listitem">  <mat-checkbox>SSRS Report?</mat-checkbox></mat-list-item>
+                                            <mat-list-item role="listitem">  <mat-checkbox>Pass specific key or project to report?</mat-checkbox></mat-list-item>
+                                          </mat-list>
+
+                         </div>
+                        
+                      </div>
               <div class="w-50-p" style="float: right">
                 <button mat-flat-button color="accent" class="mr-16" (click)="addHero(newHero.value)">Save</button>    
               </div>

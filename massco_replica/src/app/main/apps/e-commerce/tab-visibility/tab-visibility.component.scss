@@ -46,3 +46,6 @@ table {
     opacity: 0.5;
   }
   .mat-form-field-infix{width: 50px; text-align: center;}
+
+
+  .mat-form-field-appearance-legacy .mat-form-field-infix{padding: 0 0 !important;}

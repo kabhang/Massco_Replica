@@ -39,19 +39,56 @@
                   <div class="tab-content p-24" fusePerfectScrollbar>
                       <div class="w-100-p">
                           <mat-form-field fxFlex="30" class="mr-16">
-                              <input matInput placeholder="Lookup Value">        
+                              <input matInput placeholder="Object Code">        
                           </mat-form-field>
                       </div>
                       <div class="w-100-p">
                           <mat-form-field fxFlex="30" class="mr-16">
-                              <input matInput placeholder="Lookup Title">        
+                              <input matInput placeholder="Description">        
                           </mat-form-field>
                       </div>
                      
                       <div class="w-100-p">
-                          <mat-form-field fxFlex="30" class="mr-16">
-                              <input matInput placeholder="ID" value="0">        
-                          </mat-form-field>
+                            <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+                                    <mat-select placeholder="Budget Group" formControlName="Budget Group" required  >
+                                        <mat-option [value]="'-- none --'">
+                                            -- none --
+                                        </mat-option>
+                                        <mat-option [value]="' Option 1'">
+                                            Option 1
+                                        </mat-option>
+                                        <mat-option [value]="' Option 2'">
+                                            Option 2
+                                        </mat-option>
+                                        <mat-option [value]="' Option 3'">
+                                            Option 3
+                                        </mat-option>
+                                        <mat-option [value]="' Option 4'">
+                                            Option 4
+                                        </mat-option>
+                        
+                                    </mat-select>
+                        
+                                </mat-form-field>
+                                <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+                                        <mat-select placeholder="Object Code Group" formControlName="Object Code Group" required  >
+                                            <mat-option [value]="'  Hard Costs'">
+                                                    Hard Costs
+                                            </mat-option>
+                                            <mat-option [value]="' Soft Costs'">
+                                                Soft Costs
+                                            </mat-option>
+                                     
+                            
+                                        </mat-select>
+                            
+                                    </mat-form-field>
+                      </div>
+                      <div class="w-100-p">
+                          <div fxFlex="30">
+                                <span class="h4">ID : 0</span>
+
+                          </div>
                       </div>
               
               <div class="w-50-p" style="float: right">

@@ -7,6 +7,7 @@ export interface User {
     title: string;
     addressOne:string;
     contactType: string;
+    city:string;
     phoneOne:number;
     ext:number;
     phoneTwo:number;

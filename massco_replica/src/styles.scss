@@ -38,3 +38,7 @@ tbody> tr:nth-child(odd){background: #eaeaea}
  #product .content .mat-tab-body-content {
     display: inline !important;
 }
+.mat-form-field-appearance-legacy .mat-form-field-infix{padding: 0 0 !important;}
+.mat-form-field-hide-placeholder .mat-select-placeholder{padding-bottom:16px;}
+input.mat-input-element{margin-top: 9px;}
+.page-layout.carded.fullwidth > .center > .content-card{overflow: scroll;}

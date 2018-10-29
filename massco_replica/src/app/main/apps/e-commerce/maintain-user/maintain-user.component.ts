@@ -32,7 +32,7 @@ export class maintainDialog {
 }
 
 
-export interface PeriodicElement {
+export interface maintanUserData {
   user: string;
   loginAs: string;
   loginID: string;
@@ -43,7 +43,7 @@ export interface PeriodicElement {
   disabled:string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: maintanUserData[] = [
   {user: 'Albert Miranda NOCCCD', loginAs: '',loginID:'amiranda@cypresscollege.edu', password: '0A966aT8', role: 'Accountant View Only',dashboard:'Integrated', lastLogin:'19thSept,18',disabled:''},
   {user: 'Albert Miranda NOCCCD', loginAs: '',loginID:'amiranda@cypresscollege.edu', password: '0A966aT8', role: 'Accountant View Only',dashboard:'Integrated', lastLogin:'19thSept,18',disabled:''},
   {user: 'Albert Miranda NOCCCD', loginAs: '',loginID:'amiranda@cypresscollege.edu', password: '0A966aT8', role: 'Accountant View Only',dashboard:'Integrated', lastLogin:'19thSept,18',disabled:''},

@@ -33,13 +33,13 @@ export class SuretyDialog {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 }
 
-export interface PeriodicElement {
+export interface suretyData {
   title: string;
   value: string;
  
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: suretyData[] = [
   {title: '**New**', value: '**New**'},
   {title: 'Access Controls', value: 'Access Controls'},
   {title: 'Accordion Door Installer', value: 'Accordion Door Installer'},

@@ -19,7 +19,7 @@ export const navigation: FuseNavigation[] = [
                         id   : 'analytics',
                         title: 'Series A',
                         type : 'item',
-                        url  : '/apps/e-commerce/products/1/printed-dress',
+                        url  : '/apps/e-commerce/series',
                         exactMatch: true
                     },
                     {
@@ -591,15 +591,8 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'today',
                 url      : '/apps/calendar'
-            },
-            {
-                id       : 'calendar',
-                title    : 'Administration',
-                translate: 'NAV.CALENDAR',
-                type     : 'item',
-                icon     : 'today',
-                url      : '/apps/calendar'
             }
+           
         ]
     }
 
