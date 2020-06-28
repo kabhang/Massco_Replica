@@ -1,0 +1,1007 @@
+<div >
+
+    <!-- TOP BACKGROUND -->
+  
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        
+
+        <!-- CONTENT CARD -->
+        <div class="content-card mat-white-bg">
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <form name="productForm" [formGroup]="productForm" class="product w-100-p" fxLayout="column" fxFlex>
+
+                    <mat-tab-group>
+
+                        <mat-tab label="Contract">
+
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+                                <div class="w-100-p">
+                                    <mat-form-field fxFlex="15">
+                                        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="w-100-p">
+                                    <mat-form-field class="w-100-p" fxFlex="30" class="mr-16">
+                                        <textarea matInput name="description" formControlName="description" placeholder="Description" rows="3">
+                                    </textarea>
+                                    </mat-form-field>
+
+                                    <mat-form-field fxFlex="30" class="mr-16" style="position: relative;top: 36px;">
+                                        <mat-select placeholder="Type" formControlName="contact" required disabled>
+                                            <mat-option [value]="'-- none --'">
+                                                -- none --
+                                            </mat-option>
+                                            <mat-option [value]="' Option 1'">
+                                                Option 1
+                                            </mat-option>
+                                            <mat-option [value]="' Option 2'">
+                                                Option 2
+                                            </mat-option>
+                                            <mat-option [value]="' Option 3'">
+                                                Option 3
+                                            </mat-option>
+                                            <mat-option [value]="' Option 4'">
+                                                Option 4
+                                            </mat-option>
+
+                                        </mat-select>
+
+                                    </mat-form-field>
+                                </div>
+                               
+                                <div class="w-100-p">
+                                    <mat-form-field fxFlex="30" class="mr-16">
+                                        <input matInput placeholder="JCAF Line">
+
+                                    </mat-form-field>
+
+                                    <mat-form-field fxFlex="30" class="mr-16">
+                                        <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                            <mat-option [value]="'-- none --'">
+                                                2. Plans (A. Architectual Fees) - Bond (UnAllocated Amount ($2,787.40 Available)
+                                            </mat-option>
+                                            <mat-option [value]="' Option 1'">
+                                                2. Plans (B. Project Management) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                            </mat-option>
+                                            <mat-option [value]="' Option 2'">
+                                                3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                            </mat-option>
+                                            <mat-option [value]="' Option 3'">
+                                                3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                            </mat-option>
+                                            <mat-option [value]="' Option 4'">
+                                                3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                            </mat-option>
+
+                                        </mat-select>
+                                       
+
+                                    </mat-form-field>
+
+                                </div>
+
+                               
+                                <div class="w-100-p">
+                                    <mat-form-field fxFlex="30" class="mr-16">
+                                        <input matInput placeholder="Amount">
+                                    </mat-form-field>
+
+                                    <mat-form-field fxFlex="30" class="mr-16">
+                                        <input matInput placeholder="Account Number">
+
+                                    </mat-form-field>
+                                </div>
+                               
+                                <div class="w-100-p">
+                                    <mat-form-field fxFlex="30" class="mr-16">
+                                        <input matInput placeholder="P.O. Line#">
+                                    </mat-form-field>
+                                    <mat-checkbox>Reimbursable</mat-checkbox>
+                                </div>
+                           
+                                <div class="w-50-p" style="float: right">
+                                        <button mat-flat-button color="accent" class="mr-16">Save</button>
+
+                                        <button mat-flat-button class="mr-16" >Cancel</button>
+                                        
+                            </div>
+                   </div>
+
+                        </mat-tab>
+
+                        <mat-tab label="Line Item">
+
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field>
+                                                        <input matInput [matDatepicker]="picker1" placeholder="Angular forms" [formControl]="date">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker1></mat-datepicker>
+                                                      </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                            <mat-form-field class="w-100-p" fxFlex="30" class="mr-16">
+                                                <textarea matInput name="description" formControlName="description" placeholder="Product Description" rows="3">
+                                            </textarea>
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30" class="mr-16" style="position: relative;top: 36px;">
+                                                <mat-select placeholder="Line Item" formControlName="Line Item" required disabled>
+                                                    <mat-option [value]="'-- none --'">
+                                                        -- none --
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        Option 1
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        Option 2
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        Option 3
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        Option 4
+                                                    </mat-option>
+        
+                                                </mat-select>
+        
+                                            </mat-form-field>
+
+
+                                        </div>
+                                        
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="JCAF Line">
+        
+                                            </mat-form-field>
+
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                                    <mat-option [value]="'-- none --'">
+                                                        2. Plans (A. Architectual Fees) - Bond (UnAllocated Amount ($2,787.40 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        2. Plans (B. Project Management) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+        
+                                                </mat-select>
+                                               
+        
+                                            </mat-form-field>
+                                        </div>
+        
+                                        
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="Amount">
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="Account Number">
+        
+                                            </mat-form-field>
+                                        </div>
+                                        
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="P.O. Line#">
+        
+                                            </mat-form-field>
+                                            <mat-checkbox>Reimbursable</mat-checkbox>
+                                        </div>
+                                
+                                       <div class="w-50-p" style="float: right">
+                                        <button mat-flat-button color="accent" class="mr-16">Save</button>
+
+                                        <button mat-flat-button class="mr-16" >Cancel</button>
+                                        
+                            </div>
+                                    </div>
+
+
+
+                            
+                        </mat-tab>
+
+                        <mat-tab label="Allowance">
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field>
+                                                        <input matInput [matDatepicker]="picker2" placeholder="Angular forms (w/ deserialization)"
+                                                               [formControl]="serializedDate">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker2></mat-datepicker>
+                                                      </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                            <mat-form-field class="w-100-p mr-16" fxFlex="30">
+                                                <textarea matInput name="description" formControlName="description" placeholder="Product Description" rows="3">
+                                            </textarea>
+                                            </mat-form-field>
+
+                                            <mat-form-field fxFlex="30" class="mr-16" style="position: relative;top: 36px;" >
+                                                <mat-select placeholder="Allowance" formControlName="Allowance" required disabled>
+                                                    <mat-option [value]="'-- none --'">
+                                                        -- none --
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        Option 1
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        Option 2
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        Option 3
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        Option 4
+                                                    </mat-option>
+        
+                                                </mat-select>
+        
+                                            </mat-form-field>
+                                        </div>
+                                    
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="JCAF Line">
+        
+                                            </mat-form-field>
+
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                                    <mat-option [value]="'-- none --'">
+                                                        2. Plans (A. Architectual Fees) - Bond (UnAllocated Amount ($2,787.40 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        2. Plans (B. Project Management) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+        
+                                                </mat-select>
+                                               
+        
+                                            </mat-form-field>
+                                        </div>
+        
+                                       
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="Amount">
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="Account Number">
+        
+                                            </mat-form-field>
+                                        </div>
+                                       
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="P.O. Line#">
+        
+                                            </mat-form-field>
+                                            <mat-checkbox>Reimbursable</mat-checkbox>
+                                        </div>
+                                     
+                                        <div class="w-50-p" style="float: right">
+                                            <button mat-flat-button color="accent" class="mr-16">Save</button>    
+                                            <button mat-flat-button class="mr-16" >Cancel</button>                                          
+                                </div>
+</div>
+
+                        </mat-tab>
+
+                        <mat-tab label="Alternate">
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field>
+                                                        <input matInput [matDatepicker]="picker3" placeholder="Value binding" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker3></mat-datepicker>
+                                                      </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p" >
+                                            <mat-form-field class="w-100-p mr-16" fxFlex="30">
+                                                <textarea matInput name="description" formControlName="description" placeholder="Product Description" rows="5">
+                                            </textarea>
+                                            </mat-form-field>
+
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="JCAF Line">
+        
+                                            </mat-form-field>
+                                        </div>
+                                     
+                                        
+        
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"   class="mr-16">
+                                                <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                                    <mat-option [value]="'-- none --'">
+                                                        2. Plans (A. Architectual Fees) - Bond (UnAllocated Amount ($2,787.40 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        2. Plans (B. Project Management) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        3. Working Drawings (A. Architectual Fees) - Bond (UnAllocated Amount ($7,453.80 Available)
+                                                    </mat-option>
+        
+                                                </mat-select>
+                                               
+        
+                                            </mat-form-field>
+
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="Amount">
+        
+                                            </mat-form-field>
+                                        </div>
+                                        
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="Account Number">
+                                            </mat-form-field>
+
+                                            <mat-form-field fxFlex="30">
+                                                <input matInput placeholder="P.O. Line#">
+        
+                                            </mat-form-field>
+                                        </div>
+                                      
+                                        <div class="w-100-p">
+                                        <mat-checkbox>Reimbursable</mat-checkbox>
+                                    </div>
+                                    <div class="w-50-p" style="float: right">
+                                        <button mat-flat-button color="accent" class="mr-16">Save</button>    
+                                        <button mat-flat-button class="mr-16" >Cancel</button>                                          
+                            </div>
+
+                                    </div>
+                        </mat-tab>
+
+                        <mat-tab label="Change Order">
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="30"  class="mr-16">
+                                                        <input matInput [matDatepicker]="picker4" placeholder="Value binding" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker4></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="30"  class="mr-16">
+                                                            <input matInput placeholder="CO#">
+                    
+                                                        </mat-form-field>
+                                                      
+                                                                <mat-checkbox>Reimbursable</mat-checkbox>
+
+                                                        
+
+
+                                        </div>
+                                      
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <mat-select placeholder="Entry  " formControlName="Entry Type" required disabled>
+                                                    <mat-option [value]="'-- none --'">
+                                                     Change Order
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        Option 1
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        Option 2
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        Option 3
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        Option 4
+                                                    </mat-option>
+        
+                                                </mat-select>
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                    <input matInput placeholder="49707-1340-62303-7100" disabled>
+            
+                                                </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                       
+                                                <mat-form-field class="example-full-width" fxFlex="30" class="mr-16">
+                                                        <textarea matInput placeholder="Description"></textarea>
+                                                      </mat-form-field> 
+                                                      
+                                                      <mat-form-field class="example-full-width" fxFlex="30" class="mr-16">
+                                                        <input matInput placeholder="Budget Line">
+                                                      </mat-form-field>    
+                                        </div>
+
+                                        
+                
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                                    <mat-option [value]="'UET'">UET </mat-option>                                               
+        
+                                                </mat-select>
+                                               
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="Fund Code">
+                                            </mat-form-field>
+                                            <span style="font-size:10px;">Expended: $0.00 Available In Budget: $0.0</span>
+                                           
+                                        </div>
+                                       
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="Requested By">
+        
+                                            </mat-form-field>
+
+                                            <mat-form-field class="example-full-width"  fxFlex="30"  class="mr-16">
+                                                    <textarea matInput placeholder="Leave a comment"></textarea>
+                                                  </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="P.O. Line#">
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                    <input matInput placeholder="Increased Contract Days">
+            
+                                                </mat-form-field>
+
+                                                <mat-form-field fxFlex="30"  class="mr-16">
+                                                        <input matInput placeholder="Requested By" type="url">
+                
+                                                    </mat-form-field>
+                                        </div>
+
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="25"  class="mr-16">
+                                                        <input matInput [matDatepicker]="picker5" placeholder="Arch Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker5></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="25"  class="mr-16">
+                                                        <input matInput [matDatepicker]="picker6" placeholder="FDO Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker6></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="25" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker7" placeholder="Dist Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker7></mat-datepicker>
+                                                      </mat-form-field>
+                                            </div>
+                                           
+                                              
+                                                    <div class="w-100-p">
+                                                            <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker8" placeholder="Completion Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker8></mat-datepicker>
+                                                                  </mat-form-field>
+
+                                                                  <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker9" placeholder="Board Approve Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker9></mat-datepicker>
+                                                                  </mat-form-field>
+                                                        </div>
+                                                       
+                                        <div class="w-100-p">
+                                                <mat-form-field class="example-full-width mr-16" fxFlex="50">
+                                                        <textarea matInput placeholder="Leave a comment"></textarea>
+                                                      </mat-form-field>
+                                    </div>
+                                    <div class="w-50-p" style="float: right">
+                                        <button mat-flat-button color="accent" class="mr-16">Save</button>    
+                                        <button mat-flat-button class="mr-16" >Cancel</button>                                          
+                            </div>
+
+                                    </div>
+                           
+                        </mat-tab>
+                        <mat-tab label="Adjustment to Close">
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="25" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker10" placeholder="Value binding" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker4></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="25"  class="mr-16">
+                                                            <input matInput placeholder="CO#">
+                    
+                                                        </mat-form-field>
+                                                      
+                                                                <mat-checkbox>Reimbursable</mat-checkbox>
+
+                                                        
+
+
+                                        </div>
+                                      
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <mat-select placeholder="Entry Type" formControlName="Entry Type" required disabled>
+                                                    <mat-option [value]="'-- none --'">
+                                                     Change Order
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        Option 1
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        Option 2
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        Option 3
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        Option 4
+                                                    </mat-option>
+        
+                                                </mat-select>
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16" fxFlex="30"  >
+                                                    <input matInput placeholder="Acct Number">
+            
+                                                </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                       
+                                                <mat-form-field class="example-full-width mr-16"  fxFlex="30"  >
+                                                        <textarea matInput placeholder="Description"></textarea>
+                                                      </mat-form-field>        
+                                                      <mat-form-field class="example-full-width  mr-16" fxFlex="30">
+                                                        <input matInput placeholder="Budget Line">
+                                                      </mat-form-field>                                  
+                                        </div>
+
+                                     
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                                    <mat-option [value]="'UET'">
+                                                            UET
+                                                    </mat-option>
+                                                  
+        
+                                                </mat-select>
+                                               
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="Fund Code">
+                                             
+                                            </mat-form-field>
+                                            <span style="font-size:10px;">Expended: $0.00 Available In Budget: $0.0</span>
+                                        </div>
+                                       
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="Requested By">
+        
+                                            </mat-form-field>
+
+                                            <mat-form-field class="example-full-width mr-16"  fxFlex="30">
+                                                    <textarea matInput placeholder="Leave a comment"></textarea>
+                                                  </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="P.O. Line#">
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                    <input matInput placeholder="Increased Contract Days">
+            
+                                                </mat-form-field>
+
+                                                <mat-form-field fxFlex="30" class="mr-16">
+                                                        <input matInput placeholder="Requested By" type="url">
+                
+                                                    </mat-form-field>
+                                        </div>
+
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="25"  class="mr-16">
+                                                        <input matInput [matDatepicker]="picker11" placeholder="Arch Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker5></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="25"  class="mr-16">
+                                                        <input matInput [matDatepicker]="picker12" placeholder="FDO Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker6></mat-datepicker>
+                                                      </mat-form-field>
+                                                      <mat-form-field fxFlex="25"  class="mr-16">
+                                                        <input matInput [matDatepicker]="picker13" placeholder="Dist Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker7></mat-datepicker>
+                                                      </mat-form-field>
+                                            </div>
+                                          
+                                               
+                                                    <div class="w-100-p">
+                                                            <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker14" placeholder="Completion Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker8></mat-datepicker>
+                                                                  </mat-form-field>
+                                                                  <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker15" placeholder="Board Approve Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker9></mat-datepicker>
+                                                                  </mat-form-field>
+                                                        </div>
+                                                      
+                                        <div class="w-100-p">
+                                                <mat-form-field class="example-full-width" fxFlex="50">
+                                                        <textarea matInput placeholder="Leave a comment"></textarea>
+                                                      </mat-form-field>
+                                    </div>
+                                    <div class="w-50-p" style="float: right">
+                                        <button mat-flat-button color="accent" class="mr-16">Save</button>    
+                                        <button mat-flat-button class="mr-16" >Cancel</button>                                          
+                            </div>
+
+                                    </div>
+                        </mat-tab>
+                        <mat-tab label="Amendment">
+
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="30" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker16" placeholder="Value binding" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker4></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="30" class="mr-16">
+                                                            <input matInput placeholder="CO#">
+                    
+                                                        </mat-form-field>
+                                                      
+                                                                <mat-checkbox>Reimbursable</mat-checkbox>
+
+                                                        
+
+
+                                        </div>
+                                      
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <mat-select placeholder="Entry Type" formControlName="Entry Type" required disabled>
+                                                    <mat-option [value]="'-- none --'">
+                                                     Change Order
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        Option 1
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        Option 2
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        Option 3
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        Option 4
+                                                    </mat-option>
+        
+                                                </mat-select>
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                    <input matInput placeholder="Acct Number">
+            
+                                                </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                       
+                                                <mat-form-field class="example-full-width"  fxFlex="30" class="mr-16">
+                                                        <textarea matInput placeholder="Description"></textarea>
+                                                      </mat-form-field>       .
+                                                      <mat-form-field class="example-full-width" fxFlex="30" class="mr-16">
+                                                        <input matInput placeholder="Budget Line">
+                                                      </mat-form-field>                                   
+                                        </div>
+
+                                      
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                                    <mat-option [value]="'UET'">
+                                                            UET
+                                                    </mat-option>
+                                                  
+        
+                                                </mat-select>
+                                               
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="Fund Code">
+        
+                                            </mat-form-field><br/>
+                                            <span style="font-size:10px;">Expended: $0.00 Available In Budget: $0.0</span>
+                                        </div>
+                                        
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="Requested By">
+        
+                                            </mat-form-field>
+
+                                            <mat-form-field class="example-full-width"  fxFlex="30" class="mr-16">
+                                                    <textarea matInput placeholder="Leave a comment"></textarea>
+                                                  </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="P.O. Line#">
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                    <input matInput placeholder="Increased Contract Days">
+            
+                                                </mat-form-field>
+
+                                                <mat-form-field fxFlex="30" class="mr-16">
+                                                        <input matInput placeholder="Requested By" type="url">
+                
+                                                    </mat-form-field>
+                                        </div>
+
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="25" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker17" placeholder="Arch Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker5></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="25" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker18" placeholder="FDO Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker6></mat-datepicker>
+                                                      </mat-form-field>
+                                                      <mat-form-field fxFlex="25" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker19" placeholder="Dist Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker7></mat-datepicker>
+                                                      </mat-form-field>
+                                            </div>
+                                    
+                                                    <div class="w-100-p" >
+                                                            <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker20" placeholder="Completion Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker8></mat-datepicker>
+                                                                  </mat-form-field>
+
+                                                                  <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker21" placeholder="Board Approve Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker9></mat-datepicker>
+                                                                  </mat-form-field>
+                                                        </div>
+                                                      
+                                        <div class="w-100-p">
+                                                <mat-form-field class="example-full-width" fxFlex="80">
+                                                        <textarea matInput placeholder="Leave a comment"></textarea>
+                                                      </mat-form-field>
+                                    </div>
+                                    <div class="w-50-p" style="float: right">
+                                        <button mat-flat-button color="accent" class="mr-16">Save</button>    
+                                        <button mat-flat-button class="mr-16" >Cancel</button>                                          
+                            </div>
+
+                                    </div>
+                        </mat-tab>
+                        <mat-tab label="Increase Purchase Order">
+
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="30" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker22" placeholder="Value binding" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker4></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="30"  class="mr-16">
+                                                            <input matInput placeholder="CO#">
+                    
+                                                        </mat-form-field>
+                                                      
+                                                                <mat-checkbox>Reimbursable</mat-checkbox>
+
+                                                        
+
+
+                                        </div>
+                                      
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <mat-select placeholder="Entry Type" formControlName="Entry Type" required disabled>
+                                                    <mat-option [value]="'-- none --'">
+                                                     Change Order
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 1'">
+                                                        Option 1
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 2'">
+                                                        Option 2
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 3'">
+                                                        Option 3
+                                                    </mat-option>
+                                                    <mat-option [value]="' Option 4'">
+                                                        Option 4
+                                                    </mat-option>
+        
+                                                </mat-select>
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                    <input matInput placeholder="Acct Number">
+            
+                                                </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                       
+                                                <mat-form-field class="example-full-width mr-16"  fxFlex="30" >
+                                                        <textarea matInput placeholder="Description"></textarea>
+                                                      </mat-form-field>       
+                                                      <mat-form-field class="example-full-width mr-16"  fxFlex="30"> 
+                                                        <input matInput placeholder="Budget Line">
+                                                      </mat-form-field>                                      
+                                        </div>
+
+                
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <mat-select placeholder="Object Code" formControlName="Object Code" required>
+                                                    <mat-option [value]="'UET'">
+                                                            UET
+                                                    </mat-option>
+                                                  
+        
+                                                </mat-select>
+                                               
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30"  class="mr-16">
+                                                <input matInput placeholder="Fund Code">
+        
+                                            </mat-form-field>
+                                            <span style="font-size:10px;">Expended: $0.00 Available In Budget: $0.0</span>
+                                        </div>
+                                      
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="Requested By">
+        
+                                            </mat-form-field>
+
+                                            <mat-form-field class="example-full-width"  fxFlex="30" class="mr-16">
+                                                    <textarea matInput placeholder="Leave a comment"></textarea>
+                                                  </mat-form-field>
+                                        </div>
+                                        <div class="w-100-p">
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                <input matInput placeholder="P.O. Line#">
+        
+                                            </mat-form-field>
+                                            <mat-form-field fxFlex="30" class="mr-16">
+                                                    <input matInput placeholder="Increased Contract Days">
+            
+                                                </mat-form-field>
+
+                                                <mat-form-field fxFlex="30" class="mr-16">
+                                                        <input matInput placeholder="Requested By" type="url">
+                
+                                                    </mat-form-field>
+                                        </div>
+
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="25" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker23" placeholder="Arch Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker5></mat-datepicker>
+                                                      </mat-form-field>
+
+                                                      <mat-form-field fxFlex="25" class="mr-16">
+                                                        <input matInput [matDatepicker]="picker24" placeholder="FDO Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker6></mat-datepicker>
+                                                      </mat-form-field>
+                                                      <mat-form-field fxFlex="25"  class="mr-16">
+                                                        <input matInput [matDatepicker]="picker25" placeholder="Dist Approve Date" [value]="date.value">
+                                                        <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker7></mat-datepicker>
+                                                      </mat-form-field>
+                                            </div>
+                                           
+                                                    <div class="w-100-p">
+                                                            <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker26" placeholder="Completion Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker8></mat-datepicker>
+                                                                  </mat-form-field>
+                                                                  <mat-form-field fxFlex="25" class="mr-16">
+                                                                    <input matInput [matDatepicker]="picker27" placeholder="Board Approve Date" [value]="date.value">
+                                                                    <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+                                                                    <mat-datepicker #picker9></mat-datepicker>
+                                                                  </mat-form-field>
+                                                        </div>
+                                                        
+                                        <div class="w-100-p">
+                                                <mat-form-field class="example-full-width" fxFlex="80">
+                                                        <textarea matInput placeholder="Leave a comment"></textarea>
+                                                      </mat-form-field>
+                                    </div>
+                                    <div class="w-50-p" style="float: right">
+                                        <button mat-flat-button color="accent" class="mr-16">Save</button>    
+                                        <button mat-flat-button class="mr-16" >Cancel</button>                                          
+                            </div>
+
+                                    </div>
+                        </mat-tab>
+
+                    </mat-tab-group>
+                </form>
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+</div>

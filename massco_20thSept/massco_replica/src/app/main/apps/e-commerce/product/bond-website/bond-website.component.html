@@ -1,0 +1,85 @@
+
+      
+<mat-accordion>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+           <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> Edit</mat-panel-title>
+          
+          </mat-expansion-panel-header> 
+        
+          
+          <div class="tab-content p-24" fusePerfectScrollbar>
+          
+          
+          
+          
+              <div class="w-100-p">
+          
+                  <mat-form-field fxFlex="100">
+                      <input matInput placeholder="Scope" value="">
+                  </mat-form-field>
+          
+              </div>
+          
+              <div class="w-100-p">
+                  <mat-form-field fxFlex="100">
+                      <input matInput placeholder="Status" value="">
+                  </mat-form-field>
+              </div>
+          
+              <div class="w-100-p">
+                  <mat-form-field fxFlex="100">
+                      <input matInput placeholder="Campus PM" value="">
+                  </mat-form-field>
+              </div>
+               <div class="w-100-p">
+                  <mat-form-field fxFlex="100">
+                      <input matInput placeholder="Project Estimate" value="">
+                  </mat-form-field>
+              </div>
+              <div class="w-100-p">
+                      <mat-checkbox>Publish To Web</mat-checkbox>
+                
+              </div>
+          <br>
+              <div class="w-100-p" style="float: right">
+                  <button mat-flat-button color="accent" style="margin-right: 10px;">Save</button>
+                  <button mat-flat-button >Cancel</button>
+              </div>
+          
+          
+          
+          </div>
+              
+        </mat-expansion-panel>
+</mat-accordion>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->  
+    <!-- Position Column -->
+    <ng-container matColumnDef="bondcDetails">
+      <th mat-header-cell *matHeaderCellDef> Bond Details </th>
+      <td mat-cell *matCellDef="let element"> {{element.bondcDetails}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef> Details </th>
+      <td mat-cell *matCellDef="let element"> {{element.details}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element" >  </td>
+    </ng-container>
+  
+    
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

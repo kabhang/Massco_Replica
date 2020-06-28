@@ -1,0 +1,46 @@
+<div class="tab-content p-24" fusePerfectScrollbar style="width:500px;">
+                                  
+        <div class="w-100-p">
+            <mat-form-field fxFlex="100">
+                <input matInput [matDatepicker]="picker" placeholder="Invoice Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+           
+        </div>
+       
+        <div class="w-100-p">
+            <mat-form-field fxFlex="100">
+                <mat-select placeholder="Visibility" formControlName="Visibility" required  >
+                    <mat-option [value]="'-- none --'">
+                      Everyone
+                    </mat-option>
+                    <mat-option [value]="' Option 1'">
+                        Accountants Only
+                    </mat-option>
+                    <mat-option [value]="' Option 2'">
+                       Project Managers Only
+                    </mat-option>                              
+
+                </mat-select>
+
+            </mat-form-field>
+
+
+           
+        </div>
+                                  
+      <div class="w-100-p">
+            <mat-form-field class="w-100-p" fxFlex="100">
+                <textarea matInput name="Description" formControlName="Description" placeholder="Description" rows="5">
+            </textarea>
+            </mat-form-field>
+        </div>
+        <div class="w-100-p" style="float: right">
+                <button mat-flat-button color="accent" style="margin-right: 10px;">Save</button>
+                <!-- <button mat-flat-button >Delete</button> -->
+            </div>
+
+           
+              
+    </div>

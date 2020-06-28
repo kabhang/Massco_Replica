@@ -1,0 +1,59 @@
+<table mat-table [dataSource]="dataSource" >
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+ 
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="contracts">
+   
+      <td mat-cell *matCellDef="let element"> {{element.contracts}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="purchaseOrder">
+   
+      <td mat-cell *matCellDef="let element">
+          <mat-form-field class="example-full-width">
+              <input matInput value="P0118635">
+            </mat-form-field>
+      </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="botAward">
+      
+      <td mat-cell *matCellDef="let element"> 
+          <mat-form-field>
+          <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field> 
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="signed">
+      
+        <td mat-cell *matCellDef="let element"> 
+            <mat-form-field>
+            <input matInput [matDatepicker]="picker2" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field> 
+        </td>
+      </ng-container>
+  
+
+          <!-- Symbol Column -->
+    <ng-container matColumnDef="duration">
+      
+        <td mat-cell *matCellDef="let element"> 
+            <mat-form-field class="example-full-width">
+                <input matInput  value="6/12/17 to 12/30/18">
+              </mat-form-field>
+        </td>
+      </ng-container>
+    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

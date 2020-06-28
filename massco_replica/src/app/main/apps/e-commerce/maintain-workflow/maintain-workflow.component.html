@@ -1,0 +1,168 @@
+<div id="orders" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg mat-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- HEADER -->
+        <div class="header mat-accent-bg"
+             fxLayout="column" fxLayoutAlign="center center"
+             fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+            <!-- APP TITLE -->
+            <div class="logo"
+                 fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    shopping_basket
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Maintain Workflow</span>
+            </div>
+            <!-- / APP TITLE -->
+
+          
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card mat-white-bg">
+
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                   <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> Add New </mat-panel-title>    
+                  </mat-expansion-panel-header> 
+                  
+                  <div class="tab-content p-24" fusePerfectScrollbar>
+                      <div class="w-100-p">
+                          
+              <span class="mat-headline">ID: 0</span>
+                      </div>
+                      <div class="w-100-p">
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="Role" >        
+                          </mat-form-field>
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <mat-select placeholder="Routing Type" formControlName="Routing Type" required>
+                                  <mat-option [value]="'FDO Accountant'">
+                                      FDO Accountant
+                                  </mat-option>
+                                  <mat-option [value]="'FET Coordinator'">
+                                      FET Coordinator
+                                  </mat-option>
+                                  <mat-option [value]="'FET Coordinator'">
+                                      FET Coordinator
+                                  </mat-option>
+                                  <mat-option [value]="'District AP'">
+                                      District AP
+                                  </mat-option>
+                                  <mat-option [value]="'Signator'">
+                                      Signator
+                                  </mat-option>
+                                  
+                                 
+                              </mat-select>     
+                          </mat-form-field>
+                      </div>
+                     
+                      <div class="w-100-p">
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="Description">        
+                          </mat-form-field>
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <mat-select placeholder="User" formControlName="User" required>
+                                  <mat-option [value]="'--none--'">
+                                     --none--
+                                  </mat-option>
+                                  <mat-option [value]="'Eduardo Escobedo MAAS'">
+                                      Eduardo Escobedo MAAS
+                                  </mat-option>
+                                  <mat-option [value]="'jeremy Chapman'">
+                                      jeremy Chapman
+                                  </mat-option>
+                                  <mat-option [value]="'Karen LeSassier'">
+                                      Karen LeSassier
+                                  </mat-option>
+                                  <mat-option [value]="'Merina Nunez NOCCCD'">
+                                      Merina Nunez NOCCCD
+                                  </mat-option>
+                                  <mat-option [value]="'Nimbda'">
+                                      Nimbda
+                                  </mat-option>
+                                  <mat-option [value]="'Raphael Villegas'">
+                                      Raphael Villegas
+                                  </mat-option>
+                                  <mat-option [value]="'Rick Williams NOCCCD'">
+                                      Rick Williams NOCCCD
+                                  </mat-option>
+                                  <mat-option [value]="'Susan Rittel NOCCCD'">
+                                      Susan Rittel NOCCCD
+                                  </mat-option>
+                                 
+                              </mat-select>     
+                          </mat-form-field>
+                      </div>
+                      <div class="w-100-p"> 
+                          <mat-form-field fxFlex="30" class="mr-16">
+                              <input matInput placeholder="Approval Limit">        
+                          </mat-form-field>
+                      </div>  
+              
+              <div class="w-50-p" style="float: right">
+                <button mat-flat-button color="accent" class="mr-16" >Save</button>    
+              </div>
+               </div>             
+              
+                </mat-expansion-panel>
+              
+              </mat-accordion>
+
+              <table mat-table [dataSource]="dataSource" >
+
+                  <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+                
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="role">
+                    <th mat-header-cell *matHeaderCellDef> Role </th>
+                    <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+                  </ng-container>
+                
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> Description </th>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                  </ng-container>
+                
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="user">
+                    <th mat-header-cell *matHeaderCellDef> User </th>
+                    <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+                  </ng-container>
+                
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="routingType">
+                    <th mat-header-cell *matHeaderCellDef> Routing Type </th>
+                    <td mat-cell *matCellDef="let element"> {{element.routingType}} </td>
+                  </ng-container>
+                
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="limit">
+                        <th mat-header-cell *matHeaderCellDef> Limit </th>
+                        <td mat-cell *matCellDef="let element"> {{element.limit | currency}} </td>
+                      </ng-container>
+
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                
+          
+        </div>
+        <!-- / CONTENT CARD -->
+    </div>
+    <!-- / CENTER -->
+</div>

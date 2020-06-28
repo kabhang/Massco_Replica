@@ -1,0 +1,67 @@
+<div id="orders" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg mat-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- HEADER -->
+        <div class="header mat-accent-bg"
+             fxLayout="column" fxLayoutAlign="center center"
+             fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+            <!-- APP TITLE -->
+            <div class="logo"
+                 fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    shopping_basket
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Maintain District Bond Website Info</span>
+            </div>
+            <!-- / APP TITLE -->
+
+          
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card mat-white-bg">
+
+                <mat-tab-group>
+                        <mat-tab label="Current News"> 
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                        <div class="w-100-p">
+                                                <mat-form-field fxFlex="80" class="mr-16">
+                                               
+                                                        <textarea matInput placeholder="Write Current News"></textarea>
+                                                   
+                                                </mat-form-field>
+                                            </div>
+                                         <div class="w-80-p">
+                                                            <button mat-raised-button  color="accent" style="float: right;" >Save</button>
+                                                    </div>
+
+                                        </div>
+                        
+                        </mat-tab>
+                        <mat-tab label="CBOC Meeting Minutes">
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+                                           <cboc></cboc>
+
+                                        </div>
+
+                        </mat-tab>
+                   
+                        <mat-tab label="Links">
+                            <cboc></cboc>
+
+                        </mat-tab>
+                      </mat-tab-group>
+
+        </div>
+        <!-- / CONTENT CARD -->
+    </div>
+    <!-- / CENTER -->
+</div>

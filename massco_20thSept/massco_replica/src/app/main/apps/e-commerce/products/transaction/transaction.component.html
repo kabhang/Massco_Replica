@@ -1,0 +1,137 @@
+     <div class="tab-content p-24" fusePerfectScrollbar> 
+
+        <mat-accordion>
+            <mat-expansion-panel style="background:#e6e6e6; margin-bottom: 40px;">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+               <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> ADD NEW TRANSACTION</mat-panel-title>    
+              </mat-expansion-panel-header> 
+              
+              <contract-new></contract-new>
+          
+          
+            </mat-expansion-panel>
+          
+          </mat-accordion>   
+        <!-- <button mat-raised-button [routerLink]="'/apps/e-commerce/contract-new'" class="add-product-button mat-white-bg my-12 mt-sm-0">
+          <span>ADD NEW TRANSACTION</span>
+      </button> -->
+        <!-- <add-new></add-new> -->
+ <table mat-table [dataSource]="dataSource" >
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="invoiceDate">
+          <th mat-header-cell *matHeaderCellDef> Invoice Date</th>
+          <td mat-cell *matCellDef="let element"> {{element.invoiceDate}} </td>
+          <td mat-footer-cell *matFooterCellDef> Total </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="hist">
+          <th mat-header-cell *matHeaderCellDef> Hist </th>
+          <td mat-cell *matCellDef="let element" (click)="openDialog()" style="color: #03a9f4; cursor: pointer;"> <mat-icon>history</mat-icon> </td>
+          <td mat-footer-cell *matFooterCellDef>  </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef> Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+          <td mat-footer-cell *matFooterCellDef>  </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+          <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          <td mat-footer-cell *matFooterCellDef>  </td>
+        </ng-container>
+      
+
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="invoice">
+                <th mat-header-cell *matHeaderCellDef> Invoice </th>
+                <td mat-cell *matCellDef="let element"> {{element.invoice}} </td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+
+
+              
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+        
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="reimb">
+                <th mat-header-cell *matHeaderCellDef> Reimb </th>
+                <td mat-cell *matCellDef="let element"> {{element.reimb}} </td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+
+                      
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="att">
+                <th mat-header-cell *matHeaderCellDef> Att </th>
+                <td mat-cell *matCellDef="let element"> {{element.att}} </td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+
+               <!-- Symbol Column -->
+         <ng-container matColumnDef="route">
+                <th mat-header-cell *matHeaderCellDef> Route </th>
+                <td mat-cell *matCellDef="let element" style="color: #03a9f4; cursor: pointer;" (click)="openDialogAttachments()"> <mat-icon>attach_file</mat-icon></td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+
+               <!-- Symbol Column -->
+               <ng-container matColumnDef="totalAmount">
+                    <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+                    <td mat-cell *matCellDef="let element"> {{element.totalAmount | currency }} </td>
+                    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+                  </ng-container>
+
+                  <!-- <ng-container matColumnDef="cost">
+                      <th mat-header-cell *matHeaderCellDef> Cost </th>
+                      <td mat-cell *matCellDef="let transaction"> {{transaction.totalAmount | currency}} </td>
+                      <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+                    </ng-container> -->
+
+<!-- Symbol Column -->
+<ng-container matColumnDef="rententionAmount">
+        <th mat-header-cell *matHeaderCellDef> Rentention Amount</th>
+        <td mat-cell *matCellDef="let element"> {{element.rententionAmount | currency }} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalCostrent() | currency}} </td>
+      </ng-container>
+
+
+
+      
+<!-- Symbol Column -->
+<ng-container matColumnDef="payableAmount">
+        <th mat-header-cell *matHeaderCellDef> Payable Amount</th>
+        <td mat-cell *matCellDef="let element"> {{element.payableAmount | currency}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalCostpay() | currency}} </td>
+      </ng-container>
+
+
+
+      
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+      </table>
+                     <!-- <mat-paginator #paginator
+                                    [length]="dataSource.filteredData.length"
+                                    [pageIndex]="0"
+                                    [pageSize]="10"
+                                    [pageSizeOptions]="[5, 10, 25, 100]">
+                     </mat-paginator> -->
+                        </div>

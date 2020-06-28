@@ -1,0 +1,33 @@
+<mat-list role="list">
+    <mat-list-item role="listitem" (click)="openDialog()" style="cursor: pointer"><mat-icon  style="color: #8BC34A; margin-right:10px">description</mat-icon>Add Notes</mat-list-item>
+    
+  </mat-list>
+
+<table mat-table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="on">
+      <th mat-header-cell *matHeaderCellDef> On</th>
+      <td mat-cell *matCellDef="let element"> {{element.on}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="by">
+      <th mat-header-cell *matHeaderCellDef> By </th>
+      <td mat-cell *matCellDef="let element"> {{element.by}} </td>
+    </ng-container>
+  
+ 
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

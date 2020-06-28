@@ -1,0 +1,48 @@
+<div id="orders" class="page-layout carded fullwidth inner-scroll">
+
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg mat-accent-bg"></div>
+  <!-- / TOP BACKGROUND -->
+
+  <!-- CENTER -->
+  <div class="center">
+
+    <!-- HEADER -->
+    <div class="header mat-accent-bg" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+      <!-- APP TITLE -->
+      <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+        <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+          shopping_basket
+        </mat-icon>
+        <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">CM/DM Report Notes</span>
+      </div>
+      <!-- / APP TITLE -->
+
+
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT CARD -->
+    <div class="content-card mat-white-bg">
+
+      <div class="tab-content p-24" fusePerfectScrollbar>
+
+        <div class="w-100-p">
+          <mat-form-field class="example-full-width" fxFlex="30">
+            <input matInput placeholder="Write Report Notes" #newHero (keyup.enter)="addHero(newHero.value)" (blur)="addHero(newHero.value); newHero.value='' ">
+          </mat-form-field>
+        </div>
+          <button mat-flat-button color="accent" class="mr-16" (click)="addHero(newHero.value)">Save</button>
+
+
+      </div>
+      
+      <mat-card *ngFor="let hero of heroes">{{hero}}</mat-card>
+
+
+    </div>
+    <!-- / CONTENT CARD -->
+  </div>
+  <!-- / CENTER -->
+</div>
