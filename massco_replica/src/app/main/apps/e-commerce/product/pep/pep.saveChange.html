@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Localhost:5964 says</h1>
+<div mat-dialog-content>
+  <p>This action will save your updates to the Draft  and Update the last saved date, but will not record a new iteration.</p>
+ <p>Do ypu wish to continue? </p>
+</div>
+<div mat-dialog-actions>
+
+  <button mat-raised-button  color="accent" [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

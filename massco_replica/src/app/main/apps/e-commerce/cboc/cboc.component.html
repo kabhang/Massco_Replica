@@ -1,0 +1,64 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+     <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> Add New </mat-panel-title>    
+    </mat-expansion-panel-header> 
+    
+    <div class="tab-content p-24" fusePerfectScrollbar>
+
+  <div class="w-100-p">
+      <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+          <input matInput [matDatepicker]="picker" placeholder="Invoice Date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+     
+  </div>
+
+  <div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16">
+        <input matInput placeholder="Description">        
+    </mat-form-field>
+</div>
+
+<div class="w-50-p" style="float: right">
+  <button mat-flat-button color="accent" class="mr-16">Save</button>    
+  <!-- <button mat-flat-button class="mr-16" >Cancel</button>-->
+</div>
+ </div>
+
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+<mat-table [dataSource]="dataSource">
+  <!-- Position Column -->
+  <ng-container matColumnDef="date">
+    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="agenda">
+    <mat-header-cell *matHeaderCellDef> Agenda </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <mat-icon>view_agenda</mat-icon></mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="minutes">
+    <mat-header-cell *matHeaderCellDef> Minutes </mat-header-cell>
+    <mat-cell *matCellDef="let element"><mat-icon>access_time</mat-icon> </mat-cell>
+  </ng-container>
+
+  
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

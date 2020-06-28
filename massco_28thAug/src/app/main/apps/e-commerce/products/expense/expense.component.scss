@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+  }
+
+  .cdk-overlay-pane{width: 100% !important;}
+  tr.mat-footer-row {
+    font-weight: bold;
+  }
+  
+  td.mat-cell, td.mat-footer-cell, th.mat-header-cell{word-wrap: break-word;    width: 212px; border-left: 1px solid #ccc;    padding-left: 10px;}

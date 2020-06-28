@@ -1,0 +1,464 @@
+<div id="products" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg mat-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- HEADER -->
+        <div class="header mat-accent-bg" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+            <!-- APP TITLE -->
+            <div class="logo my-12 m-sm-0" fxLayout="row" fxLayoutAlign="start center">
+                <!-- <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    shopping_basket
+                </mat-icon> -->
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Paul C Miller Construction Co Inc.- (GC: Tower 7th & 10th Floor TI)
+                </span>
+            </div>
+            <!-- / APP TITLE -->
+
+       
+
+        </div>
+        <!-- / HEADER -->
+        <!-- CONTENT CARD -->
+        <div class="content-card mat-white-bg">
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <mat-tab-group class="homeIcon">
+                    <span class="documentIcon"></span>
+                    <mat-tab label="Overview">
+                        <div class="tab-content p-24" fusePerfectScrollbar>
+                        
+                                <div class="tab-content p-24" fusePerfectScrollbar>
+
+                                        <div style="margin: 10px 0">
+                                            <!-- <dialog-content-example></dialog-content-example> -->
+                                            <app-add-new-contact></app-add-new-contact>
+        
+                                        </div>
+        
+                                        <div class="content w-100-p">
+        
+                                            <!-- WIDGET GROUP -->
+                                            <div class="widget-group" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start" [@animateStagger]="{value:'50'}">
+        
+                                                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+        
+                                                    <!-- Front -->
+                                                    <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                            <div>
+                                                                <i class="fas fa-book"></i>Project Overview</div>
+        
+                                                            <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                                <mat-icon>more_vert</mat-icon>
+                                                            </button>
+                                                        </div>
+        
+                                                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                            <app-project-overview></app-project-overview>
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Front -->
+        
+                                                    <!-- Back -->
+                                                    <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                            <mat-icon class="s-16">close</mat-icon>
+                                                        </button>
+        
+                                                        <div>
+                                                            More widget info
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Back -->
+        
+                                                </fuse-widget>
+        
+                                                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+        
+                                                    <!-- Front -->
+                                                    <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                            <div>
+                                                                <i class="fas fa-file-invoice-dollar"></i>
+                                                                Budget Overview</div>
+        
+                                                            <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                                <mat-icon>more_vert</mat-icon>
+                                                            </button>
+                                                        </div>
+        
+                                                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                            <app-project-overview></app-project-overview>
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Front -->
+        
+                                                    <!-- Back -->
+                                                    <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                            <mat-icon class="s-16">close</mat-icon>
+                                                        </button>
+        
+                                                        <div>
+                                                            More widget info
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Back -->
+        
+                                                </fuse-widget>
+        
+        
+                                                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+        
+                                                    <!-- Front -->
+                                                    <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                            <div>
+                                                                <i class="fas fa-users"></i>
+                                                                Project Team Members</div>
+        
+                                                            <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                                <mat-icon>more_vert</mat-icon>
+                                                            </button>
+                                                        </div>
+        
+                                                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                            <app-project-overview></app-project-overview>
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Front -->
+        
+                                                    <!-- Back -->
+                                                    <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                            <mat-icon class="s-16">close</mat-icon>
+                                                        </button>
+        
+                                                        <div>
+                                                            More widget info
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Back -->
+        
+                                                </fuse-widget>
+        
+        
+                                                <fuse-widget class="p-10" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="50">
+        
+                                                    <!-- Front -->
+                                                    <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                                        <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                                            <div>
+                                                                <i class="fas fa-sticky-note"></i>
+                                                                Notes</div>
+        
+                                                            <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                                                <mat-icon>more_vert</mat-icon>
+                                                            </button>
+                                                        </div>
+        
+                                                        <div class="pt-8 pb-32" fxLayout="column" style="max-height: 400px;min-height: 201px;overflow: auto;">
+                                                            <app-project-overview></app-project-overview>
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Front -->
+        
+                                                    <!-- Back -->
+                                                    <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+                                                            <mat-icon class="s-16">close</mat-icon>
+                                                        </button>
+        
+                                                        <div>
+                                                            More widget info
+                                                        </div>
+                                                    </div>
+                                                    <!-- / Back -->
+        
+                                                </fuse-widget>
+        
+        
+        
+        
+        
+                                            </div>
+        
+        
+        
+        
+                                        </div>
+                                    </div>
+                        </div>
+                     </mat-tab>
+
+                    <mat-tab label="Notes">
+                        <div class="tab-content p-24" fusePerfectScrollbar>
+                                <notes></notes>
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab label="Attachments">
+                        <div class="tab-content" fusePerfectScrollbar style="padding-left: 42px;">
+
+                                <attachment-tree></attachment-tree>
+
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab label="Contract Detail">
+
+                          
+                       <div class="tab-content p-24" fusePerfectScrollbar>  
+                            <mat-accordion>
+                                    <mat-expansion-panel style="background:#e6e6e6; margin-bottom: 40px;">
+                                      <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                       <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> ADD NEW CONTRACT DETAIL</mat-panel-title>    
+                                      </mat-expansion-panel-header> 
+                                      
+                                      <app-product-new></app-product-new>
+                                  
+                                  
+                                    </mat-expansion-panel>
+                                  
+                                  </mat-accordion>   
+                        
+                            <!-- <button mat-raised-button [routerLink]="'/apps/e-commerce/product-new'" class="add-product-button mat-white-bg my-12 mt-sm-0">
+                                <span>ADD NEW CONTRACT DETAIL</span>
+                            </button> -->
+
+                                <mat-table class="products-table" #table [dataSource]="dataSource" matSort >
+                                  
+                             
+                                        <!-- ID Column -->
+                                        <ng-container matColumnDef="type">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="text-truncate">{{product.type}}</p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>
+                                        </ng-container>
+                        
+                                        <!-- Description Column -->
+                                        <ng-container matColumnDef="description">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="text-truncate">{{product.description}}</p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef  style="font-weight: bold"> 
+                                                    Total Change Orders: <br>
+                                                    Total Orig Contract: <br>
+                                                    Total Change Orders:<br>
+                                                    Total Adjustments:<br>
+                                                    Contract Grand Total:<br>
+                                                    Total Spent:<br>
+                                                    Remaining Bal:<br>                                                
+                                            </mat-footer-cell>                              
+                                        </ng-container>
+                        
+                        
+                                        <!-- Name Column -->
+                                        <ng-container matColumnDef="createDate">
+                                            <mat-header-cell *matHeaderCellDef mat-sort-header>Create Date</mat-header-cell>
+                                            <mat-cell *matCellDef="let product">
+                                                <p class="text-truncate">{{product.createDate}}</p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef style="font-weight: bold"> 
+                                                $1,000.00<br>
+                                                $0.00 <br>
+                                                $0.00 <br>
+                                                $0.00 <br>
+                                                $1,000.00 <br>
+                                                $50.00 <br>
+                                                $950.00<br>                                                
+                                            </mat-footer-cell>
+                                           
+                                        </ng-container>
+                        
+                                        <!-- Category Column -->
+                                        <ng-container matColumnDef="no">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>no</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.no}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>
+                                         
+                                        </ng-container>
+                        
+                                        <!-- Category Column -->
+                                        <ng-container matColumnDef="jcafLine">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>JCAF Line</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.jcafLine}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>
+                                            
+                                        </ng-container>
+                        
+                                        <!-- Category Column -->
+                                        <ng-container matColumnDef="funding">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>Funding</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.funding}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>
+                                        
+                                        </ng-container>
+                        
+                        
+                        
+                                        <!-- Category Column -->
+                                        <ng-container matColumnDef="objectCode">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>ObjectCode</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.objectCode}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>
+                                        
+                                        </ng-container>
+                        
+                        
+                                        <ng-container matColumnDef="c">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>C</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.c}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>
+                                          
+                                        </ng-container>
+                        
+                        
+                                        <ng-container matColumnDef="expended">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>Expended</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.expended}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef style="font-weight: bold"> $0.0 </mat-footer-cell>
+                                          
+                                        </ng-container>
+                        
+                                        <ng-container matColumnDef="pendingAmount">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>Pending Amount</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.pendingAmount  | currency}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef style="font-weight: bold"> $70.00 </mat-footer-cell>
+                                           
+                                        </ng-container>
+                        
+                                        <ng-container matColumnDef="amount">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>Amount</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.amount}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef style="font-weight: bold"> 139.3$ </mat-footer-cell>
+                                            
+                                        </ng-container>
+                        
+                                        <ng-container matColumnDef="accountNumber">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>Account Number</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.accountNumber}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+                                       
+                                        </ng-container>
+                        
+                        
+                        
+                                        <ng-container matColumnDef="r">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>R</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate">
+                                                    {{product.r}}
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>
+                                       
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="editAction">
+                                            <mat-header-cell *matHeaderCellDef  mat-sort-header>Edit Action</mat-header-cell>
+                                            <mat-cell *matCellDef="let product" >
+                                                <p class="category text-truncate" >
+                                                   <a (click)="openDialog()"  style="cursor: pointer;"> {{product.editAction}}</a>
+                                                </p>
+                                            </mat-cell>
+                                            <mat-footer-cell *matFooterCellDef></mat-footer-cell>
+                                           
+                                        </ng-container>
+                    
+                                        <ng-container matColumnDef="deleteAction">
+                                                <mat-header-cell *matHeaderCellDef  mat-sort-header> Delete Action</mat-header-cell>
+                                                <mat-cell *matCellDef="let product" >
+                                                    <p class="category text-truncate"><a  style="cursor: pointer;">{{product. deleteAction}}</a>                                                    </p>
+                                                </mat-cell>
+                                                <mat-footer-cell *matFooterCellDef>  </mat-footer-cell>                                             
+                                            </ng-container>
+                        
+                        
+                                        <mat-header-row  *matHeaderRowDef="displayedColumns"></mat-header-row>                        
+                                        <mat-row *matRowDef="let row;columns: displayedColumns;" class="product" ></mat-row>
+                                        <mat-footer-row *matFooterRowDef="displayedColumns"></mat-footer-row>
+                        
+                                    </mat-table>
+         
+                     <mat-paginator #paginator
+                                    [length]="dataSource.filteredData.length"
+                                    [pageIndex]="0"
+                                    [pageSize]="10"
+                                    [pageSizeOptions]="[5, 10, 25, 100]">
+                     </mat-paginator>
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab label="Transaction">
+                        <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+                          <transaction></transaction>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="NOC"> <noc></noc> </mat-tab>
+                    <mat-tab label="Expenses">
+                  <app-expense></app-expense>
+                    </mat-tab>
+                    
+
+                </mat-tab-group>
+                <!-- </form> -->
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+</div>

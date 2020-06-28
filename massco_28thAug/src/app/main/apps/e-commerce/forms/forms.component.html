@@ -1,0 +1,264 @@
+<div id="forms" class="page-layout simple fullwidth" fxLayout="column" style="width:100%">
+
+        <div fxLayout="column" fxLayoutAlign="start start" fxLayout.gt-md="row">
+
+            <!-- REACTIVE FORM EXAMPLE -->
+
+            <form class="mat-white-bg  p-24 mr-24 mb-24" fxLayout="column" fxLayoutAlign="start"fxFlex="1 0 auto" name="form" [formGroup]="form" >
+
+                <!-- <div class="h2 mb-24">Reactive Form Example</div> -->
+
+                <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                    <mat-form-field fxFlex="50">
+                        <mat-select placeholder="Company" formControlName="country" required>
+                            <mat-option [value]="'-- none --'">
+                                -- none --
+                            </mat-option>
+                            <mat-option [value]="'3 Day Blinds Corporation'">
+                                3 Day Blinds Corporation
+                            </mat-option>
+                            <mat-option [value]="'3 Day Blinds Corporation'">
+                                3M Company
+                            </mat-option>
+                            <mat-option [value]="'China'">
+                                5 Star Interior Services Inc
+                            </mat-option>
+                            <mat-option [value]="'A&amp;D Fire Sprinklers, Inc'">
+                                A Alvarado  Painting
+                            </mat-option>
+                            <mat-option [value]="'A&amp;V Contractors Inc'">
+                                A&amp;V Contractors Inc
+                            </mat-option>
+                            <mat-option [value]="'A-1 Fence Company'">
+                                A-1 Fence Company
+                            </mat-option>
+                            <mat-option [value]="'A-A Backflow Testing &amp; Maintenance'">
+                                A-A Backflow Testing &amp; Maintenance
+                            </mat-option>
+                           
+                        </mat-select>
+                        <mat-error *ngIf="formErrors.country.required">
+                            Country is required!
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field fxFlex="50">
+                        <mat-select placeholder="Contact" formControlName="country" required>
+                            <mat-option [value]="'TBD'">
+                                TBD 
+                            </mat-option>
+                            <mat-option [value]="'Eric Goldberg'">
+                                Eric Goldberg
+                            </mat-option>
+                            <mat-option [value]="'Emily Day'">
+                                Emily Day
+                            </mat-option>
+                            <mat-option [value]="'Raphael Villegas'">
+                                Raphael Villegas
+                            </mat-option>
+                                                    
+                        </mat-select>
+                        <mat-error *ngIf="formErrors.country.required">
+                            Country is required!
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+                        <mat-form-field fxFlex="25">
+                            <input matInput [matDatepicker]="picker1" placeholder="Contract Date" [formControl]="date">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker1></mat-datepicker>
+                                    
+                              </mat-form-field>
+
+                    <mat-form-field fxFlex="25" >
+                            <input matInput [matDatepicker]="picker2" placeholder="Expired Date" [formControl]="serializedDate">
+                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                     <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field  fxFlex="25">
+                            <mat-select placeholder="Contract Type" formControlName="country" required>
+                                <mat-option [value]="'-- none --'">
+                                  Contract Type
+                                </mat-option>
+                                <mat-option [value]="'3 Day Blinds Corporation'">
+                                   Bidded
+                                </mat-option>
+                                <mat-option [value]="'3 Day Blinds Corporation'">
+                                   Non-Bidded
+                                </mat-option>                              
+                               
+                            </mat-select>
+                            <mat-error *ngIf="formErrors.country.required">
+                                Country is required!
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field  fxFlex="25" >
+                                <mat-select placeholder="Status" formControlName="country" required>
+                                    <mat-option [value]="'-- none --'">
+                                        Close 
+                                    </mat-option>
+                                    <mat-option [value]="'3 Day Blinds Corporation'">
+                                       Open 
+                                    </mat-option>
+                                    <mat-option [value]="'3 Day Blinds Corporation'">
+                                        Pending
+                                    </mat-option>                     
+                                </mat-select>
+                                <mat-error *ngIf="formErrors.country.required">
+                                    Country is required!
+                                </mat-error>
+                            </mat-form-field>
+
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                        <mat-form-field fxFlex="25">
+                                <input matInput placeholder="Attachments" formControlName="city" required>
+                                <mat-error *ngIf="formErrors.city.required">
+                                    Attachments is required!
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field fxFlex="25">
+                                        <mat-select placeholder="Retention%:" formControlName="country" required>
+                                    <mat-option [value]="'-- none --'">
+                                       10%
+                                    </mat-option>
+                                    <mat-option [value]="'3 Day Blinds Corporation'">
+                                     15%
+                                    </mat-option>
+                                    <mat-option [value]="'3 Day Blinds Corporation'">
+                                       20%
+                                    </mat-option>     
+                                    <mat-option [value]="'3 Day Blinds Corporation'">
+                                        5%
+                                         </mat-option>                  
+                                </mat-select>
+                                <mat-error *ngIf="formErrors.country.required">
+                                    Value is required!
+                                </mat-error>
+                                </mat-form-field>
+                                <mat-form-field fxFlex="25">
+                                        <input matInput placeholder="BidPak#:" formControlName="city" required>
+                                        <mat-error *ngIf="formErrors.city.required">
+                                            Attachments is required!
+                                        </mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field fxFlex="25">
+                                           
+                                                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                    <mat-datepicker #picker></mat-datepicker>
+                                                  
+
+                                    </mat-form-field>
+        
+
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+                        <mat-form-field fxFlex="100">
+                                <input matInput [matDatepicker]="picker3" placeholder="Signed Copy Rec'd" [formControl]="serializedDate">
+                                <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                <mat-datepicker #picker4></mat-datepicker>
+                            </mat-form-field>
+
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+                    <mat-form-field fxFlex="100">
+                        <textarea matInput placeholder="Address" formControlName="address" required>
+                            1600 Amphitheatre Pkwy
+                        </textarea>
+                        <mat-error *ngIf="formErrors.address.required">
+                            Address is required!
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="100">
+                        <textarea matInput placeholder="Address 2" formControlName="address2"></textarea>
+                        <mat-error *ngIf="formErrors.address2.required">
+                            Address 2 is required!
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+                    <mat-form-field fxFlex="33">
+                        <input matInput placeholder="City" formControlName="city" required>
+                        <mat-error *ngIf="formErrors.city.required">
+                            City is required!
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="34">
+                        <input matInput placeholder="State" formControlName="state" required>
+                        <mat-error *ngIf="formErrors.state.required">
+                            State is required!
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="33">
+                        <input matInput #postalCode placeholder="Postal Code" value="94043"
+                               formControlName="postalCode" required>
+                        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                        <mat-error *ngIf="formErrors.postalCode.maxlength">
+                            Postal Code needs to be max. {{formErrors.postalCode.maxlength.requiredLength}} characters
+                        </mat-error>
+                        <mat-error *ngIf="formErrors.postalCode.required">
+                            Postal Code is required!
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+                    <mat-form-field fxFlex="100">
+                        <mat-select placeholder="Country" formControlName="country" required>
+                            <mat-option [value]="'United States of America'">
+                                United States of America
+                            </mat-option>
+                            <mat-option [value]="'United Kingdom'">
+                                United Kingdom
+                            </mat-option>
+                            <mat-option [value]="'Russia'">
+                                Russia
+                            </mat-option>
+                            <mat-option [value]="'China'">
+                                China
+                            </mat-option>
+                            <mat-option [value]="'Japan'">
+                                Japan
+                            </mat-option>
+                            <mat-option [value]="'Turkey'">
+                                Turkey
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="formErrors.country.required">
+                            Country is required!
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+                <div class="w-100-p">
+                        <button mat-flat-button color="accent" style="float: right">Save</button></div>
+
+            </form>
+
+            
+            <!-- / VERTICAL STEPPER EXAMPLE -->
+
+        </div>
+
+    </div>
+    <!-- / CONTENT -->
+
+
+

@@ -1,0 +1,53 @@
+<div>
+  <mat-toolbar class="p-0">
+      <div>Associate Exisiting Attachment with Transaction</div>    
+    </mat-toolbar>
+    <span class="mat-subheading-1">Drag files from the left tree to the appropriate Transactions in the right tree to associate the attachment with the transaction. This will not move the actual file</span>
+</div>
+<table style="width:100%">
+<tbody>
+  <td>
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+      <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+        <button mat-icon-button disabled></button>
+        <mat-checkbox class="checklist-leaf-node"
+                      [checked]="checklistSelection.isSelected(node)"
+                      (change)="checklistSelection.toggle(node);">{{node.item}}</mat-checkbox>
+      </mat-tree-node>
+    
+      <mat-tree-node *matTreeNodeDef="let node; when: hasNoContent" matTreeNodePadding>
+          <!-- <button mat-icon-button ><mat-icon style="color: #FFC107">folder</mat-icon></button> -->
+        <!-- <mat-form-field>
+          <input matInput #itemValue placeholder="New item...">
+        </mat-form-field> -->
+     
+      </mat-tree-node>
+    
+      <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+        <button mat-icon-button matTreeNodeToggle
+                [attr.aria-label]="'toggle ' + node.filename">
+          <mat-icon class="mat-icon-rtl-mirror"  style="color: #FFC107">
+            {{treeControl.isExpanded(node) ?'folder_open' : 'folder'}}
+          </mat-icon>
+          <mat-icon>pdf</mat-icon>
+        </button>
+      
+        <mat-checkbox [checked]="descendantsAllSelected(node)"
+                      [indeterminate]="descendantsPartiallySelected(node)"
+                      (change)="todoItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+        <!-- <button mat-icon-button (click)="addNewItem(node)"><mat-icon>add</mat-icon></button> -->
+      </mat-tree-node>
+    </mat-tree>
+
+  </td>
+  <td><mat-icon style="color: #FF5722;position: relative;top: 8px;">assignment_turned_in</mat-icon>Transactions (InvDate--Inv#--TotalAmt--Descr)</td>
+</tbody>
+
+</table>
+
+
+
+<div class="w-50-p" style="float: right">
+  <button mat-flat-button color="accent" class="mr-16">Save</button>    
+  <button mat-flat-button class="mr-16" >Cancel</button>                                          
+</div>

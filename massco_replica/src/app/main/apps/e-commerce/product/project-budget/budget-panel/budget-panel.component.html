@@ -1,0 +1,335 @@
+<mat-tab-group >
+
+    <mat-tab label="Budget Generator">
+        
+        <div class="tab-content p-24" fusePerfectScrollbar>
+            <span class="mat-title">JCAF Generator</span><br>
+            <span class="mat-body-1" style="color: #666;">This screen generates standard allocations to budget fields based on the percentage amounts entered in the fields below.</span><br>
+            <span class="mat-captionmat-cap" style="color: #F44336;">WARNING: This program will OVERWRITE all exisitng budget numbers for this project. The process cannot be undone!</span>
+                <div class="w-100-p">
+                        <mat-form-field fxFlex="30" class="mr-16">
+                            <input matInput placeholder="Total Project Budget" >        
+                        </mat-form-field>
+
+                    </div>
+                    <div class="w-100-p">
+                      
+                        <mat-radio-group>
+                            <mat-radio-button value="1">New Construction  </mat-radio-button> &nbsp;&nbsp;
+                            <mat-radio-button value="2">Re-Construction</mat-radio-button>
+                          </mat-radio-group>
+
+                    </div>
+                    <br> <br>
+            <div class="w-100-p">
+
+                <span class="mat-body-2">Funding Sources:</span> <br> <br>
+
+                
+               <table >
+                 <thead>
+                   <th>State %</th>
+                   <th>Bond %</th>
+                   <th>Grant %</th>
+                   <th>Hazmat %</th>
+                   <th>Maint %</th>
+                   <th>Donations %</th>
+                 </thead>
+                 <tbody>
+                   <td><input matInput placeholder="State %" >  </td>
+                   <td><input matInput placeholder="Bond %" ></td>
+                   <td><input matInput placeholder="Grant %" >   </td>
+                   <td><input matInput placeholder="Hazmat %" >   </td>
+                   <td><input matInput placeholder="Maint %" ></td>
+                   <td><input matInput placeholder="Donations %" ></td>
+                 </tbody>
+               </table>
+            </div>
+           
+            <div class="w-100-p">
+                <span class="mat-body-2">Calc Percentages</span>
+                <div class="w-50-p" >
+                    <button mat-flat-button color="accent" class="mr-16">Reset Defaults</button>    
+                    <button mat-flat-button class="mr-16" >Clear</button>                                          
+        </div>
+
+            </div>
+            <div class="w-100-p">
+                   <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+                    <input matInput placeholder="Planning Arch Fees (2A) %" value="2.87">
+                </mat-form-field>
+               </div>
+
+            <div class="w-100-p">
+                    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+                            <input matInput placeholder="Planning Project Mgmt (2B) %" value="0.82">
+                    </mat-form-field>
+            </div>
+            <div class="w-100-p">
+                <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+                        <input matInput placeholder="WorkDraw Arch Fees (3A) %" value="3.69">
+                </mat-form-field>
+        </div>
+        <div class="w-100-p">
+            <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+                    <input matInput placeholder="WorkDraw SA PC Fee (3C) %" value="0.45">
+            </mat-form-field>
+    </div>
+    <div class="w-100-p">
+        <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+                <input matInput placeholder="WorkDraw CC PC Fee (3D) %" value="0.23">
+        </mat-form-field>
+</div>
+<div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+            <input matInput placeholder="Contingency (5) %" value="5.75">
+    </mat-form-field>
+</div>
+<div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+            <input matInput placeholder="A &amp; E Oversight (6) %" value="1.64">
+    </mat-form-field>
+</div>
+<div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+            <input matInput placeholder="Tests (7A) %" value="0.82">
+    </mat-form-field>
+</div>
+<div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+            <input matInput placeholder="Inspections (7B) %" value="0">
+    </mat-form-field>
+</div>
+<div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+            <input matInput placeholder="Other %" value="0">
+    </mat-form-field>
+</div>
+<div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+            <input matInput placeholder="Total Const/Reconstr (4 E/F) %" value="83.09">
+    </mat-form-field>
+</div>
+        
+<div class="w-100-p">
+    <mat-form-field fxFlex="30" class="mr-16" class="mr-16">
+            <input matInput placeholder="Total Budget %" value="100">
+    </mat-form-field>
+</div>
+        
+            
+            
+           
+            <div class="w-50-p" style="float: right">
+                <button mat-flat-button color="accent" class="mr-16">Genrate</button>    
+                <button mat-flat-button class="mr-16" >Cancel</button>                                          
+    </div>
+
+
+               
+                  
+        </div>
+
+      </mat-tab>
+      <mat-tab label="Budget Estimates" class="p-24">  
+
+          <mat-list role="list" style="display: inline-flex">
+              <mat-list-item role="listitem">Add New Line</mat-list-item>
+              <mat-list-item role="listitem">Save</mat-list-item>
+              <mat-list-item role="listitem">
+                  <mat-form-field fxFlex="100">
+                      <mat-select placeholder="Snapshots" formControlName="country" required>
+                          <mat-option [value]="'Snapshot THIS Project'">
+                              Snapshot THIS Project
+                          </mat-option>
+                          <mat-option [value]="'Snapshot THIS Project'">
+                              Snapshot ALL District Projects
+                          </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                  <mat-form-field fxFlex="100">
+                      <mat-select placeholder="Export" formControlName="country" required>
+                          <mat-option [value]="' Export to excel'">
+                              Export to excel
+                          </mat-option>
+                        
+                      </mat-select>
+                  </mat-form-field>
+
+              </mat-list-item>
+            </mat-list>
+
+            <div class="w-100-p">
+
+                <mat-list role="list" style="display: inline-flex">
+                    <mat-list-item role="listitem">Now Showing</mat-list-item>
+                  <mat-list-item role="listitem">     
+                         <mat-form-field fxFlex="100">
+                      <mat-select placeholder="Current Data" formControlName="country" required>
+                          <mat-option [value]="'Current Data'">
+                              Current Data
+                          </mat-option>
+                          <mat-option [value]="'Current Data'">
+                              Snapshot Data
+                          </mat-option>
+                        
+                      </mat-select>
+                  </mat-form-field></mat-list-item>
+                  </mat-list>
+
+
+           
+           
+          
+         
+            </div>
+
+            <div class="w-100-p mr-16 ">
+
+                <table class="mr-16" >
+                    <thead>
+                      <th>Object Code</th>
+                      <th>Description</th>
+                      <th>Pending Expenses</th>
+                      <th>Approximate Expenses</th>
+                      <th>Notes</th>
+                    
+                    </thead>
+                    <tbody>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                     
+                    </tbody>
+                  </table>
+
+            </div>
+
+            <div class="w-100-p ">
+                <mat-form-field class="mr-16"  fxFlex="50">
+                    <textarea matInput placeholder="CM/DM Report Project Notes"></textarea>
+                  </mat-form-field>
+</div>
+
+
+<div class="w-100-p mr-16">
+    <mat-form-field fxFlex="30" class=" mr-16">
+        <mat-select placeholder="CM/DM Report Status" formControlName="country" required>
+            <mat-option [value]="' Auto Calc'">
+               Auto Calc
+            </mat-option>
+            <mat-option [value]="'Caution'">
+                Caution
+            </mat-option>
+            <mat-option [value]="'N/A'">
+              N/A
+            </mat-option>
+            <mat-option [value]="'Ok'">
+            ok
+            </mat-option>
+            <mat-option [value]="'Problem'">
+                Problem
+                </mat-option>
+          
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field fxFlex="30"  class=" mr-16">
+        <mat-select placeholder="CM/DM Proj Budget Status" formControlName="country" required>
+            <mat-option [value]="' Auto Calc'">
+               Auto Calc
+            </mat-option>
+            <mat-option [value]="'Caution'">
+                Caution
+            </mat-option>
+            <mat-option [value]="'N/A'">
+              N/A
+            </mat-option>
+            <mat-option [value]="'Ok'">
+            ok
+            </mat-option>
+            <mat-option [value]="'Problem'">
+                Problem
+                </mat-option>
+          
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field fxFlex="30"  class=" mr-16">
+        <mat-select placeholder="CM/DM Est At Complete Status" formControlName="country" required>
+            <mat-option [value]="' Auto Calc'">
+               Auto Calc
+            </mat-option>
+            <mat-option [value]="'Caution'">
+                Caution
+            </mat-option>
+            <mat-option [value]="'N/A'">
+              N/A
+            </mat-option>
+            <mat-option [value]="'Ok'">
+            ok
+            </mat-option>
+            <mat-option [value]="'Problem'">
+                Problem
+                </mat-option>
+          
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div  style="float: right" class="mr-16">
+    <button mat-flat-button color="accent" class="mr-16">Save</button>    
+    <!-- <button mat-flat-button class="mr-16" >Cancel</button>.-->
+</div>
+
+        
+      </mat-tab>
+      <mat-tab label="Budget Reporting" class="p-24"> 
+          <span class="mat-title">Edit Budget Reporting</span><br><br>
+          <div class="w-100-p mr-16">
+
+              <table class="mr-16" >
+                  <thead>
+                    <th>Month/Year</th>
+                    <th>Budget</th>
+                    
+                  
+                  </thead>
+                  <tbody>
+                    <td></td>
+                    <td></td>
+                    
+                   
+                  </tbody>
+                </table>
+
+          </div><br><br>
+
+          <div  style="float: right" class="w-50-p mr-16">
+              <button mat-flat-button color="accent" class="mr-16">Save</button>    
+              <!-- <button mat-flat-button class="mr-16" >Cancel</button>.-->
+          </div>
+      </mat-tab>
+      <mat-tab label="Preferences"> 
+          <mat-list role="list">
+              <mat-list-item role="listitem"><mat-checkbox>Hide State Column</mat-checkbox></mat-list-item>
+              <mat-list-item role="listitem"><mat-checkbox>Hide Bond Column</mat-checkbox></mat-list-item>
+              <mat-list-item role="listitem"><mat-checkbox>Hide RDA Column</mat-checkbox></mat-list-item>              
+              <mat-list-item role="listitem"><mat-checkbox>Hide Local Column</mat-checkbox></mat-list-item>
+              <mat-list-item role="listitem"><mat-checkbox>Hide SchMaint Column</mat-checkbox></mat-list-item>
+              <mat-list-item role="listitem"><mat-checkbox>Hide MeasureX Column</mat-checkbox></mat-list-item>
+              <mat-list-item role="listitem"><mat-checkbox>Hide Local Column</mat-checkbox></mat-list-item>
+            </mat-list>
+            <div  style="float: right" class="w-50-p mr-16">
+                <button mat-flat-button color="accent" class="mr-16">Save</button>    
+                <!-- <button mat-flat-button class="mr-16" >Cancel</button>.-->
+            </div>
+      </mat-tab>   
+                        
+                        
+                        
+
+    </mat-tab-group>

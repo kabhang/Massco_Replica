@@ -2,12 +2,12 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 import { ProjectDashboardDb } from 'app/fake-db/dashboard-project';
 import { AnalyticsDashboardDb } from 'app/fake-db/dashboard-analytics';
-import { CalendarFakeDb } from 'app/fake-db/calendar';
+
 import { ECommerceFakeDb } from 'app/fake-db/e-commerce';
 import { AcademyFakeDb } from 'app/fake-db/academy';
 import { MailFakeDb } from 'app/fake-db/mail';
-import { ChatFakeDb } from 'app/fake-db/chat';
-import { FileManagerFakeDb } from 'app/fake-db/file-manager';
+
+
 import { ContactsFakeDb } from 'app/fake-db/contacts';
 import { TodoFakeDb } from 'app/fake-db/todo';
 import { ScrumboardFakeDb } from 'app/fake-db/scrumboard';
@@ -31,7 +31,7 @@ export class FakeDbService implements InMemoryDbService
             'analytics-dashboard-widgets': AnalyticsDashboardDb.widgets,
 
             // Calendar
-            'calendar': CalendarFakeDb.data,
+          
 
             // E-Commerce
             'e-commerce-dashboard': ECommerceFakeDb.dashboard,
@@ -50,13 +50,10 @@ export class FakeDbService implements InMemoryDbService
             'mail-labels' : MailFakeDb.labels,
 
             // Chat
-            'chat-contacts': ChatFakeDb.contacts,
-            'chat-chats'   : ChatFakeDb.chats,
-            'chat-user'    : ChatFakeDb.user,
+         
 
             // File Manager
-            'file-manager': FileManagerFakeDb.files,
-
+           
             // Contacts
             'contacts-contacts': ContactsFakeDb.contacts,
             'contacts-user'    : ContactsFakeDb.user,
@@ -97,7 +94,11 @@ export class FakeDbService implements InMemoryDbService
 
             // Quick Panel
             'quick-panel-notes' : QuickPanelFakeDb.notes,
-            'quick-panel-events': QuickPanelFakeDb.events
+            'quick-panel-events': QuickPanelFakeDb.events,
+
+            // contracts
+          
+
         };
     }
 }

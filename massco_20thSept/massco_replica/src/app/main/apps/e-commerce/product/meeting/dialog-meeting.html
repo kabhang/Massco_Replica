@@ -1,0 +1,64 @@
+<div class="tab-content p-24" fusePerfectScrollbar style="width:500px;">
+                                  
+        <div class="w-100-p">
+            <mat-form-field fxFlex="100">
+                <input matInput [matDatepicker]="picker" placeholder="Invoice Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+           
+        </div>
+
+        <div class="w-100-p">
+                <mat-form-field class="example-full-width" fxFlex="100">
+                        <input matInput placeholder="name" value="Organizer">
+                      </mat-form-field>
+
+        </div>
+        <div class="w-100-p">
+                <mat-form-field class="w-100-p" fxFlex="100">
+                    <textarea matInput name="Topic" formControlName="Description" placeholder="Topic" rows="5">
+                </textarea>
+                </mat-form-field>
+            </div>
+        <div class="w-100-p">
+            <mat-form-field fxFlex="100">
+                <mat-select placeholder="Phase" formControlName="Visibility" required  >
+                    <mat-option [value]="'-- none --'">
+                   Not Selected
+                    </mat-option>
+                    <mat-option [value]="' Option 1'">
+                       Other
+                    </mat-option>
+                    <mat-option [value]="' Option 2'">
+                     Pre- Design
+                    </mat-option>         
+                    <mat-option [value]="' Option 2'">
+                            DSA
+                           </mat-option>                             
+                           <mat-option [value]="' Option 2'">
+                               Bidding
+                               </mat-option> 
+                               <mat-option [value]="' Option 2'">
+                                  Construction
+                                    </mat-option> 
+                                    <mat-option [value]="' Option 2'">
+                                            Close Out
+                                              </mat-option> 
+                </mat-select>
+
+            </mat-form-field>
+
+
+           
+        </div>
+                                  
+     
+        <div class="w-100-p" style="float: right">
+                <button mat-flat-button color="accent" style="margin-right: 10px;">Save</button>
+                <button mat-flat-button >Cancel</button>
+            </div>
+
+           
+              
+    </div>

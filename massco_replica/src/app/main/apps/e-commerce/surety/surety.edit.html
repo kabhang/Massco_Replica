@@ -1,0 +1,67 @@
+
+<div style="width:500px; padding: 0">
+        <div>
+                <mat-toolbar class="popupToolBar">
+                    <span> Edit Surety</span>
+                  </mat-toolbar>
+            </div>
+        
+            <div class="w-100-p">
+                    <mat-form-field fxFlex="100" class="mr-16">
+                        <input matInput placeholder="Object Code" value="41000">        
+                    </mat-form-field>
+                </div>
+                <div class="w-100-p">
+                    <mat-form-field fxFlex="100" class="mr-16">
+                        <input matInput placeholder="Description" value="Software">        
+                    </mat-form-field>
+                </div>
+                <div class="w-100-p"> 
+                <mat-form-field fxFlex="100" class="mr-16" class="mr-16">
+                    <mat-select placeholder="Budget Group" formControlName="Budget Group" required  >
+                        <mat-option [value]="'-- none --'">
+                            -- none --
+                        </mat-option>
+                        <mat-option [value]="' Option 1'">
+                            Option 1
+                        </mat-option>
+                        <mat-option [value]="' Option 2'">
+                            Option 2
+                        </mat-option>
+                        <mat-option [value]="' Option 3'">
+                            Option 3
+                        </mat-option>
+                        <mat-option [value]="' Option 4'">
+                            Option 4
+                        </mat-option>
+        
+                    </mat-select>
+        
+                </mat-form-field>
+              </div>
+        
+              <div class="w-100-p">
+                  <mat-form-field fxFlex="100" class="mr-16" class="mr-16">
+                      <mat-select placeholder="Object Code Group" formControlName="Object Code Group" required  >
+                          <mat-option [value]="'-- none --'">
+                             Hard Costs
+                          </mat-option>
+                          <mat-option [value]="' Option 1'">
+                              Soft Costs
+                          </mat-option>
+        
+                      </mat-select>
+        
+                  </mat-form-field>
+                </div>
+                <div class="w-100-p">
+                    <mat-form-field fxFlex="100" class="mr-16">
+                        <input matInput placeholder="ID" value="0">        
+                    </mat-form-field>
+                </div>
+        
+        <div style="float: right">
+          <button mat-flat-button color="accent" class="mr-16">Save</button>    
+        </div>
+        
+        </div>

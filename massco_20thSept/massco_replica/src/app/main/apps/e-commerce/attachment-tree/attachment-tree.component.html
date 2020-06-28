@@ -1,0 +1,29 @@
+
+<mat-list role="list">
+    <mat-list-item role="listitem"  (click)="openDialog()"><mat-icon  style="color: #8BC34A; margin-right:10px">create_new_folder</mat-icon>Add Folder</mat-list-item>
+    <mat-list-item role="listitem"  (click)="openDialogDelete()"><mat-icon style="color: #8BC34A; margin-right:10px">delete</mat-icon>Delete Folder</mat-list-item>
+    <mat-list-item role="listitem"  (click)="openDialogUpload()"><mat-icon style="color: #8BC34A; margin-right:10px">file_upload</mat-icon>Upload File</mat-list-item> 
+    <mat-list-item role="listitem"  (click)="openDialogMove()"><mat-icon style="color: #8BC34A; margin-right:10px">move_to_inbox</mat-icon>Move File</mat-list-item> 
+  </mat-list>
+
+  <mat-divider></mat-divider> 						
+
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+      <button mat-icon-button ><mat-icon style="color: #FFC107">folder</mat-icon></button>
+      {{node.item}}
+    </mat-tree-node>
+    <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+      <button mat-icon-button
+              [attr.aria-label]="'toggle ' + node.filename" matTreeNodeToggle>
+              
+        <mat-icon class="mat-icon-rtl-mirror" style="color: #FFC107">
+          {{treeControl.isExpanded(node) ? 'folder_open' : 'folder'}}
+        </mat-icon>
+      </button>
+      {{node.item}}
+      <mat-progress-bar *ngIf="node.isLoading" mode="indeterminate" ></mat-progress-bar>
+    </mat-tree-node>
+  </mat-tree>
+
+  

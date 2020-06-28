@@ -1,0 +1,200 @@
+<div class="tab-content p-24" fusePerfectScrollbar> 
+
+    <mat-accordion>
+        <mat-expansion-panel style="background:#e6e6e6; margin-bottom: 40px;">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+           <mat-icon style="position: relative;left: -5px;color: #03a9f4;">add</mat-icon> SUBMIT PAY APPLICATION</mat-panel-title>    
+          </mat-expansion-panel-header> 
+          
+          <contract-new></contract-new>
+      
+      
+        </mat-expansion-panel>
+      
+      </mat-accordion>   
+    <!-- <button mat-raised-button [routerLink]="'/apps/e-commerce/contract-new'" class="add-product-button mat-white-bg my-12 mt-sm-0">
+      <span>ADD NEW TRANSACTION</span>
+  </button> -->
+    <!-- <add-new></add-new> -->
+<table mat-table [dataSource]="dataSource" >
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="pdf">
+      <th mat-header-cell *matHeaderCellDef> PDF</th>
+      <td mat-cell *matCellDef="let element"> <a href="http://localhost:59564/PDF/73e61b73-9b79-46f1-b2ed-bb4c4e31d5bb.pdf"> <mat-icon style="color: #F44336; cursor: pointer;">picture_as_pdf</mat-icon></a> </td>
+      <td mat-footer-cell *matFooterCellDef> Total </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="att">
+      <th mat-header-cell *matHeaderCellDef> Att </th>
+      <td mat-cell *matCellDef="let element" (click)="openDialog()" style="color: #03a9f4; cursor: pointer;"> <mat-icon>edit</mat-icon> </td>
+      <td mat-footer-cell *matFooterCellDef>  </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="college">
+      <th mat-header-cell *matHeaderCellDef> College </th>
+      <td mat-cell *matCellDef="let element"> {{element.college}} </td>
+      <td mat-footer-cell *matFooterCellDef>  </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="project">
+      <th mat-header-cell *matHeaderCellDef> Project </th>
+      <td mat-cell *matCellDef="let element"> {{element.project}} </td>
+      <td mat-footer-cell *matFooterCellDef>  </td>
+    </ng-container>
+
+
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="proj">
+          <th mat-header-cell *matHeaderCellDef> Proj </th>
+          <td mat-cell *matCellDef="let element"> {{element.proj}} </td>
+          <td mat-footer-cell *matFooterCellDef>  </td>
+        </ng-container>
+  
+
+     <!-- Symbol Column -->
+     <ng-container matColumnDef="contractor">
+            <th mat-header-cell *matHeaderCellDef> Contractor </th>
+            <td mat-cell *matCellDef="let element"> {{element.contractor}} </td>
+            <td mat-footer-cell *matFooterCellDef>  </td>
+          </ng-container>
+
+
+          
+     <!-- Symbol Column -->
+     <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            <td mat-footer-cell *matFooterCellDef>  </td>
+          </ng-container>
+    
+     <!-- Symbol Column -->
+     <ng-container matColumnDef="inv#">
+            <th mat-header-cell *matHeaderCellDef> Inv# </th>
+            <td mat-cell *matCellDef="let element"> {{element.inv}} </td>
+            <td mat-footer-cell *matFooterCellDef>  </td>
+          </ng-container>
+
+           <!-- Symbol Column -->
+     <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
+      </ng-container>
+
+                  
+     <!-- Symbol Column -->
+     <ng-container matColumnDef="invDate">
+            <th mat-header-cell *matHeaderCellDef> Inv Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.invDate}} </td>
+            <td mat-footer-cell *matFooterCellDef>  </td>
+          </ng-container>
+
+           <!-- Symbol Column -->
+     <ng-container matColumnDef="signerName">
+            <th mat-header-cell *matHeaderCellDef> Signer Name </th>
+            <td mat-cell *matCellDef="let element">{{element.signerName}} </td>
+            <td mat-footer-cell *matFooterCellDef>  </td>
+          </ng-container>
+
+                    <!-- Symbol Column -->
+     <ng-container matColumnDef="signerEmail">
+        <th mat-header-cell *matHeaderCellDef> Signer Email </th>
+        <td mat-cell *matCellDef="let element" > {{element.signerEmail}}</td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
+      </ng-container>
+
+      
+                    <!-- Symbol Column -->
+     <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element" > {{element.status}}</td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
+      </ng-container>
+            
+     <!-- Symbol Column -->
+     <ng-container matColumnDef="timeSent">
+        <th mat-header-cell *matHeaderCellDef> Time Sent </th>
+        <td mat-cell *matCellDef="let element" > {{element.timeSent}}</td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+     <ng-container matColumnDef="timeDelivered">
+        <th mat-header-cell *matHeaderCellDef> Time Delivered</th>
+        <td mat-cell *matCellDef="let element"> {{element.timeDelivered}}</td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
+      </ng-container>
+
+
+            <!-- Symbol Column -->
+     <ng-container matColumnDef="timeSigned">
+        <th mat-header-cell *matHeaderCellDef> Time Signed</th>
+        <td mat-cell *matCellDef="let element" > {{element.timeSigned}}</td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
+      </ng-container>
+
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="declinedReason">
+                <th mat-header-cell *matHeaderCellDef> Declined Reason</th>
+                <td mat-cell *matCellDef="let element" > {{element.declinedReason}}</td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+
+
+              <!-- Symbol Column -->
+            <ng-container matColumnDef="timeDeclined">
+                <th mat-header-cell *matHeaderCellDef> Time Declined</th>
+                <td mat-cell *matCellDef="let element" > {{element.timeDeclined}}</td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+
+           
+        
+        
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="total">
+                <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+                <td mat-cell *matCellDef="let element"> {{element.total | currency}} </td>
+                <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}} </td>
+              </ng-container>
+
+                          <!-- Symbol Column -->
+            <ng-container matColumnDef="payable">
+                <th mat-header-cell *matHeaderCellDef> Payable</th>
+                <td mat-cell *matCellDef="let element" > {{element.payable}}</td>
+                <td mat-footer-cell *matFooterCellDef>  </td>
+              </ng-container>
+
+           
+
+                          <!-- Symbol Column -->
+                          <ng-container matColumnDef="owner">
+                              <th mat-header-cell *matHeaderCellDef> Owner</th>
+                              <td mat-cell *matCellDef="let element" > {{element.owner}}</td>
+                              <td mat-footer-cell *matFooterCellDef>  </td>
+                            </ng-container>
+              
+
+  
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+  </table>
+                 <!-- <mat-paginator #paginator
+                                [length]="dataSource.filteredData.length"
+                                [pageIndex]="0"
+                                [pageSize]="10"
+                                [pageSizeOptions]="[5, 10, 25, 100]">
+                 </mat-paginator> -->
+                    </div>
